@@ -6,7 +6,7 @@
 
 .kv-section {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 420px;
 
   &.index {
@@ -18,57 +18,57 @@
   }
 
   &.structure-facilities {
-    background: url("../images/kv/structure-facilities.jpg") no-repeat center center;
+    background: url('../images/kv/structure-facilities.jpg') no-repeat center center;
     background-size: cover;
   }
 
   &.common-facilities {
-    background: url("../images/kv/common-facilities.jpg") no-repeat center center;
+    background: url('../images/kv/common-facilities.jpg') no-repeat center center;
     background-size: cover;
   }
 
   &.management-association {
-    background: url("../images/kv/management-association.jpg") no-repeat center center;
+    background: url('../images/kv/management-association.jpg') no-repeat center center;
     background-size: cover;
   }
 
   &.disaster-prevention {
-    background: url("../images/kv/disaster-prevention.jpg") no-repeat center center;
+    background: url('../images/kv/disaster-prevention.jpg') no-repeat center center;
     background-size: cover;
   }
 
   &.news {
-    background: url("../images/kv/news.jpg") no-repeat center center;
+    background: url('../images/kv/news.jpg') no-repeat center center;
     background-size: cover;
   }
 
   &.imagination-land {
-    background: url("../images/kv/imagination-land.jpg") no-repeat center center;
+    background: url('../images/kv/imagination-land.jpg') no-repeat center center;
     background-size: cover;
   }
 
   &.structure-facilities {
-    background: url("../images/kv/structure-facilities.jpg") no-repeat center center;
+    background: url('../images/kv/structure-facilities.jpg') no-repeat center center;
     background-size: cover;
   }
 
   &.gallery-cg {
-    background: url("../images/kv/gallery.jpg") no-repeat center center;
+    background: url('../images/kv/gallery.jpg') no-repeat center center;
     background-size: cover;
   }
 
   &.links {
-    background: url("../images/kv/links.jpg") no-repeat center center;
+    background: url('../images/kv/links.jpg') no-repeat center center;
     background-size: cover;
   }
 
   &.access {
-    background: url("../images/kv/access.jpg") no-repeat center center;
+    background: url('../images/kv/access.jpg') no-repeat center center;
     background-size: cover;
   }
 
   &.summary {
-    background: url("../images/kv/summary.jpg") no-repeat center center;
+    background: url('../images/kv/summary.jpg') no-repeat center center;
     background-size: cover;
   }
 }

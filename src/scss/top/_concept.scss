@@ -10,20 +10,21 @@
 
 .concept-section {
   @include section.base($padding: 0);
+  overflow-x: hidden;
 }
 
 .concept_kv {
   width: 100%;
   height: 930px;
-  background: url("../images/top/concept-kv.jpg") no-repeat 10px center,
-  url("../images/top/concept-kv-bg.jpg") repeat-x center center;
+  background: url('../images/top/concept-kv.jpg') no-repeat 10px center,
+    url('../images/top/concept-kv-bg.jpg') repeat-x center center;
   background-size: auto 930px, 1px 930px;
 
   @include section.base($padding: 0);
 
   @media screen and (max-width: content-size.$breakpoint) {
     height: 640px;
-    background: url("../images/top/concept-kv-sp.jpg") no-repeat center top;
+    background: url('../images/top/concept-kv-sp.jpg') no-repeat center top;
     background-size: cover;
     padding-top: 0;
   }
@@ -78,19 +79,19 @@
   @media screen and (max-width: content-size.$breakpoint) {
     min-height: auto;
 
-    [class*="concept_point1"] & {
+    [class*='concept_point1'] & {
       height: 360px;
     }
 
-    [class*="concept_point2"] & {
+    [class*='concept_point2'] & {
       height: 580px;
     }
 
-    [class*="concept_point3"] & {
+    [class*='concept_point3'] & {
       height: 560px;
     }
 
-    [class*="concept_point4"] & {
+    [class*='concept_point4'] & {
       height: 480px;
     }
   }
@@ -102,26 +103,26 @@
   flex-direction: column;
   gap: 16px;
 
-  [class*="concept_point2"] & {
+  [class*='concept_point2'] & {
     position: absolute;
     top: 12px;
     right: 0;
   }
 
-  [class*="concept_point3"] & {
+  [class*='concept_point3'] & {
     position: absolute;
     top: 136px;
     left: 0;
   }
 
-  [class*="concept_point4"] & {
+  [class*='concept_point4'] & {
     position: absolute;
     top: 12px;
     right: 0;
   }
 
   @media screen and (max-width: content-size.$breakpoint) {
-    [class*="concept_point2"] & {
+    [class*='concept_point2'] & {
       position: absolute;
       top: 240px;
       right: auto;
@@ -129,14 +130,14 @@
       text-align: center;
     }
 
-    [class*="concept_point3"] & {
+    [class*='concept_point3'] & {
       position: absolute;
       top: 320px;
       left: 0;
       text-align: center;
     }
 
-    [class*="concept_point4"] & {
+    [class*='concept_point4'] & {
       position: absolute;
       top: 264px;
       right: 0;
@@ -156,7 +157,7 @@
 .photo {
   opacity: 0;
 
-  [class*="animation-start"] & {
+  [class*='animation-start'] & {
     &:nth-child(1) {
       @include animation.expand-in($delay: 300ms);
     }
@@ -171,7 +172,7 @@
     }
   }
 
-  [class*="concept_point1"] & {
+  [class*='concept_point1'] & {
     &:nth-child(1) {
       position: absolute;
       top: 40px;
@@ -188,7 +189,7 @@
       right: -400px;
     }
   }
-  [class*="concept_point2"] & {
+  [class*='concept_point2'] & {
     &:nth-child(1) {
       position: absolute;
       top: -80px;
@@ -207,7 +208,7 @@
       right: -200px;
     }
   }
-  [class*="concept_point3"] & {
+  [class*='concept_point3'] & {
     &:nth-child(1) {
       position: absolute;
       top: -180px;
@@ -232,7 +233,7 @@
       right: -500px;
     }
   }
-  [class*="concept_point4"] & {
+  [class*='concept_point4'] & {
     &:nth-child(1) {
       position: absolute;
       top: 80px;
@@ -252,7 +253,7 @@
     }
   }
   @media screen and (max-width: content-size.$breakpoint) {
-    [class*="concept_point1"] & {
+    [class*='concept_point1'] & {
       &:nth-child(1) {
         position: absolute;
         top: 64px;
@@ -275,7 +276,7 @@
         height: 190px;
       }
     }
-    [class*="concept_point2"] & {
+    [class*='concept_point2'] & {
       &:nth-child(1) {
         position: absolute;
         top: 0;
@@ -302,7 +303,7 @@
         height: 167px;
       }
     }
-    [class*="concept_point3"] & {
+    [class*='concept_point3'] & {
       &:nth-child(1) {
         position: absolute;
         top: -24px;
@@ -337,7 +338,7 @@
         height: 203px;
       }
     }
-    [class*="concept_point4"] & {
+    [class*='concept_point4'] & {
       &:nth-child(1) {
         position: absolute;
         top: 0;

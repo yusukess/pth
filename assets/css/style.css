@@ -83,8 +83,14 @@ legend {
   justify-content: center;
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100%;
   z-index: 10;
+}
+
+.site-header_logo {
+  align-items: center;
+  display: flex;
+  gap: 12px;
 }
 
 .site-header_inner {
@@ -92,6 +98,7 @@ legend {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
+  gap: 24px;
   justify-content: center;
   min-width: 1280px;
   padding: 0 16px;
@@ -102,7 +109,7 @@ legend {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  gap: 4px;
+  gap: 8px;
 }
 
 /*----------------------------------------
@@ -420,7 +427,7 @@ legend {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
 }
 
 .site-footer_navigation {
@@ -438,41 +445,36 @@ legend {
   width: 100%;
 }
 .site-footer .global-navigation li {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
   height: 160px;
   transition: all 0.1s ease;
   width: 25%;
 }
 .site-footer .global-navigation li.structure-facilities {
-  background: url("../images/common/footer/navigation/structure-facilities.jpg") no-repeat center center;
-  background-size: 100%;
+  background-image: url("../images/common/footer/navigation/structure-facilities.jpg");
 }
 .site-footer .global-navigation li.common-facilities {
-  background: url("../images/common/footer/navigation/common-facilities.jpg") no-repeat center center;
-  background-size: 100%;
+  background-image: url("../images/common/footer/navigation/common-facilities.jpg");
 }
 .site-footer .global-navigation li.management-association {
-  background: url("../images/common/footer/navigation/management-association.jpg") no-repeat center center;
-  background-size: 100%;
+  background-image: url("../images/common/footer/navigation/management-association.jpg");
 }
 .site-footer .global-navigation li.disaster-prevention {
-  background: url("../images/common/footer/navigation/disaster-prevention.jpg") no-repeat center center;
-  background-size: 100%;
+  background-image: url("../images/common/footer/navigation/disaster-prevention.jpg");
 }
 .site-footer .global-navigation li.news {
-  background: url("../images/common/footer/navigation/news.jpg") no-repeat center center;
-  background-size: 100%;
+  background-image: url("../images/common/footer/navigation/news.jpg");
 }
 .site-footer .global-navigation li.imagination-land {
-  background: url("../images/common/footer/navigation/imagination-land.jpg") no-repeat center center;
-  background-size: 100%;
+  background-image: url("../images/common/footer/navigation/imagination-land.jpg");
 }
 .site-footer .global-navigation li.gallery-cg {
-  background: url("../images/common/footer/navigation/gallery.jpg") no-repeat center center;
-  background-size: 100%;
+  background-image: url("../images/common/footer/navigation/gallery.jpg");
 }
 .site-footer .global-navigation li.links {
-  background: url("../images/common/footer/navigation/links.jpg") no-repeat center center;
-  background-size: 100%;
+  background-image: url("../images/common/footer/navigation/links.jpg");
 }
 .site-footer .global-navigation li:hover {
   background-size: 105%;
@@ -519,7 +521,7 @@ legend {
 .kv-section {
   height: 420px;
   position: relative;
-  width: 100vw;
+  width: 100%;
 }
 .kv-section.index {
   height: 800px;
@@ -1094,6 +1096,7 @@ legend {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow-x: hidden;
   padding: 0;
   width: 100%;
 }
@@ -3348,7 +3351,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: "Noto Sans JP", sans-serif;
   line-height: 1.8;
-  overflow-x: hidden;
+  min-width: 1280px;
 }
 
 body.active {
@@ -3377,7 +3380,15 @@ br.for-pc {
 br.for-sp {
   display: none;
 }
-@media screen and (max-width: 414px){
+@media screen and (max-width: 1325px){
+  .site-header_logo .logo-text {
+    display: none;
+  }
+  .site-header_inner {
+    min-width: auto;
+  }
+}
+@media screen and (max-width: 1160px){
   .site-header {
     display: none;
   }
@@ -3388,8 +3399,16 @@ br.for-sp {
   .site-header_panel {
     display: block;
   }
+}
+@media screen and (max-width: 430px){
   .site-footer_navigation {
     min-width: auto;
+  }
+  .site-footer .global-navigation li {
+    background-size: 100% auto;
+  }
+  .site-footer .global-navigation li:hover {
+    background-size: 105% auto;
   }
   .site-footer .global-navigation li {
     height: 100px;
@@ -4775,6 +4794,11 @@ br.for-sp {
     padding-top: 75%;
     position: relative;
   }
+  html,
+body {
+    min-width: auto;
+    overflow-x: hidden;
+  }
   br.for-pc {
     display: none;
   }
@@ -4782,7 +4806,7 @@ br.for-sp {
     display: inline-block;
   }
 }
-@media screen and (max-width: 414px) and (max-width: 414px){
+@media screen and (max-width: 430px) and (max-width: 430px){
   .news-card.card-view .news-card_title {
     font-size: 14px;
   }
