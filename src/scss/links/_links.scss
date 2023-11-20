@@ -1,0 +1,42 @@
+@use '../variables/color' as color;
+@use '../variables/font' as font;
+@use '../variables/content-size' as content-size;
+
+@use '../common/section' as section;
+@use '../common/heading' as heading;
+@use '../common/key-value' as key-value;
+
+.links-section {
+  @include section.base($padding: 40px 0 80px, $gap: 40px);
+}
+
+.links-group-section {
+  @include section.base($padding: 0);
+}
+
+.links-group_heading {
+  margin-bottom: 40px;
+  text-align: center;
+  @include heading.h1(color.$blue);
+  @include heading.add-border;
+}
+
+.links-field {
+  @include key-value.vertical;
+}
+
+@media screen and (max-width: content-size.$breakpoint) {
+  .links-section {
+    padding-top: 16px;
+  }
+
+  .links-group-section {
+    padding: 0;
+  }
+
+  .links-group_heading {
+  }
+
+  .links-field {
+  }
+}

@@ -1,0 +1,64 @@
+@use '../variables/color' as color;
+@use '../variables/font' as font;
+@use '../variables/content-size' as content-size;
+
+@use '../common/section' as section;
+@use '../common/heading' as heading;
+@use '../common/paragraph' as paragraph;
+@use '../common/notice' as notice;
+@use '../common/point' as point;
+
+.structure-section {
+  background-color: color.$white;
+  @include section.base($padding: 120px 0 80px, $gap: 80px);
+}
+
+.structure_information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.structure_heading {
+  @include heading.h1($color: color.$blue);
+}
+
+.structure_detail {
+  text-align: center;
+  @include paragraph.base;
+}
+
+.structure_notice {
+  @include notice.base;
+}
+
+.structure-facilities-point {
+  @include point.large;
+  @include point.layout-alternative;
+}
+
+@media screen and (max-width: content-size.$breakpoint) {
+  .structure-section {
+  }
+
+  .structure_information {
+  }
+
+  .structure_heading {
+    text-align: center;
+  }
+
+  .structure_detail {
+    text-align: left;
+  }
+
+  .structure_notice {
+    @include notice.base;
+  }
+
+  .structure-facilities-point {
+    @include point.large;
+    @include point.layout-alternative;
+  }
+}

@@ -1,0 +1,27 @@
+@use '../variables/color' as color;
+@use '../variables/font' as font;
+@use '../variables/content-size' as content-size;
+
+@use '../common/paragraph' as paragraph;
+
+.lightbox-card {
+  width: 307px;
+}
+
+.lightbox-card_description {
+  @include paragraph.for-card;
+}
+
+@media screen and (max-width: content-size.$breakpoint) {
+  .lightbox-card {
+    width: calc(50% - 6px);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .lightbox-card_description {
+  }
+}

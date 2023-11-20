@@ -1,0 +1,42 @@
+@use '../variables/color' as color;
+@use '../variables/font' as font;
+@use '../variables/content-size' as content-size;
+
+.breadcrumb {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  width: content-size.$content-width;
+  margin: 16px 0;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  li + li::before {
+    content: "＞";
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    color: color.$blue;
+    font-size: font.$notice-size;
+  }
+
+  a {
+    text-decoration: none;
+    color: color.$anchor-text;
+    font-size: font.$notice-size;
+  }
+}
+
+@media screen and (max-width: content-size.$breakpoint) {
+  .breadcrumb {
+    width: content-size.$content-width-sp;
+
+    a {
+      font-size: font.$paragraph-sp-size;
+    }
+  }
+}

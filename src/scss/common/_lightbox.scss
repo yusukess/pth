@@ -1,0 +1,34 @@
+@use '../variables/color' as color;
+@use '../variables/font' as font;
+
+@use '../common/paragraph' as paragraph;
+
+.lightbox {
+}
+
+.lightboxOverlay {
+  background-color: color.$blue !important;
+}
+
+.lb-close {
+  position: absolute;
+  top: -40px;
+  display: inline-block !important;
+  margin-left: -24px;
+}
+
+.lb-details {
+  width: 100% !important;
+  text-align: center !important;
+}
+
+.lb-caption {
+  font-size: font.$paragraph-size !important;
+  line-height: font.$paragraph-line-height !important;
+  color: color.$white;
+  text-align: center;
+}
+
+.lb-number {
+  display: none !important;
+}

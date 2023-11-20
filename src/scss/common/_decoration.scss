@@ -1,0 +1,85 @@
+@use '../variables/content-size' as content-size;
+
+@mixin kirakira($vpos:"top", $hpos:"right") {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    width: 79px;
+    height: 83px;
+    content: "";
+    background: url("../images/top/decoration-kirakira.svg") no-repeat center center;
+    background-size: contain;
+
+    @if ($vpos == "top") {
+      top: -40px;
+    } @else {
+      bottom: -40px;
+    }
+
+    @if ($hpos == "right") {
+      right: -40px;
+    } @else {
+      left: -40px;
+    }
+  }
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    &::after {
+      width: 40px;
+      height: 40px;
+
+      @if ($vpos == "top") {
+        top: -10px;
+      } @else {
+        bottom: -10px;
+      }
+
+      @if ($hpos == "right") {
+        right: -10px;
+      } @else {
+        left: -10px;
+      }
+    }
+  }
+}
+
+@mixin wave-top {
+  &::before {
+    position: absolute;
+    top: -65px;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 130px;
+    background: url("../images/common/wave-edge.png") repeat-x center center;
+  }
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    &::before {
+      top: -40px;
+      height: 80px;
+    }
+  }
+}
+
+
+@mixin wave-bottom {
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: -65px;
+    left: 0;
+    width: 100%;
+    height: 130px;
+    background: url("../images/common/wave-edge.png") repeat-x center center;
+    transform: rotate(180deg);
+  }
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    &::after {
+      bottom: -40px;
+      height: 80px;
+    }
+  }
+}

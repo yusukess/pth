@@ -1,0 +1,70 @@
+@use '../variables/color' as color;
+@use '../variables/font' as font;
+@use '../variables/content-size' as content-size;
+
+@use '../common/section' as section;
+@use '../common/heading' as heading;
+@use '../common/decoration' as decoration;
+
+.facilities-section {
+  position: relative;
+  @include section.base($gap: 64px);
+
+  @include decoration.wave-top;
+
+  &:not(:last-child) {
+    @include decoration.wave-bottom;
+  }
+}
+
+.facilities-section_inner {
+  /* hoge */
+}
+
+.facilities_heading {
+  @include heading.h1($color: color.$blue);
+}
+
+.facilities-group-section {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  width: 100%;
+}
+
+.facilities-group_heading {
+  text-align: center;
+  @include heading.h2($color: color.$blue);
+  @include heading.add-border;
+}
+
+.facilities-card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 16px;
+  width: 100%;
+}
+
+@media screen and (max-width: content-size.$breakpoint) {
+  .facilities-section {
+  }
+
+  .facilities-section_inner {
+  }
+
+  .facilities_heading {
+    text-align: center;
+    @include heading.h1($color: color.$blue);
+  }
+
+  .facilities-group-section {
+    gap: 40px;
+  }
+
+  .facilities-group_heading {
+  }
+
+  .facilities-card-list {
+    gap: 8px;
+  }
+}

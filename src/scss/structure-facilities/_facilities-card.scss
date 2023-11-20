@@ -1,0 +1,71 @@
+@use '../variables/color' as color;
+@use '../variables/content-size' as content-size;
+
+@use '../common/heading' as heading;
+@use '../common/paragraph' as paragraph;
+@use '../common/notice' as notice;
+
+.facilities-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 238px;
+  padding: 8px;
+  background-color: color.$white;
+}
+
+.facilities-card_thumbnail {
+  line-height: 0;
+}
+
+.facilities-card_summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.facilities-card_title {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  text-align: center;
+  @include heading.h3(color.$blue);
+}
+
+.facilities-card_detail {
+  @include paragraph.for-card;
+}
+
+.facilities-card_notice {
+  width: 100%;
+  text-align: left;
+  @include notice.for-card();
+}
+
+@media screen and (max-width: content-size.$breakpoint) {
+  .facilities-card {
+    width: calc(50% - 4px);
+  }
+
+  .facilities-card_thumbnail {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .facilities-card_summary {
+  }
+
+  .facilities-card_title {
+    height: 40px;
+  }
+
+  .facilities-card_detail {
+  }
+
+  .facilities-card_notice {
+  }
+}

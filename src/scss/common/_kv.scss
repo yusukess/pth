@@ -1,0 +1,104 @@
+@use '../variables/color' as color;
+@use '../variables/font' as font;
+@use '../variables/content-size' as content-size;
+@use '../common/sub-title' as sub-title;
+@use '../common/slick' as slick;
+
+.kv-section {
+  position: relative;
+  width: 100vw;
+  height: 420px;
+
+  &.index {
+    height: 800px;
+
+    .kv {
+      @include slick.slider-kv;
+    }
+  }
+
+  &.structure-facilities {
+    background: url("../images/kv/structure-facilities.jpg") no-repeat center center;
+    background-size: cover;
+  }
+
+  &.common-facilities {
+    background: url("../images/kv/common-facilities.jpg") no-repeat center center;
+    background-size: cover;
+  }
+
+  &.management-association {
+    background: url("../images/kv/management-association.jpg") no-repeat center center;
+    background-size: cover;
+  }
+
+  &.disaster-prevention {
+    background: url("../images/kv/disaster-prevention.jpg") no-repeat center center;
+    background-size: cover;
+  }
+
+  &.news {
+    background: url("../images/kv/news.jpg") no-repeat center center;
+    background-size: cover;
+  }
+
+  &.imagination-land {
+    background: url("../images/kv/imagination-land.jpg") no-repeat center center;
+    background-size: cover;
+  }
+
+  &.structure-facilities {
+    background: url("../images/kv/structure-facilities.jpg") no-repeat center center;
+    background-size: cover;
+  }
+
+  &.gallery-cg {
+    background: url("../images/kv/gallery.jpg") no-repeat center center;
+    background-size: cover;
+  }
+
+  &.links {
+    background: url("../images/kv/links.jpg") no-repeat center center;
+    background-size: cover;
+  }
+
+  &.access {
+    background: url("../images/kv/access.jpg") no-repeat center center;
+    background-size: cover;
+  }
+
+  &.summary {
+    background: url("../images/kv/summary.jpg") no-repeat center center;
+    background-size: cover;
+  }
+}
+
+.kv_catchcopy {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: font.$heading-font-family;
+  font-size: font.$kv-catchcopy-size;
+  color: color.$kv-text;
+  text-align: center;
+  text-shadow: 0 0 4px color.$black;
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+
+  @include sub-title.add($bottom: -40px);
+}
+
+@media screen and (max-width: content-size.$breakpoint) {
+  .kv-section {
+    height: 280px;
+
+    &.index {
+      height: calc(100vh - 64px);
+    }
+  }
+
+  .kv_catchcopy {
+    font-size: font.$kv-catchcopy-sp-size;
+  }
+}

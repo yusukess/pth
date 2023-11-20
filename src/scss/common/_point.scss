@@ -1,0 +1,121 @@
+@use '../variables/color' as color;
+@use '../variables/content-size' as content-size;
+
+@use '../common/section' as section;
+@use '../common/heading' as heading;
+@use '../common/paragraph' as paragraph;
+@use '../common/notice' as notice;
+
+@mixin _base {
+  & {
+    display: flex;
+    width: 100%;
+
+    .point_information {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .point_detail {
+      text-align: left;
+      @include paragraph.base;
+    }
+
+    .point_notice {
+      @include notice.base;
+    }
+  }
+}
+
+@mixin large {
+  & {
+    gap: 24px;
+    @include _base;
+
+    .point_information {
+      gap: 24px;
+    }
+
+    .point_heading {
+      @include heading.h3($color: color.$blue);
+    }
+  }
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    & {
+      text-align: center;
+    }
+  }
+}
+
+@mixin small {
+  & {
+    gap: 16px;
+    @include _base;
+
+    .point_information {
+      gap: 8px;
+    }
+
+    .point_heading {
+      @include heading.h3($color: color.$blue);
+    }
+
+    .point_sub-image {
+      width: 100%;
+      height: auto;
+
+      &.for-sp { display: none; }
+      &.for-pc { display: inline-block; }
+    }
+  }
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    & {
+      flex-direction: column;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      .point_information {
+        gap: 24px;
+      }
+
+      .point_heading {
+        text-align: center;
+        @include heading.h3($color: color.$blue);
+      }
+
+      .point_sub-image {
+        &.for-sp { display: inline-block; }
+        &.for-pc { display: none; }
+      }
+    }
+  }
+}
+
+@mixin layout-alternative {
+  & {
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+
+    &:nth-child(even) {
+      flex-direction: row;
+    }
+  }
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    & {
+      &:nth-child(odd) {
+        flex-direction: column;
+      }
+
+      &:nth-child(even) {
+        flex-direction: column;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@use '../variables/color' as color;
+@use '../variables/font' as font;
+@use '../variables/content-size' as content-size;
+
+@use '../common/section' as section;
+@use '../common/heading' as heading;
+@use '../common/paragraph' as paragraph;
+@use '../common/tag' as tag;
+
+@import './article';
+
+.single-section {
+  @include section.base(40px 0 80px);
+}
+
+@media screen and (max-width: content-size.$breakpoint) {
+  .single-section {
+    padding-top: 0;
+  }
+}

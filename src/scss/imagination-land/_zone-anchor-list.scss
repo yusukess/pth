@@ -1,0 +1,57 @@
+@use '../variables/content-size' as content-size;
+@use '../common/heading' as heading;
+
+.zone-anchor-list {
+  z-index: 1;
+  display: flex;
+  gap: 16px;
+
+  &.bottom {
+    position: relative;
+    margin-top: 2168px + 100px;
+    padding-bottom: 80px;
+
+    &::before {
+      position: absolute;
+      top: -56px;
+      left: 50%;
+      transform: translateX(-50%);
+      content: "\\　他のゾーンも見てみよう　/";
+      display: block;
+      white-space: nowrap;
+
+      @include heading.h3();
+    }
+  }
+
+  > .zone-anchor {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+  }
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &.middle {
+      display: none;
+    }
+
+    &.bottom {
+      margin-top: 1400px + 100px;
+      padding-bottom: 80px;
+
+      &::before {
+        top: -56px;
+
+        @include heading.h3();
+      }
+    }
+
+    > .zone-anchor {
+      width: 112px;
+      height: 112px;
+    }
+  }
+}

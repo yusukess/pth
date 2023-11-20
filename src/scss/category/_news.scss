@@ -1,0 +1,25 @@
+@use '../variables/color' as color;
+@use '../variables/font' as font;
+@use '../variables/content-size' as content-size;
+
+@use '../common/section' as section;
+@use '../common/heading' as heading;
+@use '../common/paragraph' as paragraph;
+@use '../common/news-card' as news-card;
+
+.news-section {
+  @include section.base($padding: 40px 0, $gap: 0);
+}
+
+.news-card {
+  @include news-card.list-view;
+}
+
+@media screen and (max-width: content-size.$breakpoint) {
+  .news-section {
+    padding-top: 0;
+  }
+  .news-section_inner {
+    gap: 0;
+  }
+}

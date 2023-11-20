@@ -1,0 +1,206 @@
+@use '../variables/color' as color;
+@use '../variables/content-size' as content-size;
+
+@use '../common/shadow' as shadow;
+@use '../common/paragraph' as paragraph;
+@use '../common/notice' as notice;
+@use '../common/text-ellipsis' as text-ellipsis;
+@use '../common/tag' as tag;
+
+@mixin card-view {
+  &.card-view {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-decoration: none;
+    background-color: color.$light-gold;
+    border-radius: 12px;
+    transition: transform .1s ease;
+
+    @include shadow.card;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    .news-card_thumbnail {
+      width: 240px;
+      height: 170px;
+      background: color.$copper;
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+    .news-card_summary {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      height: 182px;
+      padding: 16px;
+    }
+
+    .news-card_post-date {
+      @include notice.for-card(color.$copper);
+    }
+
+    .news-card_title {
+      font-weight: bold;
+      @include paragraph.for-card(color.$copper);
+      @include text-ellipsis.multiple-ellipsis(76px);
+    }
+
+    .news-card_detail {
+      @include notice.for-card(color.$copper);
+      @include text-ellipsis.multiple-ellipsis(52px);
+    }
+  }
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    &.card-view {
+      margin: 0 8px;
+      .news-card_thumbnail {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 130px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .news-card_summary {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        height: auto;
+        padding: 16px;
+      }
+
+      .news-card_post-date {
+        @include notice.for-card(color.$copper);
+      }
+
+      .news-card_title {
+        font-weight: bold;
+        @include paragraph.for-card(color.$copper);
+        @include text-ellipsis.multiple-ellipsis(76px);
+      }
+
+      .news-card_detail {
+        @include notice.for-card(color.$copper);
+        @include text-ellipsis.multiple-ellipsis(52px);
+      }
+    }
+  }
+}
+
+@mixin list-view {
+  &.list-view {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    align-items: center;
+    width: 100%;
+    padding: 16px 0;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    & + & {
+      border-top: solid 1px color.$blue;
+    }
+
+    .news-card_thumbnail {
+      width: 220px;
+      height: 152px;
+
+      img {
+        width: 220px;
+        height: 152px;
+        object-fit: cover;
+      }
+    }
+
+    .news-card_summary {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .news-card_tags {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+    }
+
+    .news-card_tag {
+      @include tag.base;
+    }
+
+    .news-card_post-date {
+      @include notice.base(color.$blue);
+    }
+
+    .news-card_title {
+      font-weight: bold;
+      @include paragraph.base(color.$blue);
+      @include text-ellipsis.multiple-ellipsis(29px);
+    }
+
+    .news-card_detail {
+      @include notice.base();
+      @include text-ellipsis.multiple-ellipsis(43px);
+    }
+  }
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    &.list-view {
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+      padding: 24px 0;
+
+      .news-card_thumbnail {
+        width: 100%;
+        height: 140px;
+
+        img {
+          width: 100%;
+          height: 140px;
+        }
+      }
+
+      .news-card_summary {
+        width: 100%;
+        gap: 4px;
+      }
+
+      .news-card_tags {
+        gap: 8px;
+      }
+
+      .news-card_tag {
+      }
+
+      .news-card_post-date {
+      }
+
+      .news-card_title {
+        @include text-ellipsis.multiple-ellipsis(72px);
+      }
+
+      .news-card_detail {
+        @include text-ellipsis.multiple-ellipsis(60px);
+      }
+    }
+  }
+}

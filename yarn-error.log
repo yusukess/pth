@@ -1,0 +1,71 @@
+Arguments: 
+  /Users/yuusuke_shibakiri/.anyenv/envs/nodenv/versions/16.13.0/bin/node /Users/yuusuke_shibakiri/.anyenv/envs/nodenv/versions/16.13.0/bin/yarn isntall
+
+PATH: 
+  /Users/yuusuke_shibakiri/.anyenv/envs/nodenv/versions/16.13.0/bin:/Users/yuusuke_shibakiri/.anyenv/envs/nodenv/libexec:/Users/yuusuke_shibakiri/.anyenv/envs/nodenv/plugins/nodenv-vars/bin:/Users/yuusuke_shibakiri/.anyenv/envs/nodenv/plugins/nodenv-default-packages/bin:/Users/yuusuke_shibakiri/.anyenv/envs/nodenv/plugins/node-build/bin:/Users/yuusuke_shibakiri/.anyenv/envs/nodenv/shims:/Users/yuusuke_shibakiri/.anyenv/envs/nodenv/bin:/Users/yuusuke_shibakiri/.rbenv/shims:~/.rbenv/shims:/usr/local/bin:/Users/yuusuke_shibakiri/.anyenv/envs/nodenv/shims:/Users/yuusuke_shibakiri/.nodenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/yuusuke_shibakiri/.anyenv/envs/nodenv/shims:/Users/yuusuke_shibakiri/.anyenv/envs/nodenv/bin:/Users/yuusuke_shibakiri/.rbenv/shims:~/.rbenv/shims:/Users/yuusuke_shibakiri/.nodenv/shims:/Users/yuusuke_shibakiri/.nodenv/bin:/Users/yuusuke_shibakiri/.nodebrew/current/bin:/Users/yuusuke_shibakiri/Library/Android/sdk/platform-tools:/Users/yuusuke_shibakiri/.nodebrew/current/bin:/usr/local/bin:/Users/yuusuke_shibakiri/.nodebrew/current/bin:/Users/yuusuke_shibakiri/Library/Android/sdk/platform-tools
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  16.13.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/yuusuke_shibakiri/Local Sites/epicbridal/app/public/wp-content/themes/epicbridal/package.json: Unexpected token } in JSON at position 1267
+      at JSON.parse (<anonymous>)
+      at /Users/yuusuke_shibakiri/.anyenv/envs/nodenv/versions/16.13.0/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/Users/yuusuke_shibakiri/.anyenv/envs/nodenv/versions/16.13.0/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /Users/yuusuke_shibakiri/.anyenv/envs/nodenv/versions/16.13.0/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "epicbridal",
+    "version": "1.0.0",
+    "description": "=== Twenty Twenty === Contributors: the WordPress team Tested up to: 6.0 Stable tag: 2.0 License: GPLv2 or later License URI: http://www.gnu.org/licenses/gpl-2.0.html",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "dev": "webpack --watch"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "autoprefixer": "^10.2.5",
+      "browser-sync": "^2.26.14",
+      "browser-sync-webpack-plugin": "^2.3.0",
+      "css-declaration-sorter": "^6.0.3",
+      "css-loader": "^5.2.4",
+      "mini-css-extract-plugin": "^1.6.0",
+      "postcss": "^8.2.15",
+      "postcss-loader": "^5.3.0",
+      "postcss-sort-media-queries": "^3.9.10",
+      "sass": "^1.32.13",
+      "sass-loader": "^11.1.1",
+      "style-loader": "^2.0.0",
+      "stylelint": "^13.13.1",
+      "stylelint-webpack-plugin": "^2.1.1",
+      "stylelint-config-prettier": "^9.0.3",
+      "stylelint-config-recess-order": "^3.0.0",
+      "stylelint-config-recommended-scss": "4.3.0",
+      "stylelint-scss": "3.21.0",
+      "webpack-dev-server": "^3.11.2",
+      "webpack": "^5.74.0",
+      "webpack-cli": "^4.10.0"
+    },
+    "browserslist": [
+      "last 2 version",
+      "ie >= 11",
+      "Android >=4"
+    ],
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

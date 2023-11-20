@@ -1,0 +1,368 @@
+@use '../variables/color' as color;
+@use '../variables/font' as font;
+@use '../variables/content-size' as content-size;
+
+@use '../common/heading' as heading;
+@use '../common/section' as section;
+@use '../common/paragraph' as paragraph;
+@use '../common/animation' as animation;
+@use '../common/decoration' as decoration;
+
+.concept-section {
+  @include section.base($padding: 0);
+}
+
+.concept_kv {
+  width: 100%;
+  height: 930px;
+  background: url("../images/top/concept-kv.jpg") no-repeat 10px center,
+  url("../images/top/concept-kv-bg.jpg") repeat-x center center;
+  background-size: auto 930px, 1px 930px;
+
+  @include section.base($padding: 0);
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    height: 640px;
+    background: url("../images/top/concept-kv-sp.jpg") no-repeat center top;
+    background-size: cover;
+    padding-top: 0;
+  }
+}
+
+.concept_kv_inner {
+  position: relative;
+  height: 930px;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    height: 640px;
+  }
+}
+
+.concept_heading {
+  position: absolute;
+  bottom: 120px;
+  right: 0;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    top: 120px;
+    left: -8px;
+    width: 320px;
+    height: auto;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.concept_point {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  @include section.base($padding: 120px 0);
+
+  &:nth-child(even) {
+    background-color: color.$light-blue;
+
+    @include decoration.wave-top;
+    @include decoration.wave-bottom;
+  }
+}
+
+.concept_point_inner {
+  position: relative;
+  /* TODO: 仮置きのため要調整 */
+  min-height: 800px;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    min-height: auto;
+
+    [class*="concept_point1"] & {
+      height: 360px;
+    }
+
+    [class*="concept_point2"] & {
+      height: 580px;
+    }
+
+    [class*="concept_point3"] & {
+      height: 560px;
+    }
+
+    [class*="concept_point4"] & {
+      height: 480px;
+    }
+  }
+}
+
+.concept_point_description {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  [class*="concept_point2"] & {
+    position: absolute;
+    top: 12px;
+    right: 0;
+  }
+
+  [class*="concept_point3"] & {
+    position: absolute;
+    top: 136px;
+    left: 0;
+  }
+
+  [class*="concept_point4"] & {
+    position: absolute;
+    top: 12px;
+    right: 0;
+  }
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    [class*="concept_point2"] & {
+      position: absolute;
+      top: 240px;
+      right: auto;
+      left: 0;
+      text-align: center;
+    }
+
+    [class*="concept_point3"] & {
+      position: absolute;
+      top: 320px;
+      left: 0;
+      text-align: center;
+    }
+
+    [class*="concept_point4"] & {
+      position: absolute;
+      top: 264px;
+      right: 0;
+      text-align: center;
+    }
+  }
+}
+
+.concept_point_heading {
+  @include heading.h1($color: color.$blue);
+}
+
+.concept_point_detail {
+  @include paragraph.base($color: color.$blue);
+}
+
+.photo {
+  opacity: 0;
+
+  [class*="animation-start"] & {
+    &:nth-child(1) {
+      @include animation.expand-in($delay: 300ms);
+    }
+    &:nth-child(2) {
+      @include animation.expand-in($delay: 800ms);
+    }
+    &:nth-child(3) {
+      @include animation.expand-in($delay: 1300ms);
+    }
+    &:nth-child(4) {
+      @include animation.expand-in($delay: 1800ms);
+    }
+  }
+
+  [class*="concept_point1"] & {
+    &:nth-child(1) {
+      position: absolute;
+      top: 40px;
+      left: -120px;
+    }
+    &:nth-child(2) {
+      position: absolute;
+      bottom: 0;
+      left: 204px;
+    }
+    &:nth-child(3) {
+      position: absolute;
+      top: 0;
+      right: -400px;
+    }
+  }
+  [class*="concept_point2"] & {
+    &:nth-child(1) {
+      position: absolute;
+      top: -80px;
+      left: -300px;
+    }
+
+    &:nth-child(2) {
+      position: absolute;
+      bottom: 40px;
+      right: 260px;
+    }
+
+    &:nth-child(3) {
+      position: absolute;
+      bottom: 0;
+      right: -200px;
+    }
+  }
+  [class*="concept_point3"] & {
+    &:nth-child(1) {
+      position: absolute;
+      top: -180px;
+      left: -300px;
+    }
+
+    &:nth-child(2) {
+      position: absolute;
+      bottom: 80px;
+      left: 0;
+    }
+
+    &:nth-child(3) {
+      position: absolute;
+      bottom: 0;
+      left: 324px;
+    }
+
+    &:nth-child(4) {
+      position: absolute;
+      top: -40px;
+      right: -500px;
+    }
+  }
+  [class*="concept_point4"] & {
+    &:nth-child(1) {
+      position: absolute;
+      top: 80px;
+      left: -360px;
+    }
+
+    &:nth-child(2) {
+      position: absolute;
+      bottom: -32px;
+      right: 320px;
+    }
+
+    &:nth-child(3) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  @media screen and (max-width: content-size.$breakpoint) {
+    [class*="concept_point1"] & {
+      &:nth-child(1) {
+        position: absolute;
+        top: 64px;
+        left: 8px;
+        width: 106px;
+        height: 188px;
+      }
+      &:nth-child(2) {
+        position: absolute;
+        bottom: -24px;
+        left: 132px;
+        width: 106px;
+        height: 188px;
+      }
+      &:nth-child(3) {
+        position: absolute;
+        top: -20px;
+        right: -8px;
+        width: 230px;
+        height: 190px;
+      }
+    }
+    [class*="concept_point2"] & {
+      &:nth-child(1) {
+        position: absolute;
+        top: 0;
+        left: -8px;
+        width: 177px;
+        height: 177px;
+      }
+
+      &:nth-child(2) {
+        position: absolute;
+        bottom: 0;
+        right: 8px;
+        width: 99px;
+        height: 99px;
+      }
+
+      &:nth-child(3) {
+        position: absolute;
+        bottom: auto;
+        top: 48px;
+        right: auto;
+        left: 184px;
+        width: 122px;
+        height: 167px;
+      }
+    }
+    [class*="concept_point3"] & {
+      &:nth-child(1) {
+        position: absolute;
+        top: -24px;
+        left: -8px;
+        width: 220px;
+        height: 95px;
+      }
+
+      &:nth-child(2) {
+        position: absolute;
+        bottom: auto;
+        top: 88px;
+        left: 16px;
+        width: 120px;
+        height: 89px;
+      }
+
+      &:nth-child(3) {
+        position: absolute;
+        bottom: auto;
+        top: 200px;
+        left: -8px;
+        width: 102px;
+        height: 102px;
+      }
+
+      &:nth-child(4) {
+        position: absolute;
+        top: 88px;
+        right: 0;
+        width: 250px;
+        height: 203px;
+      }
+    }
+    [class*="concept_point4"] & {
+      &:nth-child(1) {
+        position: absolute;
+        top: 0;
+        left: -8px;
+        width: 181px;
+        height: 174px;
+      }
+
+      &:nth-child(2) {
+        position: absolute;
+        bottom: auto;
+        top: 100px;
+        right: 112px;
+        width: 79px;
+        height: 147px;
+      }
+
+      &:nth-child(3) {
+        position: absolute;
+        bottom: auto;
+        top: 60px;
+        right: 16px;
+        width: 79px;
+        height: 147px;
+      }
+    }
+  }
+}

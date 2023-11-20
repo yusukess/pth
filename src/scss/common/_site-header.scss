@@ -1,0 +1,293 @@
+@use '../variables/color' as color;
+@use '../variables/font' as font;
+@use '../variables/content-size' as content-size;
+@use '../variables/z-index' as z-index;
+@use '../common/sub-title' as sub-title;
+
+.site-header {
+  position: fixed;
+  top: 0;
+  z-index: z-index.$header-layer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100px;
+  background-color: color.$header-background;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    display: none;
+  }
+}
+
+.site-header_inner {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-width: content-size.$site-width;
+  padding: 0 16px;
+}
+
+.site-header_navigation {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 4px;
+  align-items: end;
+}
+
+/*----------------------------------------
+  構造・設備 〜 居住者向けリンク集のナビゲーション
+ ----------------------------------------*/
+.site-header .global-navigation {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  height: 32px;
+  margin-left: auto;
+
+  li {
+    position: relative;
+    min-width: 96px;
+    font-family: font.$heading-font-family;
+
+    @include sub-title.add($bottom:2px);
+
+    &::after {
+      font-size: font.$header-nav-sub-size;
+      line-height: 1;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    a {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      font-size: font.$header-nav-main-size;
+      color: color.$header-text;
+      text-align: center;
+      text-decoration: none;
+
+      &::after {
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+        content: '';
+        transform: scale(0, 1);
+        transform-origin: left top;
+        transition: transform .3s;
+      }
+
+      &:hover::after {
+        transform: scale(1, 1);
+      }
+    }
+  }
+}
+
+/*----------------------------------------
+  アクセス・マップ 〜 居住者専用ページのナビゲーション
+ ----------------------------------------*/
+.site-header .sub-navigation {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  height: 16px;
+
+  li {
+    display: flex;
+    align-items: center;
+    font-family: font.$heading-font-family;
+
+    &::before {
+      display: block;
+      font-size: font.$header-nav-sub-size;
+      line-height: 1;
+      color: #fff;
+      white-space: nowrap;
+      pointer-events: none;
+      content: "▶︎";
+      transform: translateX(-50%);
+    }
+
+    a {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      font-size: font.$header-nav-main-size;
+      line-height: 1;
+      color: color.$header-text;
+      text-align: center;
+      text-decoration: none;
+
+      &::after {
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+        content: '';
+        transform: scale(0, 1);
+        transform-origin: left top;
+        transition: transform .3s;
+      }
+
+      &:hover::after {
+        transform: scale(1, 1);
+      }
+    }
+  }
+}
+
+.site-header-sp {
+  display: none;
+
+  z-index: z-index.$header-layer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 48px;
+  padding: 0 8px;
+  background-color: color.$header-background;
+  box-sizing: border-box;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .site-header_logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 104px;
+      height: 32px;
+    }
+  }
+
+  .site-header_hamburger {
+    width: 48px;
+    height: 100%;
+    background-color: transparent; /*buttonタグデフォルトスタイルを打ち消し*/
+    border-color: transparent; /*buttonタグデフォルトスタイルを打ち消し*/
+    z-index: 9999;
+
+    &.active {
+      transform: translateX(0);
+
+      span {
+        background-color: color.$blue;
+
+        &:nth-child(1) {
+          top: 5px;
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          top: -13px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    span {
+      width: 100%;
+      height: 1px;
+      background-color: color.$white;
+      position: relative;
+      transition: ease .4s; /*ハンバーガーメニュークリック時の三本線の動きを遅延*/
+      display: block;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        margin: 8px 0;
+      }
+
+      &:nth-child(3) {
+        top: 0;
+      }
+    }
+  }
+}
+
+.site-header_panel {
+  display: none;
+
+  z-index: z-index.$header-layer;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: color.$header-panel-background;
+  transition: ease .4s;
+  transform: translateX(100%);
+
+  &.active {
+    transform: initial;
+  }
+
+  .global-navigation {
+    display: flex;
+    flex-direction: column;
+    padding-top: 64px;
+
+    li {
+      position: relative;
+      height: 56px;
+
+      @include sub-title.add($bottom:2px);
+
+      a {
+        display: flex;
+        align-items: center;
+        padding: 0 0 0 24px;
+        text-decoration: none;
+        color: color.$blue;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .sub-navigation {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      position: relative;
+      height: 56px;
+      @include sub-title.add($bottom:2px);
+
+      a {
+        display: flex;
+        align-items: center;
+        padding: 0 0 0 24px;
+        text-decoration: none;
+        color: color.$blue;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    display: block;
+  }
+}

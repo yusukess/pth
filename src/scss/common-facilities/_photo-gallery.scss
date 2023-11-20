@@ -1,0 +1,72 @@
+@use '../variables/color' as color;
+@use '../variables/font' as font;
+@use '../variables/content-size' as content-size;
+
+@use '../common/slick' as slick;
+@use '../common/section' as section;
+@use '../common/heading' as heading;
+@use '../common/paragraph' as paragraph;
+
+.photo-gallery-section {
+  @include section.base($padding: 40px 0 80px, $gap: 80px);
+}
+
+.area-group-section {
+  @include section.base($padding: 0);
+}
+
+.photo-gallery_heading {
+  @include heading.h1(color.$blue);
+  @include heading.add-border;
+}
+
+.photo-gallery_slider {
+  @include slick.slider-gallery;
+}
+
+.photo-gallery_information {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.photo-gallery_title {
+  width: 100%;
+  text-align: left;
+  @include heading.h2(color.$blue);
+}
+
+.photo-gallery_detail {
+  width: 100%;
+  text-align: left;
+  @include paragraph.base;
+}
+
+@media screen and (max-width: content-size.$breakpoint) {
+  .photo-gallery-section {
+    padding-top: 0;
+  }
+
+  .area-group-section {
+    padding: 0;
+  }
+
+  .area-group-section_inner {
+    gap: 24px;
+  }
+
+  .photo-gallery_heading {
+  }
+
+  .photo-gallery_slider {
+  }
+
+  .photo-gallery_information {
+  }
+
+  .photo-gallery_title {
+  }
+
+  .photo-gallery_detail {
+  }
+}

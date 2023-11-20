@@ -1,0 +1,13 @@
+@use '../variables/color' as color;
+@use '../common/notice' as notice;
+
+@mixin base {
+  padding: 2px 8px;
+  background-color: color.$blue;
+  @include notice.base($color: color.$white);
+
+  a {
+    text-decoration: none;
+    color: color.$white;
+  }
+}

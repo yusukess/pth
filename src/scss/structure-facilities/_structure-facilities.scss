@@ -1,0 +1,12 @@
+@use '../variables/color' as color;
+
+@import 'page-anchor';
+@import 'structure';
+@import 'facilities';
+@import 'facilities-card';
+
+[class*="structure-facilities"] {
+  main {
+    background-color: color.$light-blue;
+  }
+}

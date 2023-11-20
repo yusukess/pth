@@ -1,0 +1,55 @@
+@use '../variables/color' as color;
+@use '../variables/font' as font;
+@use '../variables/content-size' as content-size;
+
+@use '../common/section' as section;
+@use '../common/heading' as heading;
+@use '../common/paragraph' as paragraph;
+@use '../common/notice' as notice;
+
+.management-association-section {
+  @include section.base($padding: 40px 0 80px);
+}
+
+.information-section {
+  @include section.base($padding: 0);
+}
+
+.information_heading {
+  text-align: center;
+  @include heading.h1($color: color.$blue);
+}
+
+.information_detail {
+  @include paragraph.base;
+}
+
+.information_signature {
+  width: 100%;
+  text-align: right;
+  @include paragraph.base;
+}
+
+@media screen and (max-width: content-size.$breakpoint) {
+  .management-association-section {
+    padding-top: 16px;
+  }
+
+  .management-association-section_inner {
+    gap: 40px;
+  }
+
+  .information-section {
+    padding: 0;
+  }
+
+  .information_heading {
+  }
+
+  .information_detail {
+  }
+
+  .information_signature {
+  }
+
+}

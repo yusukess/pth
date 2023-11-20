@@ -1,0 +1,64 @@
+@use '../variables/color' as color;
+@use '../variables/font' as font;
+@use '../variables/content-size' as content-size;
+
+@use '../common/section' as section;
+@use '../common/heading' as heading;
+@use '../common/paragraph' as paragraph;
+@use '../common/notice' as notice;
+@use '../common/point' as point;
+
+@import 'activity-introduction';
+
+.disaster-prevention-section {
+  background-color: color.$white;
+  @include section.base($padding: 40px 0 80px, $gap: 80px);
+}
+
+.disaster-prevention_information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.disaster-prevention_heading {
+  @include heading.h1($color: color.$blue);
+}
+
+.disaster-prevention_detail {
+  text-align: center;
+  @include paragraph.base;
+}
+
+.disaster-prevention_notice {
+  @include notice.base;
+}
+
+.disaster-prevention-point {
+  @include point.small;
+}
+
+@media screen and (max-width: content-size.$breakpoint) {
+  .disaster-prevention-section {
+    padding-top: 16px;
+  }
+
+  .disaster-prevention_information {
+  }
+
+  .disaster-prevention_heading {
+    text-align: center;
+  }
+
+  .disaster-prevention_detail {
+    text-align: left;
+  }
+
+  .disaster-prevention_notice {
+  }
+
+  .disaster-prevention-point {
+    gap: 24px;
+  }
+}

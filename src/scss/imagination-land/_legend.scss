@@ -1,0 +1,67 @@
+@use '../variables/font' as font;
+@use '../variables/color' as color;
+@use '../variables/content-size' as content-size;
+
+@use '../common/section' as section;
+@use '../common/heading' as heading;
+@use '../common/paragraph' as paragraph;
+
+.legend-section {
+  background: color.$light-blue url("../images/imagination-land/legend-bg.png") no-repeat center center;
+  background-size: cover;
+  @include section.base($padding: 64px 0 240px);
+}
+
+.legend_heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: font.$legend-heading1-size !important;
+  @include heading.h1(color.$blue);
+
+  small {
+    margin-top: 4px;
+    @include heading.h3(color.$blue);
+  }
+}
+
+.legend_story {
+  margin-top: 24px;
+  text-align: center;
+  @include paragraph.base(color.$blue);
+}
+
+@media screen and (max-width: content-size.$breakpoint) {
+  .legend-section {
+    position: relative;
+    background: color.$legend-blue url("../images/imagination-land/legend-bg.png") no-repeat right bottom;
+    background-size: 800px 470px;
+    padding-bottom: 280px;
+
+    &::before {
+      content: "";
+      width: 100vw;
+      height: 80px;
+      background: linear-gradient(color.$white, transparent);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .legend-section_inner {
+    gap: 24px;
+  }
+
+  .legend_heading {
+    font-size: font.$legend-heading1-size-sp !important;
+
+    small {
+      font-size: font.$notice-sp-size;
+    }
+  }
+
+  .legend_story {
+    margin-top: 0;
+  }
+}

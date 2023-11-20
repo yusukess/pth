@@ -1,0 +1,16 @@
+@use '../variables/color' as color;
+@use '../variables/font' as font;
+
+@mixin base($color: color.$notice-text) {
+  color: $color;
+  font-family: font.$base-font-family;
+  font-size: font.$notice-size;
+  line-height: font.$paragraph-line-height;
+}
+
+@mixin for-card($color: color.$notice-text) {
+  color: $color;
+  font-family: font.$base-font-family;
+  font-size: font.$notice-size;
+  line-height: font.$card-paragraph-line-height;
+}

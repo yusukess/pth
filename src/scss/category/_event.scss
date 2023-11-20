@@ -1,0 +1,58 @@
+@use '../variables/color' as color;
+@use '../variables/font' as font;
+@use '../variables/content-size' as content-size;
+
+@use '../common/slick' as slick;
+@use '../common/section' as section;
+@use '../common/heading' as heading;
+@use '../common/paragraph' as paragraph;
+
+.event-section {
+  @include section.base($padding: 40px 0 80px, $gap: 80px);
+}
+
+.event-message {
+  text-align: center;
+  @include heading.h1($color: color.$blue);
+}
+
+.event-group-section {
+  @include section.base($padding: 0);
+}
+
+.event_heading {
+  @include heading.h1(color.$blue);
+  @include heading.add-border;
+}
+
+.event_slider {
+  @include slick.slider-gallery;
+}
+
+.event_information {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.event_title {
+  width: 100%;
+  text-align: left;
+  @include heading.h2(color.$blue);
+}
+
+.event_detail {
+  width: 100%;
+  text-align: left;
+  @include paragraph.base;
+}
+
+@media screen and (max-width: content-size.$breakpoint) {
+  .event-section {
+    padding-top: 0;
+  }
+
+  .event-group-section {
+    padding: 0;
+  }
+}

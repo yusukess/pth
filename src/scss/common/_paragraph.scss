@@ -1,0 +1,25 @@
+@use '../variables/color' as color;
+@use '../variables/font' as font;
+@use '../variables/content-size' as content-size;
+
+@mixin base($color: color.$base-text) {
+  color: $color;
+  font-family: font.$base-font-family;
+  font-size: font.$paragraph-size;
+  line-height: font.$paragraph-line-height;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    font-size: font.$paragraph-sp-size;
+  }
+}
+
+@mixin for-card($color: color.$base-text) {
+  color: $color;
+  font-family: font.$base-font-family;
+  font-size: font.$paragraph-size;
+  line-height: font.$card-paragraph-line-height;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    font-size: font.$paragraph-sp-size;
+  }
+}

@@ -1,0 +1,22 @@
+@use '../variables/font' as font;
+
+@mixin add($bottom: auto, $top: auto) {
+  &::after {
+    position: absolute;
+    top: $top;
+    bottom: $bottom;
+    left: 50%;
+    display: block;
+    color: #fff;
+    transform: translateX(-50%);
+  }
+
+  &.structure-facilities::after { content: 'Structure & Facilities'; }
+  &.common-facilities::after { content: 'Common Facilities'; }
+  &.management-association::after { content: 'Management Association'; }
+  &.disaster-prevention::after { content: 'Disaster Prevention'; }
+  &.news::after { content: 'News/Events'; }
+  &.imagination-land::after { content: 'Imagination Land'; }
+  &.gallery-cg::after { content: 'Gallery & CG Collection'; }
+  &.links::after { content: 'Links for Residents'; }
+}

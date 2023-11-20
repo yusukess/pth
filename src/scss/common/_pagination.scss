@@ -1,0 +1,69 @@
+@use '../variables/color' as color;
+@use '../variables/font' as font;
+@use '../variables/content-size' as content-size;
+
+.wp-pagenavi {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 40px 0;
+
+  .pages,
+  .extend　{
+    display: none;
+  }
+
+  .current,
+  .page,
+  .first,
+  .last {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+  }
+
+  .current {
+    color: color.$white;
+    background-color: color.$blue;
+  }
+
+  .page,
+  .first,
+  .last {
+    box-sizing: border-box;
+    color: color.$blue;
+    background-color: color.$white;
+    border: color.$blue solid 1px;
+  }
+}
+
+.article_pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+
+  a {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: color.$blue;
+    border-radius: 8px;
+    font-size: font.$paragraph-size;
+
+    &:hover {
+      background-color: color.$light-blue;
+    }
+  }
+}
+
+@media screen and (max-width: content-size.$breakpoint) {
+  .article_pagination {
+    a {
+      font-size: font.$paragraph-sp-size;
+    }
+  }
+}

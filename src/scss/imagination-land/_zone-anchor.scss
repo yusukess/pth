@@ -1,0 +1,54 @@
+@use '../variables/font' as font;
+@use '../variables/color' as color;
+@use '../variables/content-size' as content-size;
+
+@use '../common/heading' as heading;
+@use '../common/paragraph' as paragraph;
+@use '../common/notice' as notice;
+
+.zone-anchor {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  line-height: font.$card-paragraph-line-height;
+  color: color.$white;
+  box-shadow: 0 4px 4px rgba(color.$black, .25);
+
+  @include heading.zone-anchor(color.$white);
+
+  &.greeting { background-color: rgba(color.$zone-blue, .7); }
+  &.attractive { background-color: rgba(color.$zone-yellow, .7); }
+  &.friendship { background-color: rgba(color.$zone-green, .7); }
+  &.peaceful { background-color: rgba(color.$zone-purple, .7); }
+  &.bright { background-color: rgba(color.$zone-pink, .7); }
+
+  &:hover {
+    opacity: .8;
+  }
+
+  &.current::before {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    content: "";
+    width: 80px;
+    height: 80px;
+    background: url("../images/imagination-land/anchor.svg") no-repeat center center;
+    background-size: 100%;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,.2));
+
+    @media screen and (max-width: content-size.$breakpoint) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  small {
+    line-height: font.$card-paragraph-line-height !important;
+    @include notice.base(color.$white);
+  }
+}

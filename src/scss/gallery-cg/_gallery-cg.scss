@@ -1,0 +1,67 @@
+@use '../variables/color' as color;
+@use '../variables/font' as font;
+@use '../variables/content-size' as content-size;
+
+@use '../common/section' as section;
+@use '../common/heading' as heading;
+@use '../common/paragraph' as paragraph;
+
+@import 'lightbox-card';
+
+.gallery-section,
+.cg-section {
+  @include section.base($padding: 40px 0 80px);
+}
+
+.gallery_heading,
+.cg_heading {
+  @include heading.h1(color.$blue);
+}
+
+.gallery-group,
+.cg-group {
+  @include section.base($padding: 0 0 40px);
+}
+
+.gallery-group_heading,
+.cg-group_heading {
+  @include heading.h2(color.$blue);
+  @include heading.add-border;
+}
+
+.gallery,
+.cg {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+@media screen and (max-width: content-size.$breakpoint) {
+  .gallery-section,
+  .cg-section {
+    padding-top: 0;
+  }
+
+  .gallery_heading,
+  .cg_heading {
+  }
+
+  .gallery-group,
+  .cg-group {
+    padding: 0;
+  }
+
+  .gallery-group_heading,
+  .cg-group_heading {
+  }
+
+  .gallery,
+  .cg {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}

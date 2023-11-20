@@ -1,0 +1,69 @@
+@use './variables/font' as font;
+@use './variables/content-size' as content-size;
+
+@import 'common/reset';
+@import 'common/site-header';
+@import 'common/site-footer';
+@import 'common/kv';
+@import 'common/breadcrumb';
+@import 'common/pagination';
+@import 'common/lightbox';
+
+@import 'top/top';
+@import 'structure-facilities/structure-facilities';
+@import 'common-facilities/common-facilities';
+@import 'management-association/management-association';
+@import 'category/category';
+@import 'single/single';
+@import 'gallery-cg/gallery-cg';
+@import 'links/links';
+@import 'summary/summary';
+@import 'disaster-prevention/disaster-prevention';
+@import 'imagination-land/imagination-land';
+@import 'access/access';
+
+html,
+body {
+  font-family: font.$base-font-family;
+  line-height: font.$base-line-height;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+body.active {
+  height: 100%;
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+button {
+  border: none;
+}
+
+br {
+  &.for-pc {
+    display: inline-block;
+
+    @media screen and (max-width: content-size.$breakpoint) {
+      display: none;
+    }
+  }
+  &.for-sp {
+    display: none;
+
+    @media screen and (max-width: content-size.$breakpoint) {
+      display: inline-block;
+    }
+  }
+}

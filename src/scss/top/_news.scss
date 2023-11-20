@@ -1,0 +1,80 @@
+@use '../variables/color' as color;
+@use '../variables/font' as font;
+@use '../variables/content-size' as content-size;
+
+@use '../common/heading' as heading;
+@use '../common/section' as section;
+@use '../common/decoration' as decoration;
+@use '../common/button' as button;
+@use '../common/shadow' as shadow;
+@use '../common/paragraph' as paragraph;
+@use '../common/notice' as notice;
+@use '../common/slick' as slick;
+@use '../common/news-card' as news-card;
+@use '../common/animation' as animation;
+
+.recent-news-section {
+  @include section.base();
+}
+
+.recent-news-section_inner {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    width: 1px;
+    height: 100px;
+    content: "";
+    background-color: color.$copper;
+    transform-origin: left top;
+
+    @include animation.dripping;
+  }
+}
+
+.recent-news_heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+
+  @include heading.top-news-heading($color: color.$copper);
+  @include decoration.kirakira("top", "left");
+
+  small {
+    font-family: font.$base-font-family;
+    font-size: font.$paragraph-size;
+  }
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    small {
+      font-size: font.$paragraph-sp-size;
+    }
+  }
+}
+
+.recent-news_slider {
+  position: relative;
+  width: 100%;
+}
+
+.news-card {
+  @include news-card.card-view;
+}
+
+.slider_card-list {
+  @include slick.slider-multiple;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.recent-news_button {
+  background-color: color.$gold;
+  @include button.base;
+}

@@ -1,0 +1,14 @@
+@use '../variables/color' as color;
+
+@import 'introduction';
+@import 'news';
+@import '../common/news-card';
+@import '../common/slick';
+@import 'concept';
+@import 'movie';
+
+[class*="home"] {
+  main {
+    background-color: color.$white;
+  }
+}

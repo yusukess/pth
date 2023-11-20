@@ -1,0 +1,29 @@
+@use '../variables/color' as color;
+@use '../variables/font' as font;
+
+@use '../common/heading' as heading;
+@use '../common/paragraph' as paragraph;
+@use '../common/decoration' as decoration;
+@use '../common/section' as section;
+
+.introduction-section {
+  @include section.base;
+}
+
+.introduction-section_inner {
+  /* hoge */
+}
+
+.introduction_heading {
+  position: relative;
+  text-align: center;
+
+  @include heading.h1($color: color.$copper);
+  @include decoration.kirakira;
+}
+
+.introduction_detail {
+  text-align: center;
+
+  @include paragraph.base($color: color.$copper);
+}

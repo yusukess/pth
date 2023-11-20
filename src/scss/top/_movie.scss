@@ -1,0 +1,104 @@
+@use '../variables/color' as color;
+@use '../variables/font' as font;
+@use '../variables/content-size' as content-size;
+
+@use '../common/heading' as heading;
+@use '../common/section' as section;
+@use '../common/paragraph' as paragraph;
+@use '../common/decoration' as decoration;
+@use '../common/animation' as animation;
+
+.movie-section {
+  position: relative;
+  background-color: color.$light-gold;
+
+  @include section.base($padding: 160px 0 160px, $gap:80px);
+
+  &::before {
+    position: absolute;
+    top: -257px;
+    content: "";
+    width: 100%;
+    height: 257px;
+    background: url("../images/top/movie-section-edge.png") repeat-x center center;
+    background-size: contain;
+
+    @media screen and (max-width: content-size.$breakpoint) {
+      top: -100px;
+      height: 100px;
+    }
+  }
+}
+
+.movie-section_inner {
+  padding-top: 24px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: -180px;
+    left: 50%;
+    width: 1px;
+    height: 100px;
+    content: "";
+    background-color: color.$copper;
+    transform-origin: left top;
+
+    @include animation.dripping;
+  }
+}
+
+.movie_heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+
+  @include heading.h1($color: color.$copper);
+  @include decoration.kirakira("top", "right");
+
+  &::before {
+    position: absolute;
+    left: -126px;
+    top: 50%;
+    width: 96px;
+    height: 149px;
+    content: "";
+    background: url("../images/top/decoration-fairy.svg") no-repeat center center;
+    background-size: contain;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    right: -44px !important;
+    top: 8px !important;
+  }
+
+  small {
+    font-family: font.$base-font-family;
+    font-size: font.$paragraph-size;
+  }
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    &::before {
+      left: -56px;
+      width: 48px;
+      height: 74px;
+    }
+  }
+}
+
+.movie-player {
+  width: 640px;
+  height: 360px;
+  background-color: color.$black;
+  background:
+          url("../images/top/movie-edge.svg") no-repeat left center,
+          url("../images/top/movie-edge.svg") no-repeat right center;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    width: calc(100% - 16px);
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}

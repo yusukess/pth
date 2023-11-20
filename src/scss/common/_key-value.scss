@@ -1,0 +1,118 @@
+@use '../variables/color' as color;
+@use '../variables/content-size' as content-size;
+
+@use '../common/heading' as heading;
+@use '../common/paragraph' as paragraph;
+
+@mixin vertical {
+  &.field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    .key {
+      width: 100%;
+      text-align: left;
+      @include heading.h3(color.$blue);
+      @include heading.add-box;
+    }
+
+    .value {
+      width: 100%;
+      text-align: left;
+      padding-left: 16px;
+      @include paragraph.base;
+    }
+  }
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    &.field {
+
+      &:not(:last-child) {
+      }
+
+      .key {
+      }
+
+      .value {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+@mixin horizontal {
+  &.field {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    .key {
+      width: 120px;
+      height: 30px;
+      text-align: center;
+      background-color: color.$blue;
+      @include paragraph.base(color.$white);
+    }
+
+    .value {
+      text-align: left;
+      @include paragraph.base;
+    }
+  }
+  @media screen and (max-width: content-size.$breakpoint) {
+    &.field {
+      gap: 8px;
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+
+      .key {
+        width: 80px;
+        height: 24px;
+        vertical-align: middle;
+      }
+
+      .value {
+        text-align: left;
+        @include paragraph.base;
+      }
+    }
+  }
+}
+
+@mixin vertical-non-value {
+  &.field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .key {
+      width: 100%;
+      text-align: left;
+      @include paragraph.base();
+      @include heading.add-box;
+    }
+  }
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    &.field {
+
+      .key {
+        @include heading.add-box($height: 52px);
+      }
+    }
+  }
+}

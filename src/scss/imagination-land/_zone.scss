@@ -1,0 +1,192 @@
+@use '../variables/font' as font;
+@use '../variables/color' as color;
+@use '../variables/content-size' as content-size;
+
+@use '../common/section' as section;
+@use '../common/heading' as heading;
+@use '../common/paragraph' as paragraph;
+
+.zone-section {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 2168px; /* greeting-zoneの高さに合わせる */
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: all .5s ease;
+  box-sizing: border-box;
+
+  @include section.base($padding: 120px 0 80px);
+
+  &.current {
+    opacity: 1;
+  }
+
+  &.greeting {
+    background-color: color.$zone-blue-bg;
+  }
+  &.attractive {
+    background-color: color.$zone-yellow-bg;
+  }
+  &.friendship {
+    background-color: color.$zone-green-bg;
+  }
+  &.peaceful {
+    background-color: color.$zone-purple-bg;
+  }
+  &.bright {
+    background-color: color.$zone-pink-bg;
+  }
+}
+
+.zone_heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  [class*="greeting"] & {
+    @include heading.zone-h1(color.$zone-blue-text);
+    small { @include paragraph.base(color.$zone-blue-text); }
+  }
+  [class*="attractive"] & {
+    @include heading.zone-h1(color.$zone-yellow-text);
+    small { @include paragraph.base(color.$zone-yellow-text); }
+  }
+  [class*="friendship"] & {
+    @include heading.zone-h1(color.$zone-green-text);
+    small { @include paragraph.base(color.$zone-green-text); }
+  }
+  [class*="peaceful"] & {
+    @include heading.zone-h1(color.$zone-purple-text);
+    small { @include paragraph.base(color.$zone-purple-text); }
+  }
+  [class*="bright"] & {
+    @include heading.zone-h1(color.$zone-pink-text);
+    small { @include paragraph.base(color.$zone-pink-text); }
+  }
+}
+
+.zone_image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 500px;
+  margin-top: 24px;
+
+  [class*="greeting"] &-1 {
+    background: url('../images/imagination-land/zone/greeting1.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  [class*="greeting"] &-2 {
+    background: url('../images/imagination-land/zone/greeting2.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  [class*="attractive"] &-1 {
+    background: url('../images/imagination-land/zone/attractive1.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  [class*="attractive"] &-2 {
+    background: url('../images/imagination-land/zone/attractive2.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  [class*="friendship"] &-1 {
+    background: url('../images/imagination-land/zone/friendship1.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  [class*="friendship"] &-2 {
+    background: url('../images/imagination-land/zone/friendship2.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  [class*="peaceful"] &-1 {
+    background: url('../images/imagination-land/zone/peaceful1.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  [class*="peaceful"] &-2 {
+    background: url('../images/imagination-land/zone/peaceful2.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  [class*="bright"] &-1 {
+    background: url('../images/imagination-land/zone/bright1.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  [class*="bright"] &-2 {
+    background: url('../images/imagination-land/zone/bright2.jpg') no-repeat center center;
+    background-size: cover;
+  }
+}
+
+.zone_image_title {
+  @include heading.h1(color.$white);
+}
+
+.zone_detail_heading {
+  margin: 16px;
+
+  [class*="greeting"] & {
+    @include heading.h2(color.$zone-blue-text);
+  }
+  [class*="attractive"] & {
+    @include heading.h2(color.$zone-yellow-text);
+  }
+  [class*="friendship"] & {
+    @include heading.h2(color.$zone-green-text);
+  }
+  [class*="peaceful"] & {
+    @include heading.h2(color.$zone-purple-text);
+  }
+  [class*="bright"] & {
+    @include heading.h2(color.$zone-pink-text);
+  }
+}
+
+.zone_detail_information {
+  text-align: center;
+
+  [class*="greeting"] & {
+    @include paragraph.base(color.$zone-blue-text);
+  }
+  [class*="attractive"] & {
+    @include paragraph.base(color.$zone-yellow-text);
+  }
+  [class*="friendship"] & {
+    @include paragraph.base(color.$zone-green-text);
+  }
+  [class*="peaceful"] & {
+    @include paragraph.base(color.$zone-purple-text);
+  }
+  [class*="bright"] & {
+    @include paragraph.base(color.$zone-pink-text);
+  }
+}
+
+@media screen and (max-width: content-size.$breakpoint) {
+  .zone-section {
+    height: 1400px;
+    padding: 40px 0;
+  }
+
+  .zone-section_inner {
+    gap: 16px;
+  }
+
+  .zone_heading {
+  }
+
+  .zone_image {
+    width: 100vw;
+    height: 240px;
+  }
+
+  .zone_image_title {
+    @include heading.h1(color.$white);
+  }
+
+  .zone_detail_heading {
+    margin: 16px;
+  }
+
+  .zone_detail_information {
+    text-align: left;
+  }
+}
