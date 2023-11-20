@@ -32,10 +32,11 @@
   li {
     width: 25%;
     height: 160px;
-    transition: all 0.1s ease;
+    text-align: center;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
+    transition: all 0.1s ease;
 
     &.structure-facilities {
       background-image: url('../images/common/footer/navigation/structure-facilities.jpg');
@@ -63,14 +64,14 @@
     }
 
     @media screen and (max-width: content-size.$breakpoint) {
-      background-size: 100% auto;
+      background-size: cover;
     }
 
     &:hover {
       background-size: 105%;
 
       @media screen and (max-width: content-size.$breakpoint) {
-        background-size: 105% auto;
+        background-size: cover;
       }
     }
 
@@ -80,9 +81,9 @@
       justify-content: center;
       width: 100%;
       height: 100%;
-      color: color.$footer-text;
       font-family: font.$heading-font-family;
       font-size: font.$footer-nav-size;
+      color: color.$footer-text;
       text-decoration: none;
     }
   }

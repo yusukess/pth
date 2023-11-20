@@ -206,7 +206,7 @@ legend {
   display: flex;
   font-family: "Zen Old Mincho", serif;
 }
-.site-header .sub-navigation li::before {
+.site-header .sub-navigation li:before {
   color: #fff;
   content: "▶︎";
   display: block;
@@ -227,7 +227,7 @@ legend {
   text-decoration: none;
   width: 100%;
 }
-.site-header .sub-navigation li a::after {
+.site-header .sub-navigation li a:after {
   background-color: #fff;
   bottom: -4px;
   content: "";
@@ -252,7 +252,7 @@ legend {
   padding: 0 8px;
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100%;
   z-index: 10;
 }
 .site-header-sp .site-header_logo {
@@ -307,10 +307,13 @@ legend {
 
 .site-header_panel {
   background-color: rgba(255, 255, 255, 0.95);
+  bottom: 0;
   display: none;
-  height: 100vh;
   left: 0;
-  position: absolute;
+  overflow-y: auto;
+  padding: 24px 0 calc(24px + env(safe-area-inset-bottom));
+  position: fixed;
+  top: 0;
   transform: translateX(100%);
   transition: ease 0.4s;
   width: 100%;
@@ -322,44 +325,11 @@ legend {
 .site-header_panel .global-navigation {
   display: flex;
   flex-direction: column;
-  padding-top: 64px;
+  width: 100%;
 }
 .site-header_panel .global-navigation li {
   height: 56px;
   position: relative;
-}
-.site-header_panel .global-navigation li::after {
-  bottom: 2px;
-  color: #fff;
-  display: block;
-  left: 50%;
-  position: absolute;
-  top: auto;
-  transform: translateX(-50%);
-}
-.site-header_panel .global-navigation li.structure-facilities::after {
-  content: "Structure & Facilities";
-}
-.site-header_panel .global-navigation li.common-facilities::after {
-  content: "Common Facilities";
-}
-.site-header_panel .global-navigation li.management-association::after {
-  content: "Management Association";
-}
-.site-header_panel .global-navigation li.disaster-prevention::after {
-  content: "Disaster Prevention";
-}
-.site-header_panel .global-navigation li.news::after {
-  content: "News/Events";
-}
-.site-header_panel .global-navigation li.imagination-land::after {
-  content: "Imagination Land";
-}
-.site-header_panel .global-navigation li.gallery-cg::after {
-  content: "Gallery & CG Collection";
-}
-.site-header_panel .global-navigation li.links::after {
-  content: "Links for Residents";
 }
 .site-header_panel .global-navigation li a {
   align-items: center;
@@ -368,11 +338,11 @@ legend {
   height: 100%;
   padding: 0 0 0 24px;
   text-decoration: none;
-  width: 100%;
 }
 .site-header_panel .sub-navigation {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .site-header_panel .sub-navigation li {
   height: 56px;
@@ -418,7 +388,6 @@ legend {
   height: 100%;
   padding: 0 0 0 24px;
   text-decoration: none;
-  width: 100%;
 }
 
 .site-footer {
@@ -449,6 +418,7 @@ legend {
   background-repeat: no-repeat;
   background-size: 100%;
   height: 160px;
+  text-align: center;
   transition: all 0.1s ease;
   width: 25%;
 }
@@ -3354,7 +3324,7 @@ body {
   min-width: 1280px;
 }
 
-body.active {
+html.active {
   height: 100%;
   overflow: hidden;
 }
@@ -3405,10 +3375,10 @@ br.for-sp {
     min-width: auto;
   }
   .site-footer .global-navigation li {
-    background-size: 100% auto;
+    background-size: cover;
   }
   .site-footer .global-navigation li:hover {
-    background-size: 105% auto;
+    background-size: cover;
   }
   .site-footer .global-navigation li {
     height: 100px;

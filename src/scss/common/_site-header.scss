@@ -23,8 +23,8 @@
 
 .site-header_logo {
   display: flex;
-  align-items: center;
   gap: 12px;
+  align-items: center;
 
   .logo-text {
     @media screen and (max-width: content-size.$breakpoint-header) {
@@ -37,11 +37,11 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
+  gap: 24px;
   align-items: center;
   justify-content: center;
   min-width: content-size.$site-width;
   padding: 0 16px;
-  gap: 24px;
 
   @media screen and (max-width: content-size.$breakpoint-header) {
     min-width: auto;
@@ -96,11 +96,11 @@
         left: 0;
         width: 100%;
         height: 1px;
-        background-color: #fff;
         content: '';
+        background-color: #fff;
+        transition: transform 0.3s;
         transform: scale(0, 1);
         transform-origin: left top;
-        transition: transform 0.3s;
       }
 
       &:hover::after {
@@ -124,7 +124,7 @@
     align-items: center;
     font-family: font.$heading-font-family;
 
-    &::before {
+    &:before {
       display: block;
       font-size: font.$header-nav-sub-size;
       line-height: 1;
@@ -146,17 +146,17 @@
       text-align: center;
       text-decoration: none;
 
-      &::after {
+      &:after {
         position: absolute;
         bottom: -4px;
         left: 0;
         width: 100%;
         height: 1px;
-        background-color: #fff;
         content: '';
+        background-color: #fff;
+        transition: transform 0.3s;
         transform: scale(0, 1);
         transform-origin: left top;
-        transition: transform 0.3s;
       }
 
       &:hover::after {
@@ -167,17 +167,17 @@
 }
 
 .site-header-sp {
-  display: none;
-
-  z-index: z-index.$header-layer;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+
+  z-index: z-index.$header-layer;
+  box-sizing: border-box;
+  display: none;
+  width: 100%;
   height: 48px;
   padding: 0 8px;
   background-color: color.$header-background;
-  box-sizing: border-box;
 
   @media screen and (max-width: content-size.$breakpoint-header-min) {
     display: flex;
@@ -195,11 +195,11 @@
   }
 
   .site-header_hamburger {
+    z-index: 9999;
     width: 48px;
     height: 100%;
     background-color: transparent; /*buttonタグデフォルトスタイルを打ち消し*/
     border-color: transparent; /*buttonタグデフォルトスタイルを打ち消し*/
-    z-index: 9999;
 
     &.active {
       transform: translateX(0);
@@ -222,12 +222,12 @@
     }
 
     span {
+      position: relative;
+      display: block;
       width: 100%;
       height: 1px;
       background-color: color.$white;
-      position: relative;
       transition: ease 0.4s; /*ハンバーガーメニュークリック時の三本線の動きを遅延*/
-      display: block;
 
       &:nth-child(1) {
         top: 0;
@@ -245,13 +245,16 @@
 }
 
 .site-header_panel {
-  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
 
   z-index: z-index.$header-layer;
-  position: absolute;
-  left: 0;
+  display: none;
   width: 100%;
-  height: 100vh;
+  padding: 24px 0 calc(24px + env(safe-area-inset-bottom));
+  overflow-y: auto;
   background-color: color.$header-panel-background;
   transition: ease 0.4s;
   transform: translateX(100%);
@@ -263,22 +266,21 @@
   .global-navigation {
     display: flex;
     flex-direction: column;
-    padding-top: 64px;
+    width: 100%;
 
     li {
       position: relative;
       height: 56px;
 
-      @include sub-title.add($bottom: 2px);
+      // @include sub-title.add($bottom: 2px);
 
       a {
         display: flex;
         align-items: center;
-        padding: 0 0 0 24px;
-        text-decoration: none;
-        color: color.$blue;
-        width: 100%;
         height: 100%;
+        padding: 0 0 0 24px;
+        color: color.$blue;
+        text-decoration: none;
       }
     }
   }
@@ -286,6 +288,7 @@
   .sub-navigation {
     display: flex;
     flex-direction: column;
+    width: 100%;
 
     li {
       position: relative;
@@ -295,11 +298,10 @@
       a {
         display: flex;
         align-items: center;
-        padding: 0 0 0 24px;
-        text-decoration: none;
-        color: color.$blue;
-        width: 100%;
         height: 100%;
+        padding: 0 0 0 24px;
+        color: color.$blue;
+        text-decoration: none;
       }
     }
   }
