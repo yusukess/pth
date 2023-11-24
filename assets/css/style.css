@@ -1535,10 +1535,13 @@ legend {
 }
 
 .movie-player {
-  background: url("../images/top/movie-edge.svg") no-repeat left center, url("../images/top/movie-edge.svg") no-repeat right center;
-  background-color: #000;
   height: 360px;
+  position: relative;
   width: 640px;
+}
+.movie-player video {
+  height: 100%;
+  width: 100%;
 }
 
 [class*=home] main {
