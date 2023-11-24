@@ -1,5 +1,10 @@
 <section class="concept-section">
     <section class="concept_kv">
+        <div class="concept_kv_parallax">
+            <div class="concept_kv_bubble">
+                <?php echo(default_image( array('top/concept-kv-bubble.png'), '', '', '', 'bubble' )); ?>
+            </div>
+        </div>
         <div class="concept_kv_inner">
             <h2 class="concept_heading"><?php echo(default_image( array('top/concept-heading.png'), '720', '150', '水と緑と共に、自由に住まう' )); ?></h2>
         </div>

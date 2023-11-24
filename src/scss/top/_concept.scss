@@ -14,11 +14,13 @@
 }
 
 .concept_kv {
+  position: relative;
   width: 100%;
   height: 930px;
-  background: url('../images/top/concept-kv.jpg') no-repeat 10px center,
-    url('../images/top/concept-kv-bg.jpg') repeat-x center center;
-  background-size: auto 930px, 1px 930px;
+  background: url('../images/top/concept-kv-whale.png') no-repeat 20px center,
+              url('../images/top/concept-kv-bg.jpg') repeat-x center center;
+  background-size: 1876px 747px, 1px 930px;
+  overflow: hidden;
 
   @include section.base($padding: 0);
 
@@ -39,10 +41,34 @@
   }
 }
 
+.concept_kv_parallax {
+  margin: 0 auto;
+  max-width: 1600px;
+  width: 100%;
+}
+
+.concept_kv_bubble {
+  z-index: 1;
+}
+
+.concept_kv_bubble img{
+  width: 100%;
+  height: auto;
+}
+
+
 .concept_heading {
   position: absolute;
   bottom: 120px;
   right: 0;
+
+  img {
+    opacity: 0;
+  }
+
+  &.animation-start img {
+    @include animation.fadein($delay: 100ms);
+  }
 
   @media screen and (max-width: content-size.$breakpoint) {
     top: 120px;

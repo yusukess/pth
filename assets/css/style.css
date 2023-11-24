@@ -841,6 +841,26 @@ legend {
     transform: scale(1, 1);
   }
 }
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .recent-news-section {
   align-items: center;
   display: flex;
@@ -1061,6 +1081,16 @@ legend {
     transform: scale(1, 1);
   }
 }
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .concept-section {
   align-items: center;
   display: flex;
@@ -1081,13 +1111,15 @@ legend {
 
 .concept_kv {
   align-items: center;
-  background: url("../images/top/concept-kv.jpg") no-repeat 10px center, url("../images/top/concept-kv-bg.jpg") repeat-x center center;
-  background-size: auto 930px, 1px 930px;
+  background: url("../images/top/concept-kv-whale.png") no-repeat 20px center, url("../images/top/concept-kv-bg.jpg") repeat-x center center;
+  background-size: 1876px 747px, 1px 930px;
   display: flex;
   flex-direction: column;
   height: 930px;
   justify-content: center;
+  overflow: hidden;
   padding: 0;
+  position: relative;
   width: 100%;
   width: 100%;
 }
@@ -1105,10 +1137,45 @@ legend {
   position: relative;
 }
 
+.concept_kv_parallax {
+  margin: 0 auto;
+  max-width: 1600px;
+  width: 100%;
+}
+
+.concept_kv_bubble {
+  z-index: 1;
+}
+
+.concept_kv_bubble img {
+  height: auto;
+  width: 100%;
+}
+
 .concept_heading {
   bottom: 120px;
   position: absolute;
   right: 0;
+}
+.concept_heading img {
+  opacity: 0;
+}
+.concept_heading.animation-start img {
+  -webkit-animation-name: fadein;
+  -webkit-animation-delay: 100ms;
+  -webkit-animation-duration: 800ms;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-direction: normal;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-iteration-count: 1;
+          animation-delay: 100ms;
+          animation-direction: normal;
+          animation-duration: 800ms;
+          animation-fill-mode: forwards;
+          animation-iteration-count: 1;
+          animation-name: fadein;
+          animation-timing-function: ease;
+  opacity: 0;
 }
 
 .concept_point {
@@ -1359,6 +1426,16 @@ legend {
     height: 0;
     top: 0;
     transform: scale(1, 1);
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 .movie-section {
