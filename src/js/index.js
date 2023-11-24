@@ -20,6 +20,10 @@
       ],
     });
 
+    $(window).on("resize orientationchange", function () {
+      $(".slider-multiple").slick("resize");
+    });
+
     // top > キービジュアルのスライダー
     $('.slider-kv').slick({
       infinite: true,
