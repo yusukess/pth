@@ -1,7 +1,7 @@
 @use '../variables/color' as color;
 @use '../variables/content-size' as content-size;
 
-@mixin base($padding: 80px 0, $gap:40px) {
+@mixin base($padding: 80px 0, $gap: 40px, $width: content-size.$content-width) {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,15 +15,15 @@
     gap: $gap;
     align-items: center;
     justify-content: center;
-    width: content-size.$content-width;
+    width: $width;
   }
 
   @media screen and (max-width: content-size.$breakpoint) {
     padding: 64px 0;
 
     &_inner {
-      width: content-size.$content-width-sp;
       gap: 40px;
+      width: content-size.$content-width-sp;
     }
   }
 }

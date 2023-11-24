@@ -3006,7 +3006,7 @@ legend {
   flex-direction: column;
   gap: 40px;
   justify-content: center;
-  width: 1000px;
+  width: 100%;
 }
 .zone-section.current {
   opacity: 1;
@@ -3099,7 +3099,7 @@ legend {
   height: 500px;
   justify-content: center;
   margin-top: 24px;
-  width: 100vw;
+  width: 100%;
 }
 [class*=greeting] .zone_image-1 {
   background: url("../images/imagination-land/zone/greeting1.jpg") no-repeat center center;
@@ -3272,7 +3272,7 @@ legend {
   height: auto;
   margin-top: -64px;
   position: relative;
-  width: 100vw;
+  width: 100%;
 }
 
 .access-section {
@@ -4733,6 +4733,9 @@ br.for-sp {
   }
   .zone-section_inner {
     gap: 16px;
+  }
+  .zone_heading {
+    /*!*/
   }
   .zone_image {
     height: 240px;

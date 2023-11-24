@@ -2,13 +2,13 @@
 
 @use '../common/heading' as heading;
 
-@import "story-introduction";
-@import "zone-anchor";
-@import "zone-anchor-list";
-@import "zone";
-@import "legend";
+@import 'story-introduction';
+@import 'zone-anchor';
+@import 'zone-anchor-list';
+@import 'zone';
+@import 'legend';
 
-[class*="imagination-land"] {
+[class*='imagination-land'] {
   .breadcrumb {
     z-index: 1;
 
@@ -20,7 +20,7 @@
 
   .zone-container {
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: auto;
     margin-top: -64px;
   }
