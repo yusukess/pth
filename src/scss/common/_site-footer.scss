@@ -7,7 +7,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   background-color: color.$footer-lower-part-background;
 }
 
@@ -32,43 +32,47 @@
   li {
     width: 25%;
     height: 160px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
     transition: all 0.1s ease;
 
     &.structure-facilities {
-      background: url('../images/common/footer/navigation/structure-facilities.jpg') no-repeat center center;
-      background-size: 100%;
+      background-image: url('../images/common/footer/navigation/structure-facilities.jpg');
     }
     &.common-facilities {
-      background: url('../images/common/footer/navigation/common-facilities.jpg') no-repeat center center;
-      background-size: 100%;
+      background-image: url('../images/common/footer/navigation/common-facilities.jpg');
     }
     &.management-association {
-      background: url('../images/common/footer/navigation/management-association.jpg') no-repeat center center;
-      background-size: 100%;
+      background-image: url('../images/common/footer/navigation/management-association.jpg');
     }
     &.disaster-prevention {
-      background: url('../images/common/footer/navigation/disaster-prevention.jpg') no-repeat center center;
-      background-size: 100%;
+      background-image: url('../images/common/footer/navigation/disaster-prevention.jpg');
     }
     &.news {
-      background: url('../images/common/footer/navigation/news.jpg') no-repeat center center;
-      background-size: 100%;
+      background-image: url('../images/common/footer/navigation/news.jpg');
     }
     &.imagination-land {
-      background: url('../images/common/footer/navigation/imagination-land.jpg') no-repeat center center;
-      background-size: 100%;
+      background-image: url('../images/common/footer/navigation/imagination-land.jpg');
     }
     &.gallery-cg {
-      background: url('../images/common/footer/navigation/gallery.jpg') no-repeat center center;
-      background-size: 100%;
+      background-image: url('../images/common/footer/navigation/gallery.jpg');
     }
     &.links {
-      background: url('../images/common/footer/navigation/links.jpg') no-repeat center center;
-      background-size: 100%;
+      background-image: url('../images/common/footer/navigation/links.jpg');
+    }
+
+    @media screen and (max-width: content-size.$breakpoint) {
+      background-size: cover;
     }
 
     &:hover {
       background-size: 105%;
+
+      @media screen and (max-width: content-size.$breakpoint) {
+        background-size: cover;
+      }
     }
 
     a {
@@ -77,9 +81,9 @@
       justify-content: center;
       width: 100%;
       height: 100%;
-      color: color.$footer-text;
       font-family: font.$heading-font-family;
       font-size: font.$footer-nav-size;
+      color: color.$footer-text;
       text-decoration: none;
     }
   }

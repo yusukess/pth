@@ -24,14 +24,19 @@
 
 html,
 body {
+  min-width: content-size.$site-width;
   font-family: font.$base-font-family;
   line-height: font.$base-line-height;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    min-width: auto;
+    overflow-x: hidden;
+  }
 }
 
-body.active {
+html.active {
   height: 100%;
   overflow: hidden;
 }
