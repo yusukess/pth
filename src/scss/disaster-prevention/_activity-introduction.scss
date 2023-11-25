@@ -8,11 +8,14 @@
 @use '../common/decoration' as decoration;
 
 .activity-introduction-section {
+  @include section.base();
   position: relative;
+  padding-top: 0;
   background-color: color.$light-blue;
 
-  @include section.base();
-  @include decoration.wave-top;
+  @media screen and (max-width: content-size.$breakpoint) {
+    padding-bottom: 64px;
+  }
 }
 
 .activity-introduction_heading {
@@ -26,20 +29,18 @@
 
 .activity-introduction-card-list {
   display: flex;
-  justify-content: space-between;
   gap: 16px;
-
+  justify-content: space-between;
 }
 
 .activity-introduction-card {
   display: flex;
   flex-direction: column;
-  background-color: color.$blue;
   width: 306px;
+  background-color: color.$blue;
 }
 
 .activity-introduction-card_thumbnail {
-
 }
 
 .activity-introduction-card_title {

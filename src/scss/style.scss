@@ -8,6 +8,7 @@
 @import 'common/breadcrumb';
 @import 'common/pagination';
 @import 'common/lightbox';
+@import 'common/wave';
 
 @import 'top/top';
 @import 'structure-facilities/structure-facilities';
@@ -70,5 +71,12 @@ br {
     @media screen and (max-width: content-size.$breakpoint) {
       display: inline-block;
     }
+  }
+}
+
+img {
+  @media screen and (max-width: content-size.$breakpoint) {
+    width: 100%;
+    height: auto;
   }
 }

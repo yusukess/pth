@@ -9,8 +9,7 @@
 .facilities-section {
   position: relative;
   @include section.base($gap: 64px);
-
-  @include decoration.wave-top;
+  padding-top: 0;
 
   &:not(:last-child) {
     @include decoration.wave-bottom;
@@ -47,6 +46,7 @@
 
 @media screen and (max-width: content-size.$breakpoint) {
   .facilities-section {
+    padding: 0 0 64px;
   }
 
   .facilities-section_inner {

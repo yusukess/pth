@@ -3,10 +3,10 @@
 @use '../variables/content-size' as content-size;
 
 @mixin h1($color: color.$base-text) {
-  color: $color;
   font-family: font.$heading-font-family;
   font-size: font.$heading1-size;
   line-height: font.$heading-line-height;
+  color: $color;
 
   @media screen and (max-width: content-size.$breakpoint) {
     font-size: font.$heading1-sp-size;
@@ -14,21 +14,21 @@
 }
 
 @mixin h2($color: color.$base-text) {
-  color: $color;
   font-family: font.$heading-font-family;
   font-size: font.$heading2-size;
   line-height: font.$heading-line-height;
+  color: $color;
 
   @media screen and (max-width: content-size.$breakpoint) {
     font-size: font.$heading2-sp-size;
   }
 }
 
-@mixin h3($color: color.$base-text) {
-  color: $color;
+@mixin h3($color: color.$base-text, $size: font.$heading3-size) {
   font-family: font.$heading-font-family;
-  font-size: font.$heading3-size;
+  font-size: $size;
   line-height: font.$heading-line-height;
+  color: $color;
 
   @media screen and (max-width: content-size.$breakpoint) {
     font-size: font.$heading3-sp-size;
@@ -36,10 +36,10 @@
 }
 
 @mixin zone-h1($color: color.$base-text) {
-  color: $color;
   font-family: font.$zone-font-family;
   font-size: font.$zone-heading1-size;
   line-height: font.$heading-line-height;
+  color: $color;
 
   @media screen and (max-width: content-size.$breakpoint) {
     font-size: font.$zone-heading1-size-sp;
@@ -47,10 +47,10 @@
 }
 
 @mixin zone-anchor($color: color.$base-text) {
-  color: $color;
   font-family: font.$heading-font-family;
   font-size: font.$zone-anchor-size;
   line-height: font.$heading-line-height;
+  color: $color;
 
   @media screen and (max-width: content-size.$breakpoint) {
     font-size: font.$zone-anchor-size-sp;
@@ -58,10 +58,10 @@
 }
 
 @mixin top-news-heading($color: color.$gold) {
-  color: $color;
   font-family: font.$heading-font-family;
   font-size: font.$top-news-heading-size;
   line-height: font.$heading-line-height;
+  color: $color;
 
   @media screen and (max-width: content-size.$breakpoint) {
     font-size: font.$top-news-heading-size-sp;
@@ -76,21 +76,27 @@
   &::before,
   &::after {
     flex-grow: 1;
-    content: "";
     height: 1px;
+    content: '';
     background-color: color.$blue;
   }
 
-  &::before { margin-right: 72px; }
-  &::after { margin-left: 72px; }
+  &::before {
+    margin-right: 72px;
+  }
+  &::after {
+    margin-left: 72px;
+  }
 
   @media screen and (max-width: content-size.$breakpoint) {
     flex-direction: column;
 
-    &::before { display: none; }
+    &::before {
+      display: none;
+    }
     &::after {
-      margin: 24px 0 0;
       width: 60px;
+      margin: 24px 0 0;
     }
   }
 }
@@ -98,15 +104,15 @@
 @mixin add-box($height: 20px) {
   display: flex;
   flex-direction: row;
-  align-items: center;
   gap: 12px;
+  align-items: center;
 
   &::before {
     display: block;
-    content: "";
     flex-shrink: 0;
-    height: $height;
     width: 8px;
+    height: $height;
+    content: '';
     background-color: color.$blue;
   }
 }

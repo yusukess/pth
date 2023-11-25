@@ -11,10 +11,8 @@
 
 .single-section {
   @include section.base(40px 0 80px);
-}
 
-@media screen and (max-width: content-size.$breakpoint) {
-  .single-section {
-    padding-top: 0;
+  @media screen and (max-width: content-size.$breakpoint) {
+    padding-top: 16px;
   }
 }

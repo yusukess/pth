@@ -14,7 +14,7 @@
 @use '../common/animation' as animation;
 
 .recent-news-section {
-  @include section.base();
+  @include section.base($sp-padding: 0, $sp-gap: 24px);
 }
 
 .recent-news-section_inner {
@@ -26,7 +26,7 @@
     left: 50%;
     width: 1px;
     height: 100px;
-    content: "";
+    content: '';
     background-color: color.$copper;
     transform-origin: left top;
 
@@ -41,7 +41,7 @@
   width: fit-content;
 
   @include heading.top-news-heading($color: color.$copper);
-  @include decoration.kirakira("top", "left");
+  @include decoration.kirakira('top', 'left');
 
   small {
     font-family: font.$base-font-family;

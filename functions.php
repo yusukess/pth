@@ -242,6 +242,6 @@ add_action('wp_print_styles', 'custom_print_styles');
 
 function my_scripts_method()
 {
-    wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', array(), '2.2.4');
+	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', array(), '2.2.4');
 }
 add_action('wp_enqueue_scripts', 'my_scripts_method');

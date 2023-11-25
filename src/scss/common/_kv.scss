@@ -14,6 +14,20 @@
 
     .kv {
       @include slick.slider-kv;
+
+      &.for-pc {
+        @media screen and (max-width: content-size.$breakpoint) {
+          display: none;
+        }
+      }
+
+      &.for-sp {
+        display: none;
+
+        @media screen and (max-width: content-size.$breakpoint) {
+          display: block;
+        }
+      }
     }
   }
 
@@ -47,11 +61,6 @@
     background-size: cover;
   }
 
-  &.structure-facilities {
-    background: url('../images/kv/structure-facilities.jpg') no-repeat center center;
-    background-size: cover;
-  }
-
   &.gallery-cg {
     background: url('../images/kv/gallery.jpg') no-repeat center center;
     background-size: cover;
@@ -74,10 +83,10 @@
 }
 
 .kv_catchcopy {
-  z-index: 1;
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 1;
   font-family: font.$heading-font-family;
   font-size: font.$kv-catchcopy-size;
   color: color.$kv-text;
@@ -95,6 +104,10 @@
 
     &.index {
       height: calc(100vh - 64px);
+
+      @media screen and (max-width: content-size.$breakpoint) {
+        height: 813px;
+      }
     }
   }
 
