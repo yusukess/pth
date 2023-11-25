@@ -1,6 +1,8 @@
 $site-width: 1280px;
 $content-width: 1000px;
-$content-width-sp: calc(100vw - 16px);
+$concept-max-width-sp: 375px;
+$cotent-side-sp: calc(32 / 750 * 100%);
+$content-width-sp: calc(100vw - $cotent-side-sp * 2);
 
 $breakpoint: 430px;
 $breakpoint-header: 1325px;

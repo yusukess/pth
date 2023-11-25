@@ -10,14 +10,14 @@
 
 .structure-section {
   background-color: color.$white;
-  @include section.base($padding: 120px 0 80px, $gap: 80px);
+  @include section.base($padding: 180px 0 280px, $gap: 80px);
 }
 
 .structure_information {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 24px;
+  align-items: center;
 }
 
 .structure_heading {

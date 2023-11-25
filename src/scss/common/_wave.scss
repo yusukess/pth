@@ -1,0 +1,69 @@
+@use '../variables/color' as color;
+@use '../variables/font' as font;
+@use '../variables/content-size' as content-size;
+
+.wave-anime {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 130px;
+  overflow: hidden;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    height: 65px;
+  }
+
+  &.is-inverted {
+    transform: scale(-1, -1);
+  }
+
+  &.bg-white {
+    background-color: color.$white;
+  }
+
+  &.is-top {
+    top: 0;
+  }
+
+  &.is-bottom {
+    bottom: 0;
+  }
+
+  [id^='scroller'] {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .scroller01 {
+    color: #e7f7f7;
+  }
+
+  .scroller02 {
+    color: #d3edef;
+  }
+  .scroller03 {
+    color: color.$light-blue;
+  }
+
+  .simply-scroll {
+    height: 130px;
+    margin-bottom: 0 !important;
+
+    @media screen and (max-width: content-size.$breakpoint) {
+      height: 65px;
+    }
+  }
+}
+
+.simply-scroll {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 130px;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    height: 65px;
+  }
+}

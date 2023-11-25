@@ -2,6 +2,8 @@
 @use '../variables/font' as font;
 @use '../variables/content-size' as content-size;
 
+@use 'sass:math';
+
 @use '../common/heading' as heading;
 @use '../common/section' as section;
 @use '../common/paragraph' as paragraph;
@@ -9,7 +11,7 @@
 @use '../common/decoration' as decoration;
 
 .concept-section {
-  @include section.base($padding: 0);
+  @include section.base($padding: 0, $sp-padding: 0 0 120px);
   overflow-x: hidden;
 }
 
@@ -17,18 +19,18 @@
   position: relative;
   width: 100%;
   height: 930px;
-  background: url('../images/top/concept-kv-whale.png') no-repeat 20px center,
-              url('../images/top/concept-kv-bg.jpg') repeat-x center center;
-  background-size: 1876px 747px, 1px 930px;
   overflow: hidden;
+  background: url('../images/top/concept-kv-whale.png') no-repeat 20px center,
+    url('../images/top/concept-kv-bg.jpg') repeat-x center center;
+  background-size: 1876px 747px, 1px 930px;
 
   @include section.base($padding: 0);
 
   @media screen and (max-width: content-size.$breakpoint) {
     height: 640px;
+    padding-top: 0;
     background: url('../images/top/concept-kv-sp.jpg') no-repeat center top;
     background-size: cover;
-    padding-top: 0;
   }
 }
 
@@ -42,25 +44,24 @@
 }
 
 .concept_kv_parallax {
-  margin: 0 auto;
-  max-width: 1600px;
   width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .concept_kv_bubble {
   z-index: 1;
 }
 
-.concept_kv_bubble img{
+.concept_kv_bubble img {
   width: 100%;
   height: auto;
 }
 
-
 .concept_heading {
   position: absolute;
-  bottom: 120px;
   right: 0;
+  bottom: 120px;
 
   img {
     opacity: 0;
@@ -84,41 +85,82 @@
 }
 
 .concept_point {
-  z-index: 1;
   position: relative;
-  width: 100%;
-  @include section.base($padding: 120px 0);
+  z-index: 1;
+  max-width: 100%;
+  @include section.base($padding: 130px 0);
 
   &:nth-child(even) {
     background-color: color.$light-blue;
+  }
 
-    @include decoration.wave-top;
-    @include decoration.wave-bottom;
+  &.concept_point1 {
+    padding-bottom: 86px;
+
+    @media screen and (max-width: content-size.$breakpoint) {
+      z-index: 2;
+      padding: 0;
+    }
+  }
+
+  &.concept_point2 {
+    padding-bottom: 270px;
+
+    @media screen and (max-width: content-size.$breakpoint) {
+      padding-bottom: 200px;
+    }
+  }
+
+  &.concept_point3 {
+    padding-bottom: 64px;
+
+    @media screen and (max-width: content-size.$breakpoint) {
+      padding-top: 0;
+      padding-bottom: 80px;
+    }
+  }
+
+  &.concept_point4 {
+    padding-top: 64px;
+
+    @media screen and (max-width: content-size.$breakpoint) {
+      padding-top: 24px;
+      padding-bottom: 88px;
+    }
   }
 }
 
 .concept_point_inner {
   position: relative;
+  width: 1600px;
+
   /* TODO: 仮置きのため要調整 */
   min-height: 800px;
+  margin: 0 auto;
+
+  [class*='concept_point2'] & {
+    margin-top: 24px;
+  }
 
   @media screen and (max-width: content-size.$breakpoint) {
+    max-width: content-size.$concept-max-width-sp;
     min-height: auto;
 
     [class*='concept_point1'] & {
-      height: 360px;
+      height: calc(730px / 2);
     }
 
     [class*='concept_point2'] & {
-      height: 580px;
+      height: calc(968px / 2);
+      margin: 0;
     }
 
     [class*='concept_point3'] & {
-      height: 560px;
+      height: 630px;
     }
 
     [class*='concept_point4'] & {
-      height: 480px;
+      height: 510px;
     }
   }
 }
@@ -130,43 +172,35 @@
   gap: 16px;
 
   [class*='concept_point2'] & {
-    position: absolute;
-    top: 12px;
-    right: 0;
+    width: 710px;
+    margin: 0 150px auto auto;
   }
 
   [class*='concept_point3'] & {
-    position: absolute;
-    top: 136px;
-    left: 0;
+    margin: 66px auto auto 46px;
   }
 
   [class*='concept_point4'] & {
-    position: absolute;
-    top: 12px;
-    right: 0;
+    width: 700px;
+    margin: 0 64px auto auto;
   }
 
   @media screen and (max-width: content-size.$breakpoint) {
     [class*='concept_point2'] & {
-      position: absolute;
-      top: 240px;
-      right: auto;
-      left: 0;
+      width: 100%;
+      margin: auto 0 0;
       text-align: center;
     }
 
     [class*='concept_point3'] & {
-      position: absolute;
-      top: 320px;
-      left: 0;
+      width: 100%;
+      margin: auto 0 0;
       text-align: center;
     }
 
     [class*='concept_point4'] & {
-      position: absolute;
-      top: 264px;
-      right: 0;
+      width: 100%;
+      margin: auto 0 0;
       text-align: center;
     }
   }
@@ -185,119 +219,119 @@
 
   [class*='animation-start'] & {
     &:nth-child(1) {
-      @include animation.expand-in($delay: 300ms);
+      @include animation.expand-in($delay: 100ms);
     }
     &:nth-child(2) {
-      @include animation.expand-in($delay: 800ms);
+      @include animation.expand-in($delay: 150ms);
     }
     &:nth-child(3) {
-      @include animation.expand-in($delay: 1300ms);
+      @include animation.expand-in($delay: 200ms);
     }
     &:nth-child(4) {
-      @include animation.expand-in($delay: 1800ms);
+      @include animation.expand-in($delay: 250ms);
     }
   }
 
   [class*='concept_point1'] & {
     &:nth-child(1) {
       position: absolute;
-      top: 40px;
-      left: -120px;
+      top: 24px;
+      left: 45px;
     }
     &:nth-child(2) {
       position: absolute;
-      bottom: 0;
-      left: 204px;
+      bottom: 20px;
+      left: 392px;
     }
     &:nth-child(3) {
       position: absolute;
-      top: 0;
-      right: -400px;
+      top: 24px;
+      right: 0px;
     }
   }
   [class*='concept_point2'] & {
     &:nth-child(1) {
       position: absolute;
-      top: -80px;
-      left: -300px;
+      top: -60px;
+      left: 0px;
     }
 
     &:nth-child(2) {
       position: absolute;
+      right: 558px;
       bottom: 40px;
-      right: 260px;
     }
 
     &:nth-child(3) {
       position: absolute;
+      right: 96px;
       bottom: 0;
-      right: -200px;
     }
   }
   [class*='concept_point3'] & {
     &:nth-child(1) {
       position: absolute;
-      top: -180px;
-      left: -300px;
+      top: -260px;
+      left: 0px;
     }
 
     &:nth-child(2) {
       position: absolute;
-      bottom: 80px;
-      left: 0;
+      bottom: 124px;
+      left: 46px;
     }
 
     &:nth-child(3) {
       position: absolute;
       bottom: 0;
-      left: 324px;
+      left: 380px;
     }
 
     &:nth-child(4) {
       position: absolute;
       top: -40px;
-      right: -500px;
+      right: 0px;
     }
   }
   [class*='concept_point4'] & {
     &:nth-child(1) {
       position: absolute;
       top: 80px;
-      left: -360px;
+      left: 0px;
     }
 
     &:nth-child(2) {
       position: absolute;
-      bottom: -32px;
-      right: 320px;
+      right: 504px;
+      bottom: -76px;
     }
 
     &:nth-child(3) {
       position: absolute;
+      right: 150px;
       bottom: 0;
-      right: 0;
     }
   }
   @media screen and (max-width: content-size.$breakpoint) {
     [class*='concept_point1'] & {
       &:nth-child(1) {
         position: absolute;
-        top: 64px;
-        left: 8px;
+        top: 0;
+        left: 0;
         width: 106px;
         height: 188px;
       }
       &:nth-child(2) {
         position: absolute;
-        bottom: -24px;
-        left: 132px;
+        bottom: 32px;
+        left: 122px;
         width: 106px;
         height: 188px;
       }
       &:nth-child(3) {
         position: absolute;
-        top: -20px;
-        right: -8px;
+        top: -86px;
+        right: -1 * content-size.$cotent-side-sp;
         width: 230px;
         height: 190px;
       }
@@ -306,25 +340,25 @@
       &:nth-child(1) {
         position: absolute;
         top: 0;
-        left: -8px;
+        left: -1 * content-size.$cotent-side-sp;
         width: 177px;
         height: 177px;
       }
 
       &:nth-child(2) {
         position: absolute;
-        bottom: 0;
         right: 8px;
+        bottom: -124px;
         width: 99px;
         height: 99px;
       }
 
       &:nth-child(3) {
         position: absolute;
-        bottom: auto;
-        top: 48px;
+        top: 64px;
         right: auto;
-        left: 184px;
+        bottom: auto;
+        left: 180px;
         width: 122px;
         height: 167px;
       }
@@ -332,16 +366,16 @@
     [class*='concept_point3'] & {
       &:nth-child(1) {
         position: absolute;
-        top: -24px;
-        left: -8px;
+        top: 0px;
+        left: -1 * content-size.$cotent-side-sp;
         width: 220px;
         height: 95px;
       }
 
       &:nth-child(2) {
         position: absolute;
+        top: 118px;
         bottom: auto;
-        top: 88px;
         left: 16px;
         width: 120px;
         height: 89px;
@@ -349,8 +383,8 @@
 
       &:nth-child(3) {
         position: absolute;
+        top: 224px;
         bottom: auto;
-        top: 200px;
         left: -8px;
         width: 102px;
         height: 102px;
@@ -358,35 +392,36 @@
 
       &:nth-child(4) {
         position: absolute;
-        top: 88px;
-        right: 0;
+        top: 114px;
+        right: -60px;
         width: 250px;
         height: 203px;
       }
     }
+
     [class*='concept_point4'] & {
       &:nth-child(1) {
         position: absolute;
         top: 0;
-        left: -8px;
+        left: -1 * content-size.$cotent-side-sp;
         width: 181px;
         height: 174px;
       }
 
       &:nth-child(2) {
         position: absolute;
+        top: 64px;
+        right: 84px;
         bottom: auto;
-        top: 100px;
-        right: 112px;
         width: 79px;
         height: 147px;
       }
 
       &:nth-child(3) {
         position: absolute;
+        top: 24px;
+        right: -1 * math.div(content-size.$cotent-side-sp, 2);
         bottom: auto;
-        top: 60px;
-        right: 16px;
         width: 79px;
         height: 147px;
       }

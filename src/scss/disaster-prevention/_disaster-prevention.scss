@@ -12,14 +12,14 @@
 
 .disaster-prevention-section {
   background-color: color.$white;
-  @include section.base($padding: 40px 0 80px, $gap: 80px);
+  @include section.base($padding: 40px 0 240px, $gap: 80px);
 }
 
 .disaster-prevention_information {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 24px;
+  align-items: center;
 }
 
 .disaster-prevention_heading {

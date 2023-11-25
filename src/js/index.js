@@ -20,8 +20,8 @@
       ],
     });
 
-    $(window).on("resize orientationchange", function () {
-      $(".slider-multiple").slick("resize");
+    $(window).on('resize orientationchange', function () {
+      $('.slider-multiple').slick('resize');
     });
 
     // top > キービジュアルのスライダー
@@ -40,9 +40,6 @@
       responsive: [
         {
           breakpoint: 430,
-          settings: {
-            dots: false,
-          },
         },
       ],
     });
@@ -73,7 +70,7 @@
 
     const common_facilities_area = [
       'entrance',
-      'rounge',
+      'lounge',
       'guest-room',
       'open-garden',
       'activity-space',
@@ -205,13 +202,13 @@
      * くじら
      *
      ====================*/
-    const elem = document.querySelector(".concept_kv_bubble");
-    console.log("elem: ", elem);
+    const elem = document.querySelector('.concept_kv_bubble');
+    console.log('elem: ', elem);
     if (elem !== null) {
-      let target = document.getElementsByClassName("concept_kv_bubble");
+      let target = document.getElementsByClassName('concept_kv_bubble');
       let parallaxConfig = {
         delay: 0, // スクロール止めてから動く秒数
-        orientation: "up", // 動く方向
+        orientation: 'up', // 動く方向
         scale: 2, // 動く大きさ
       };
       const parallax_instance = new simpleParallax(target, parallaxConfig);
@@ -229,6 +226,36 @@
         if (scrollPos > elemOffset - wh + wh / 2) {
           $(this).addClass(isAnimate);
         }
+      });
+    });
+
+    /*====================
+     *
+     * 波
+     *
+     ====================*/
+    $('.scroller01').each(function () {
+      $(this).simplyScroll({
+        pauseOnHover: false,
+        pauseOnTouch: false,
+        speed: 3,
+      });
+    });
+
+    $('.scroller02').each(function () {
+      $(this).simplyScroll({
+        pauseOnHover: false,
+        pauseOnTouch: false,
+        speed: 2,
+        initialOffset: 800,
+      });
+    });
+
+    $('.scroller03').each(function () {
+      $(this).simplyScroll({
+        pauseOnHover: false,
+        pauseOnTouch: false,
+        speed: 1,
       });
     });
 
