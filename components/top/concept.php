@@ -8,9 +8,10 @@
         <div class="concept_kv_inner">
             <h2 class="concept_heading"><?php echo (default_image(array('top/concept-heading.png'), '720', '150', '水と緑と共に、自由に住まう')); ?></h2>
         </div>
+        <?php get_template_part('components/common/wave', null, ['className' => 'is-bottom']); ?>
     </section>
     <section class="concept_point concept_point1">
-        <?php get_template_part('components/common/wave', null, ['className' => 'bg-white is-top']); ?>
+
 
         <div class="concept_point_inner">
             <?php echo (default_image(array('top/moving-photo/photo1.jpg'), '300', '530', '', 'photo')); ?>

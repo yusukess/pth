@@ -309,3 +309,12 @@
     }
   }
 }
+
+.kv-section.index {
+  opacity: 0;
+  transition: opacity 0.3s linear;
+
+  &.slick-init {
+    opacity: 1;
+  }
+}

@@ -8,7 +8,6 @@
             <?php echo (default_image(array('kv/top/pc/02.jpg'), '1600', '800', '画像')); ?>
             <?php echo (default_image(array('kv/top/pc/03.jpg'), '1600', '800', '画像')); ?>
         </div>
-
         <div class="kv slider-kv for-sp">
             <?php echo (default_image(array('kv/top/sp/01.jpg'), '590', '1278', '画像')); ?>
             <?php echo (default_image(array('kv/top/sp/02.jpg'), '590', '1278', '画像')); ?>
