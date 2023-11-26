@@ -25,6 +25,10 @@
     });
 
     // top > キービジュアルのスライダー
+    $('.slider-kv').on('init', function (event, slick) {
+      $('.kv-section').addClass('slick-init');
+    });
+
     $('.slider-kv').slick({
       infinite: true,
       arrows: false,
@@ -45,8 +49,8 @@
     });
 
     // SPでスライダーが止まるのを防止
-    $('.slider-kv').on('touchmove', function (event, slick, currentSlide, nextSlide) {
-      $('.slider-kv').slick('slickPlay');
+    $('.slider-kv.index').on('touchmove', function (event, slick, currentSlide, nextSlide) {
+      $('.slider-kv.index').slick('slickPlay');
     });
 
     // ギャラリースライダー（共有施設・ギャラリー）
