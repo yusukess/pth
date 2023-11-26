@@ -344,14 +344,14 @@ $facilities_database = [
                 "id" => "parking08",
                 "caption" => "キャプションテキスト"
             ],
-            [
-                "id" => "parking09",
-                "caption" => "キャプションテキスト"
-            ],
-            [
-                "id" => "parking10",
-                "caption" => "キャプションテキスト"
-            ],
+            // [
+            //     "id" => "parking09",
+            //     "caption" => "キャプションテキスト"
+            // ],
+            // [
+            //     "id" => "parking10",
+            //     "caption" => "キャプションテキスト"
+            // ],
 
         ]
     ],
@@ -432,18 +432,18 @@ $facilities_database = [
                 "id" => "other09",
                 "caption" => "キャプションテキスト"
             ],
-            [
-                "id" => "other10",
-                "caption" => "キャプションテキスト"
-            ],
-            [
-                "id" => "other11",
-                "caption" => "キャプションテキスト"
-            ],
-            [
-                "id" => "other12",
-                "caption" => "キャプションテキスト"
-            ],
+            // [
+            //     "id" => "other10",
+            //     "caption" => "キャプションテキスト"
+            // ],
+            // [
+            //     "id" => "other11",
+            //     "caption" => "キャプションテキスト"
+            // ],
+            // [
+            //     "id" => "other12",
+            //     "caption" => "キャプションテキスト"
+            // ],
 
         ]
     ],

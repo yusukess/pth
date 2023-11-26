@@ -12,6 +12,7 @@
 
 .summary-group-section {
   @include section.base($padding: 0);
+  gap: 16px;
 }
 
 .summary-group_heading {
@@ -22,12 +23,32 @@
 }
 
 .summary-field {
-  @include key-value.horizontal;
+  display: flex;
+  gap: 8px;
+  width: 100%;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    flex-direction: column;
+  }
+
+  .key {
+    width: fit-content;
+    min-width: 120px;
+    padding: 0 8px;
+    color: color.$white;
+    text-align: center;
+    background-color: color.$blue;
+
+    @media screen and (max-width: content-size.$breakpoint) {
+      width: 100%;
+      padding: 0;
+    }
+  }
 }
 
 @media screen and (max-width: content-size.$breakpoint) {
   .summary-section {
-    padding-top: 16px;
+    padding-top: 0;
   }
 
   .summary-group-section {

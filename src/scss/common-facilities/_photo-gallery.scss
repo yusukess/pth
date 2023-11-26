@@ -33,7 +33,7 @@
 .photo-gallery_title {
   width: 100%;
   text-align: left;
-  @include heading.h2(color.$blue);
+  @include heading.h3(color.$blue);
 }
 
 .photo-gallery_detail {

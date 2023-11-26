@@ -9,7 +9,7 @@
   position: relative;
   background-color: color.$light-blue;
 
-  @include section.base($padding: 0 0 42px);
+  @include section.base($padding: 32px 0 40px);
 
   &:after {
     bottom: -65px;
@@ -25,6 +25,7 @@
 }
 
 .page-anchor_button {
+  font-size: 24px;
   text-shadow: 0 0 2px rgba(color.$blue, 0.8);
   background: url('../images/structure-facilities/anchor-button-bg.jpg') no-repeat center center;
   @include button.base;

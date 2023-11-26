@@ -14,7 +14,7 @@
       nextArrow: '<button class="arrow-next"></button>',
       responsive: [
         {
-          breakpoint: 430,
+          breakpoint: 431,
           settings: 'unslick',
         },
       ],
@@ -39,7 +39,7 @@
       waitForAnimate: false,
       responsive: [
         {
-          breakpoint: 430,
+          breakpoint: 431,
         },
       ],
     });
@@ -51,7 +51,7 @@
 
     // ギャラリースライダー（共有施設・ギャラリー）
     let slider_photo_setting_base = {
-      infinite: false,
+      infinite: true,
       asNavFor: '.slider-gallery_nav',
       prevArrow: '<button class="arrow-prev"></button>',
       nextArrow: '<button class="arrow-next"></button>',
@@ -59,13 +59,20 @@
 
     // ギャラリースライダーのナビゲーションスライダー（共有施設・ギャラリー）
     let slider_photo_nav_setting_base = {
-      infinite: false,
-      slidesToShow: 8,
+      infinite: true,
+      slidesToShow: 20,
       slidesToScroll: 1,
       asNavFor: '.slider-photo',
       focusOnSelect: true,
       swipeToSlide: true,
       arrows: false,
+
+      responsive: [
+        {
+          breakpoint: 431,
+          slidesToShow: 3,
+        },
+      ],
     };
 
     const common_facilities_area = [
@@ -102,8 +109,14 @@
       tmp_setting['asNavFor'] = '.' + $target + ' .slider-gallery_nav';
       tmp_nav_setting['asNavFor'] = '.' + $target + ' .slider-photo';
 
-      $('.' + $target + ' .slider-photo').slick(tmp_setting);
-      $('.' + $target + ' .slider-gallery_nav').slick(tmp_nav_setting);
+      $('.' + $target + ' .slider-photo').each(function () {
+        console.log('hoge');
+        $(this).slick(tmp_setting);
+      });
+
+      $('.' + $target + ' .slider-gallery_nav').each(function () {
+        $(this).slick(tmp_nav_setting);
+      });
     });
 
     /*====================

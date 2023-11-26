@@ -38,7 +38,7 @@
 @media screen and (max-width: content-size.$breakpoint) {
   .breadcrumb {
     width: content-size.$content-width-sp;
-    margin: 8px 0;
+    margin: 8px 0 40px;
 
     a {
       font-size: font.$paragraph-sp-size;

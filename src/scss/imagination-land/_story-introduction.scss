@@ -54,8 +54,8 @@
       left: 20px;
     }
     &.attractive {
-      left: 50px;
       bottom: 130px;
+      left: 50px;
     }
     &.friendship {
       bottom: 20px;
@@ -63,8 +63,8 @@
       transform: translateX(-50%);
     }
     &.peaceful {
-      bottom: 130px;
       right: 0;
+      bottom: 130px;
     }
     &.bright {
       top: 120px;
@@ -75,6 +75,7 @@
 
 @media screen and (max-width: content-size.$breakpoint) {
   .story-introduction-section {
+    padding-top: 64px;
   }
 
   .story-introduction_heading {
@@ -116,8 +117,8 @@
         left: 16px;
       }
       &.attractive {
-        left: 16px;
         bottom: 0;
+        left: 16px;
       }
       &.friendship {
         bottom: 0;
@@ -125,8 +126,8 @@
         transform: translateX(-50%);
       }
       &.peaceful {
-        bottom: 0;
         right: 16px;
+        bottom: 0;
       }
       &.bright {
         top: 0;

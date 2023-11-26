@@ -9,13 +9,56 @@
 @use '../common/key-value' as key-value;
 
 .access-section {
-  @include section.base();
+  @include section.base($padding: 40px 0 240px, $gap: 64px);
+}
+
+.access_heading {
+  text-align: center;
+  @include heading.h1(color.$blue);
+}
+
+.access_sub_heading {
+  @include heading.h3($color: color.$blue);
+  font-size: 20px;
+}
+
+.access_heading_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  text-align: center;
+}
+
+.access_detail_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.access-sub-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  width: 100%;
+}
+
+.access_detail {
+  width: 100%;
+  @include paragraph.base;
+}
+
+.access_notice {
+  width: 100%;
+  @include notice.base;
 }
 
 .access_bus {
   display: grid;
-  grid-template-columns: 440px 1fr;
   grid-template-rows: 96px 1fr;
+  grid-template-columns: 440px 1fr;
   gap: 16px;
   height: 298px;
 }
@@ -32,29 +75,56 @@
   grid-column: 2/3;
 }
 
-.access_heading {
-  @include heading.h1(color.$blue);
-}
-
-.access_detail {
-  width: 100%;
-  @include paragraph.base();
-}
-
-.access_notice {
-  width: 100%;
-  @include notice.base();
-}
-
 .access_stations {
   display: flex;
   flex-direction: column;
   gap: 8px;
   width: 100%;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    gap: 16px;
+  }
+}
+
+.access_transportation {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  width: 100%;
 }
 
 .access-field {
-  @include key-value.vertical-non-value;
+  display: flex;
+  gap: 8px;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    flex-direction: column;
+  }
+
+  .access_transportation & {
+    flex-direction: column;
+  }
+
+  .key {
+    width: fit-content;
+    min-width: 120px;
+    padding: 0 8px;
+    color: color.$white;
+    text-align: center;
+    background-color: color.$blue;
+
+    @media screen and (max-width: content-size.$breakpoint) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}
+
+.access_google-map_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  width: 100%;
 }
 
 .access_google-map {
@@ -75,12 +145,15 @@
 
 .access_google-map_more {
   display: block;
-  color: color.$blue;
   margin-top: 8px;
+  color: color.$blue;
+  text-align: right;
 }
 
 @media screen and (max-width: content-size.$breakpoint) {
   .access-section {
+    padding-top: 0;
+
     img {
       width: 100%;
       height: auto;
@@ -100,6 +173,107 @@
     padding-top: 75%;
 
     iframe {
+    }
+  }
+}
+
+.access-bus-section {
+  @include section.base($padding: 0 0 120px, $sp-padding: 0);
+  gap: 80px;
+  background-color: color.$light-blue;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    gap: 40px;
+  }
+}
+
+.bus-map-box {
+  display: flex;
+  gap: 32px;
+  padding: 24px;
+  background-color: color.$white;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+  }
+}
+
+.bus-map_text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    gap: 16px;
+  }
+}
+
+.bus-map_heading {
+  @include heading.h1(color.$blue);
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    text-align: center;
+  }
+}
+
+.bus-map_sub {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    gap: 16px;
+  }
+
+  .image {
+    @media screen and (max-width: content-size.$breakpoint) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+.local_map {
+  margin-bottom: 40px;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    margin-bottom: 24px;
+  }
+}
+
+.access-car {
+  width: 100%;
+  li {
+    display: flex;
+    &:before {
+      content: '・';
+    }
+  }
+}
+
+.access-familiar-section {
+  @include section.base($padding: 240px 0 160px);
+  gap: 80px;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    gap: 40px;
+  }
+}
+
+.familiar-image {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    flex-wrap: wrap;
+  }
+
+  img {
+    @media screen and (max-width: content-size.$breakpoint) {
+      width: 50%;
     }
   }
 }

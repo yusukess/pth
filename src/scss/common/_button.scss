@@ -7,11 +7,12 @@
   justify-content: center;
   width: 300px;
   height: 60px;
+  font-family: font.$heading-font-family;
   color: color.$white;
   text-decoration: none;
   border-radius: 12px;
 
   &:hover {
-    opacity: .8;
+    opacity: 0.8;
   }
 }

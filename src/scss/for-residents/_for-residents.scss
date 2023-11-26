@@ -6,37 +6,37 @@
 @use '../common/heading' as heading;
 @use '../common/key-value' as key-value;
 
-.links-section {
+.for-residents-section {
   @include section.base($padding: 40px 0 80px, $gap: 40px);
 }
 
-.links-group-section {
+.for-residents-group-section {
   @include section.base($padding: 0);
 }
 
-.links-group_heading {
+.for-residents-group_heading {
   margin-bottom: 40px;
   text-align: center;
   @include heading.h1(color.$blue);
   @include heading.add-border;
 }
 
-.links-field {
+.for-residents-field {
   @include key-value.vertical;
 }
 
 @media screen and (max-width: content-size.$breakpoint) {
-  .links-section {
-    padding-top: 16px;
+  .for-residents-section {
+    padding-top: 0;
   }
 
-  .links-group-section {
+  .for-residents-group-section {
     padding: 0;
   }
 
-  .links-group_heading {
+  .for-residents-group_heading {
   }
 
-  .links-field {
+  .for-residents-field {
   }
 }

@@ -74,6 +74,7 @@
     @include sub-title.add($bottom: 2px);
 
     &::after {
+      bottom: -1px;
       font-size: font.$header-nav-sub-size;
       line-height: 1;
       white-space: nowrap;

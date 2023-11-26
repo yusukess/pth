@@ -11,12 +11,34 @@
     transform: translateX(-50%);
   }
 
-  &.structure-facilities::after { content: 'Structure & Facilities'; }
-  &.common-facilities::after { content: 'Common Facilities'; }
-  &.management-association::after { content: 'Management Association'; }
-  &.disaster-prevention::after { content: 'Disaster Prevention'; }
-  &.news::after { content: 'News/Events'; }
-  &.imagination-land::after { content: 'Imagination Land'; }
-  &.gallery-cg::after { content: 'Gallery & CG Collection'; }
-  &.links::after { content: 'Links for Residents'; }
+  &.structure-facilities::after {
+    content: 'Structure & Facilities';
+  }
+  &.common-facilities::after {
+    content: 'Common Facilities';
+  }
+  &.management-association::after {
+    content: 'Management Association';
+  }
+  &.disaster-prevention::after {
+    content: 'Disaster Prevention';
+  }
+  &.news::after {
+    content: 'News/Events';
+  }
+  &.imagination-land::after {
+    content: 'Imagination Land';
+  }
+  &.gallery-cg::after {
+    content: 'Gallery & CG Collection';
+  }
+  &.access::after {
+    content: 'Access & Map';
+  }
+  &.summary::after {
+    content: 'Building Overview';
+  }
+  &.for-residents::after {
+    content: 'Links for Residents';
+  }
 }
