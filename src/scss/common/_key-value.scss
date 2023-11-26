@@ -6,10 +6,10 @@
 
 @mixin vertical {
   &.field {
-    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 8px;
+    width: 100%;
 
     &:not(:last-child) {
       margin-bottom: 24px;
@@ -18,21 +18,20 @@
     .key {
       width: 100%;
       text-align: left;
-      @include heading.h3(color.$blue);
+      @include heading.h3(color.$white);
       @include heading.add-box;
     }
 
     .value {
       width: 100%;
-      text-align: left;
       padding-left: 16px;
+      text-align: left;
       @include paragraph.base;
     }
   }
 
   @media screen and (max-width: content-size.$breakpoint) {
     &.field {
-
       &:not(:last-child) {
       }
 
@@ -48,11 +47,11 @@
 
 @mixin horizontal {
   &.field {
-    width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
     gap: 16px;
+    align-items: center;
+    width: 100%;
     &:not(:last-child) {
       margin-bottom: 24px;
     }
@@ -94,10 +93,10 @@
 
 @mixin vertical-non-value {
   &.field {
-    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 8px;
+    width: 100%;
 
     .key {
       width: 100%;
@@ -109,7 +108,6 @@
 
   @media screen and (max-width: content-size.$breakpoint) {
     &.field {
-
       .key {
         @include heading.add-box($height: 52px);
       }

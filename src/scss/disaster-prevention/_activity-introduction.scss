@@ -8,14 +8,10 @@
 @use '../common/decoration' as decoration;
 
 .activity-introduction-section {
-  @include section.base();
+  @include section.base($sp-padding: 0 0 64px);
   position: relative;
   padding-top: 0;
   background-color: color.$light-blue;
-
-  @media screen and (max-width: content-size.$breakpoint) {
-    padding-bottom: 64px;
-  }
 }
 
 .activity-introduction_heading {

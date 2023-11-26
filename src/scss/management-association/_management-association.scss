@@ -32,7 +32,7 @@
 
 @media screen and (max-width: content-size.$breakpoint) {
   .management-association-section {
-    padding-top: 16px;
+    padding-top: 0;
   }
 
   .management-association-section_inner {
@@ -51,5 +51,4 @@
 
   .information_signature {
   }
-
 }

@@ -1,4 +1,5 @@
 @use './variables/font' as font;
+@use './variables/color';
 @use './variables/content-size' as content-size;
 
 @import 'common/reset';
@@ -17,7 +18,7 @@
 @import 'category/category';
 @import 'single/single';
 @import 'gallery-cg/gallery-cg';
-@import 'links/links';
+@import 'for-residents/for-residents';
 @import 'summary/summary';
 @import 'disaster-prevention/disaster-prevention';
 @import 'imagination-land/imagination-land';
@@ -34,6 +35,7 @@ body {
   @media screen and (max-width: content-size.$breakpoint) {
     min-width: auto;
     overflow-x: hidden;
+    font-size: 14px;
   }
 }
 
@@ -51,6 +53,15 @@ main {
 a,
 button {
   cursor: pointer;
+}
+
+a {
+  color: color.$blue;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 button {
@@ -78,5 +89,19 @@ img {
   @media screen and (max-width: content-size.$breakpoint) {
     width: 100%;
     height: auto;
+  }
+}
+
+.for-pc {
+  @media screen and (max-width: content-size.$breakpoint) {
+    display: none;
+  }
+}
+
+.for-sp {
+  display: none;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    display: block;
   }
 }

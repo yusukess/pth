@@ -10,7 +10,11 @@
   height: 420px;
 
   &.index {
-    height: 567px;
+    height: auto;
+
+    @media screen and (max-width: content-size.$breakpoint) {
+      height: 567px;
+    }
 
     .kv {
       @include slick.slider-kv;
@@ -66,7 +70,7 @@
     background-size: cover;
   }
 
-  &.links {
+  &.for-residents {
     background: url('../images/kv/links.jpg') no-repeat center center;
     background-size: cover;
   }

@@ -7,12 +7,11 @@
 @use '../common/paragraph' as paragraph;
 
 .zone-section {
+  @include section.base($padding: 120px 0 80px, $width: 100%);
   position: absolute;
   top: 0;
   left: 50%;
   box-sizing: border-box;
-
-  @include section.base($padding: 120px 0 80px, $width: 100%);
 
   height: 2168px; /* greeting-zoneの高さに合わせる */
   opacity: 0;

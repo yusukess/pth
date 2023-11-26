@@ -18,6 +18,44 @@
   @include heading.h1(color.$blue);
 }
 
+.gallery_heading {
+  position: relative;
+  width: 100%;
+  text-align: center;
+
+  &::before {
+    position: absolute;
+    top: -34px;
+    left: 124px;
+    width: 126px;
+    aspect-ratio: 126/129;
+    content: '';
+    background: url(../images/gallery-cg/header/bg_01.png) no-repeat;
+    background-size: 100% auto;
+
+    @media screen and (max-width: content-size.$breakpoint) {
+      top: -20px;
+      left: 0;
+      width: 64px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    right: 130px;
+    width: 144px;
+    aspect-ratio: 144/44;
+    content: '';
+    background: url(../images/gallery-cg/header/bg_02.png) no-repeat;
+    background-size: 100% auto;
+
+    @media screen and (max-width: content-size.$breakpoint) {
+      right: 0;
+      width: 72px;
+    }
+  }
+}
+
 .gallery-group,
 .cg-group {
   @include section.base($padding: 0 0 40px);
@@ -31,12 +69,12 @@
 
 .gallery,
 .cg {
-  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   flex-wrap: wrap;
   gap: 24px;
+  justify-content: space-between;
+  width: 100%;
   margin-top: 40px;
 }
 

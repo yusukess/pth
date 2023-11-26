@@ -157,10 +157,17 @@ legend {
 .site-header .global-navigation li.gallery-cg::after {
   content: "Gallery & CG Collection";
 }
-.site-header .global-navigation li.links::after {
+.site-header .global-navigation li.access::after {
+  content: "Access & Map";
+}
+.site-header .global-navigation li.summary::after {
+  content: "Building Overview";
+}
+.site-header .global-navigation li.for-residents::after {
   content: "Links for Residents";
 }
 .site-header .global-navigation li::after {
+  bottom: -1px;
   font-size: 10px;
   line-height: 1;
   pointer-events: none;
@@ -378,7 +385,13 @@ legend {
 .site-header_panel .sub-navigation li.gallery-cg::after {
   content: "Gallery & CG Collection";
 }
-.site-header_panel .sub-navigation li.links::after {
+.site-header_panel .sub-navigation li.access::after {
+  content: "Access & Map";
+}
+.site-header_panel .sub-navigation li.summary::after {
+  content: "Building Overview";
+}
+.site-header_panel .sub-navigation li.for-residents::after {
   content: "Links for Residents";
 }
 .site-header_panel .sub-navigation li a {
@@ -443,7 +456,7 @@ legend {
 .site-footer .global-navigation li.gallery-cg {
   background-image: url("../images/common/footer/navigation/gallery.jpg");
 }
-.site-footer .global-navigation li.links {
+.site-footer .global-navigation li.for-residents {
   background-image: url("../images/common/footer/navigation/links.jpg");
 }
 .site-footer .global-navigation li:hover {
@@ -494,7 +507,7 @@ legend {
   width: 100%;
 }
 .kv-section.index {
-  height: 567px;
+  height: auto;
 }
 .kv-section.index .kv.slick-slider {
   height: 800px;
@@ -570,7 +583,7 @@ legend {
   background: url("../images/kv/gallery.jpg") no-repeat center center;
   background-size: cover;
 }
-.kv-section.links {
+.kv-section.for-residents {
   background: url("../images/kv/links.jpg") no-repeat center center;
   background-size: cover;
 }
@@ -626,7 +639,13 @@ legend {
 .kv_catchcopy.gallery-cg::after {
   content: "Gallery & CG Collection";
 }
-.kv_catchcopy.links::after {
+.kv_catchcopy.access::after {
+  content: "Access & Map";
+}
+.kv_catchcopy.summary::after {
+  content: "Building Overview";
+}
+.kv_catchcopy.for-residents::after {
   content: "Links for Residents";
 }
 .breadcrumb {
@@ -856,7 +875,6 @@ legend {
 }
 @-webkit-keyframes dripping {
   0% {
-    height: 100px;
     transform: scale(1, 0);
   }
   20% {
@@ -874,7 +892,6 @@ legend {
 }
 @keyframes dripping {
   0% {
-    height: 100px;
     transform: scale(1, 0);
   }
   20% {
@@ -933,8 +950,8 @@ legend {
 }
 .recent-news-section_inner::before {
   -webkit-animation-name: dripping;
-  -webkit-animation-delay: 500ms;
   -webkit-animation-duration: 2400ms;
+  -webkit-animation-delay: 500ms;
   -webkit-animation-iteration-count: infinite;
           animation-delay: 500ms;
           animation-duration: 2400ms;
@@ -1092,13 +1109,18 @@ legend {
   border-radius: 12px;
   color: #fff;
   display: flex;
+  font-family: "Zen Old Mincho", serif;
   height: 60px;
   justify-content: center;
   text-decoration: none;
   width: 300px;
+  width: 500px;
 }
 .recent-news_button:hover {
   opacity: 0.8;
+}
+.recent-news_button:hover {
+  text-decoration: none;
 }
 
 @keyframes expand-in-keyframe {
@@ -1114,7 +1136,6 @@ legend {
 }
 @keyframes dripping {
   0% {
-    height: 100px;
     transform: scale(1, 0);
   }
   20% {
@@ -1213,12 +1234,12 @@ legend {
 }
 .concept_heading.animation-start img {
   -webkit-animation-name: fadein;
-  -webkit-animation-delay: 100ms;
   -webkit-animation-duration: 800ms;
-  -webkit-animation-fill-mode: forwards;
-  -webkit-animation-direction: normal;
   -webkit-animation-timing-function: ease;
+  -webkit-animation-delay: 100ms;
   -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
           animation-delay: 100ms;
           animation-direction: normal;
           animation-duration: 800ms;
@@ -1313,12 +1334,12 @@ legend {
 }
 [class*=animation-start] .photo:nth-child(1) {
   -webkit-animation-name: expand-in-keyframe;
-  -webkit-animation-delay: 100ms;
   -webkit-animation-duration: 500ms;
-  -webkit-animation-fill-mode: forwards;
-  -webkit-animation-direction: normal;
   -webkit-animation-timing-function: ease;
+  -webkit-animation-delay: 100ms;
   -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
           animation-delay: 100ms;
           animation-direction: normal;
           animation-duration: 500ms;
@@ -1330,12 +1351,12 @@ legend {
 }
 [class*=animation-start] .photo:nth-child(2) {
   -webkit-animation-name: expand-in-keyframe;
-  -webkit-animation-delay: 150ms;
   -webkit-animation-duration: 500ms;
-  -webkit-animation-fill-mode: forwards;
-  -webkit-animation-direction: normal;
   -webkit-animation-timing-function: ease;
+  -webkit-animation-delay: 150ms;
   -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
           animation-delay: 150ms;
           animation-direction: normal;
           animation-duration: 500ms;
@@ -1347,12 +1368,12 @@ legend {
 }
 [class*=animation-start] .photo:nth-child(3) {
   -webkit-animation-name: expand-in-keyframe;
-  -webkit-animation-delay: 200ms;
   -webkit-animation-duration: 500ms;
-  -webkit-animation-fill-mode: forwards;
-  -webkit-animation-direction: normal;
   -webkit-animation-timing-function: ease;
+  -webkit-animation-delay: 200ms;
   -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
           animation-delay: 200ms;
           animation-direction: normal;
           animation-duration: 500ms;
@@ -1364,12 +1385,12 @@ legend {
 }
 [class*=animation-start] .photo:nth-child(4) {
   -webkit-animation-name: expand-in-keyframe;
-  -webkit-animation-delay: 250ms;
   -webkit-animation-duration: 500ms;
-  -webkit-animation-fill-mode: forwards;
-  -webkit-animation-direction: normal;
   -webkit-animation-timing-function: ease;
+  -webkit-animation-delay: 250ms;
   -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
           animation-delay: 250ms;
           animation-direction: normal;
           animation-duration: 500ms;
@@ -1458,7 +1479,6 @@ legend {
 }
 @keyframes dripping {
   0% {
-    height: 100px;
     transform: scale(1, 0);
   }
   20% {
@@ -1519,8 +1539,8 @@ legend {
 }
 .movie-section_inner::before {
   -webkit-animation-name: dripping;
-  -webkit-animation-delay: 500ms;
   -webkit-animation-duration: 2400ms;
+  -webkit-animation-delay: 500ms;
   -webkit-animation-iteration-count: infinite;
           animation-delay: 500ms;
           animation-duration: 2400ms;
@@ -1601,7 +1621,7 @@ legend {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 0 42px;
+  padding: 32px 0 40px;
   position: relative;
   position: relative;
   width: 100%;
@@ -1632,6 +1652,8 @@ legend {
   border-radius: 12px;
   color: #fff;
   display: flex;
+  font-family: "Zen Old Mincho", serif;
+  font-size: 24px;
   height: 60px;
   justify-content: center;
   text-decoration: none;
@@ -2479,6 +2501,31 @@ legend {
   line-height: 1.5;
 }
 
+.gallery_heading {
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+.gallery_heading::before {
+  aspect-ratio: 126/129;
+  background: url(../images/gallery-cg/header/bg_01.png) no-repeat;
+  background-size: 100% auto;
+  content: "";
+  left: 124px;
+  position: absolute;
+  top: -34px;
+  width: 126px;
+}
+.gallery_heading::after {
+  aspect-ratio: 144/44;
+  background: url(../images/gallery-cg/header/bg_02.png) no-repeat;
+  background-size: 100% auto;
+  content: "";
+  position: absolute;
+  right: 130px;
+  width: 144px;
+}
+
 .gallery-group,
 .cg-group {
   align-items: center;
@@ -2536,7 +2583,7 @@ legend {
   margin-top: 40px;
   width: 100%;
 }
-.links-section {
+.for-residents-section {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -2545,7 +2592,7 @@ legend {
   position: relative;
   width: 100%;
 }
-.links-section_inner {
+.for-residents-section_inner {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -2554,7 +2601,7 @@ legend {
   width: 1000px;
 }
 
-.links-group-section {
+.for-residents-group-section {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -2563,7 +2610,7 @@ legend {
   position: relative;
   width: 100%;
 }
-.links-group-section_inner {
+.for-residents-group-section_inner {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -2572,7 +2619,7 @@ legend {
   width: 1000px;
 }
 
-.links-group_heading {
+.for-residents-group_heading {
   align-items: center;
   color: #2775A6;
   display: flex;
@@ -2583,31 +2630,31 @@ legend {
   text-align: center;
   width: 100%;
 }
-.links-group_heading::before, .links-group_heading::after {
+.for-residents-group_heading::before, .for-residents-group_heading::after {
   background-color: #2775A6;
   content: "";
   flex-grow: 1;
   height: 1px;
 }
-.links-group_heading::before {
+.for-residents-group_heading::before {
   margin-right: 72px;
 }
-.links-group_heading::after {
+.for-residents-group_heading::after {
   margin-left: 72px;
 }
 
-.links-field.field {
+.for-residents-field.field {
   display: flex;
   flex-direction: column;
   gap: 8px;
   width: 100%;
 }
-.links-field.field:not(:last-child) {
+.for-residents-field.field:not(:last-child) {
   margin-bottom: 24px;
 }
-.links-field.field .key {
+.for-residents-field.field .key {
   align-items: center;
-  color: #2775A6;
+  color: #fff;
   display: flex;
   flex-direction: row;
   font-family: "Zen Old Mincho", serif;
@@ -2617,7 +2664,7 @@ legend {
   text-align: left;
   width: 100%;
 }
-.links-field.field .key::before {
+.for-residents-field.field .key::before {
   background-color: #2775A6;
   content: "";
   display: block;
@@ -2625,7 +2672,7 @@ legend {
   height: 20px;
   width: 8px;
 }
-.links-field.field .value {
+.for-residents-field.field .value {
   color: #222;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
@@ -2656,6 +2703,7 @@ legend {
   align-items: center;
   display: flex;
   flex-direction: column;
+  gap: 16px;
   justify-content: center;
   padding: 0;
   position: relative;
@@ -2694,32 +2742,20 @@ legend {
   margin-left: 72px;
 }
 
-.summary-field.field {
-  align-items: center;
+.summary-field {
   display: flex;
-  flex-direction: row;
-  gap: 16px;
+  gap: 8px;
   width: 100%;
 }
-.summary-field.field:not(:last-child) {
-  margin-bottom: 24px;
-}
-.summary-field.field .key {
+.summary-field .key {
   background-color: #2775A6;
   color: #fff;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 16px;
-  height: 30px;
-  line-height: 1.8;
+  min-width: 120px;
+  padding: 0 8px;
   text-align: center;
-  width: 120px;
-}
-.summary-field.field .value {
-  color: #222;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 16px;
-  line-height: 1.8;
-  text-align: left;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .activity-introduction-section {
   align-items: center;
@@ -3060,8 +3096,8 @@ legend {
   left: 50%;
   opacity: 0;
   padding: 120px 0 80px;
-  position: absolute;
   position: relative;
+  position: absolute;
   top: 0;
   transform: translateX(-50%);
   transition: all 0.5s ease;
@@ -3348,7 +3384,7 @@ legend {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px 0 120px;
+  padding: 40px 0 240px;
   position: relative;
   width: 100%;
 }
@@ -3356,9 +3392,64 @@ legend {
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 64px;
   justify-content: center;
   width: 1000px;
+}
+
+.access_heading {
+  color: #2775A6;
+  font-family: "Zen Old Mincho", serif;
+  font-size: 32px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.access_sub_heading {
+  color: #2775A6;
+  font-family: "Zen Old Mincho", serif;
+  font-size: 24px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.access_heading_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: center;
+  width: 100%;
+}
+
+.access_detail_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.access-sub-section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.access_detail {
+  color: #222;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  width: 100%;
+}
+
+.access_notice {
+  color: #777;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 12px;
+  line-height: 1.8;
+  width: 100%;
 }
 
 .access_bus {
@@ -3387,29 +3478,6 @@ legend {
   line-height: 1.8;
 }
 
-.access_heading {
-  color: #2775A6;
-  font-family: "Zen Old Mincho", serif;
-  font-size: 32px;
-  line-height: 1.5;
-}
-
-.access_detail {
-  color: #222;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 16px;
-  line-height: 1.8;
-  width: 100%;
-}
-
-.access_notice {
-  color: #777;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 12px;
-  line-height: 1.8;
-  width: 100%;
-}
-
 .access_stations {
   display: flex;
   flex-direction: column;
@@ -3417,31 +3485,36 @@ legend {
   width: 100%;
 }
 
-.access-field.field {
+.access_transportation {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 36px;
   width: 100%;
 }
-.access-field.field .key {
-  align-items: center;
-  color: #222;
+
+.access-field {
   display: flex;
-  flex-direction: row;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 16px;
-  gap: 12px;
-  line-height: 1.8;
-  text-align: left;
-  width: 100%;
+  gap: 8px;
 }
-.access-field.field .key::before {
+.access_transportation .access-field {
+  flex-direction: column;
+}
+.access-field .key {
   background-color: #2775A6;
-  content: "";
-  display: block;
-  flex-shrink: 0;
-  height: 20px;
-  width: 8px;
+  color: #fff;
+  min-width: 120px;
+  padding: 0 8px;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.access_google-map_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  width: 100%;
 }
 
 .access_google-map {
@@ -3463,7 +3536,93 @@ legend {
   color: #2775A6;
   display: block;
   margin-top: 8px;
+  text-align: right;
 }
+.access-bus-section {
+  align-items: center;
+  background-color: #E2F0F3;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  justify-content: center;
+  padding: 0 0 120px;
+  position: relative;
+  width: 100%;
+}
+.access-bus-section_inner {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  width: 1000px;
+}
+
+.bus-map-box {
+  background-color: #fff;
+  display: flex;
+  gap: 32px;
+  padding: 24px;
+}
+
+.bus-map_text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.bus-map_heading {
+  color: #2775A6;
+  font-family: "Zen Old Mincho", serif;
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+.bus-map_sub {
+  align-items: center;
+  display: flex;
+  gap: 24px;
+}
+
+.local_map {
+  margin-bottom: 40px;
+}
+
+.access-car {
+  width: 100%;
+}
+.access-car li {
+  display: flex;
+}
+.access-car li:before {
+  content: "・";
+}
+
+.access-familiar-section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  justify-content: center;
+  padding: 240px 0 160px;
+  position: relative;
+  width: 100%;
+}
+.access-familiar-section_inner {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  width: 1000px;
+}
+
+.familiar-image {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 html,
 body {
   -webkit-font-smoothing: antialiased;
@@ -3489,6 +3648,14 @@ button {
   cursor: pointer;
 }
 
+a {
+  color: #2775A6;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 button {
   border: none;
 }
@@ -3499,6 +3666,11 @@ br.for-pc {
 br.for-sp {
   display: none;
 }
+
+.for-sp {
+  display: none;
+}
+
 @media screen and (max-width: 1325px){
   .site-header_logo .logo-text {
     display: none;
@@ -3507,6 +3679,7 @@ br.for-sp {
     min-width: auto;
   }
 }
+
 @media screen and (max-width: 1160px){
   .site-header {
     display: none;
@@ -3519,6 +3692,7 @@ br.for-sp {
     display: block;
   }
 }
+
 @media screen and (max-width: 430px){
   .site-footer_navigation {
     min-width: auto;
@@ -3546,6 +3720,9 @@ br.for-sp {
   }
   .site-footer_copyright {
     font-size: 14px;
+  }
+  .kv-section.index {
+    height: 567px;
   }
   .kv-section.index .kv.slick-slider .slick-list {
     left: 0;
@@ -3605,7 +3782,7 @@ br.for-sp {
     height: 65px;
   }
   .introduction-section {
-    padding: 12px 0 120px;
+    padding: 12px 0 64px;
   }
   .introduction-section_inner {
     gap: 24px;
@@ -3630,8 +3807,12 @@ br.for-sp {
     gap: 24px;
     width: calc(100vw - 8.5333333333%);
   }
+  .recent-news-section_inner::before {
+    height: 50px;
+    top: -50px;
+  }
   .recent-news_heading {
-    font-size: 40px;
+    font-size: 32px;
   }
   .recent-news_heading::after {
     height: 40px;
@@ -3650,9 +3831,9 @@ br.for-sp {
   }
   .news-card.card-view .news-card_thumbnail {
     align-items: center;
+    aspect-ratio: 34/13;
     border-radius: 12px 12px 0 0;
     display: flex;
-    height: 130px;
     justify-content: center;
     overflow: hidden;
     width: 100%;
@@ -3758,7 +3939,7 @@ br.for-sp {
     padding-top: 0;
   }
   .concept_point.concept_point4 {
-    padding-bottom: 88px;
+    padding-bottom: 24px;
     padding-top: 24px;
   }
   .concept_point_inner {
@@ -3906,6 +4087,10 @@ br.for-sp {
   .movie-section::before {
     height: 100px;
     top: -100px;
+  }
+  .movie-section_inner::before {
+    height: 80px;
+    top: -80px;
   }
   .movie_heading {
     font-size: 22px;
@@ -4209,7 +4394,7 @@ br.for-sp {
     font-size: 14px;
   }
   .management-association-section {
-    padding-top: 16px;
+    padding-top: 0;
   }
   .management-association-section_inner {
     gap: 40px;
@@ -4440,6 +4625,15 @@ br.for-sp {
 .cg_heading {
     font-size: 22px;
   }
+  .gallery_heading::before {
+    left: 0;
+    top: -20px;
+    width: 64px;
+  }
+  .gallery_heading::after {
+    right: 0;
+    width: 72px;
+  }
   .gallery-group,
 .cg-group {
     padding: 120px 0;
@@ -4479,46 +4673,46 @@ br.for-sp {
     flex-wrap: wrap;
     gap: 12px;
   }
-  .links-section {
+  .for-residents-section {
     padding: 120px 0;
   }
-  .links-section_inner {
+  .for-residents-section_inner {
     gap: 40px;
     width: calc(100vw - 8.5333333333%);
   }
-  .links-group-section {
+  .for-residents-group-section {
     padding: 120px 0;
   }
-  .links-group-section_inner {
+  .for-residents-group-section_inner {
     gap: 40px;
     width: calc(100vw - 8.5333333333%);
   }
-  .links-group_heading {
+  .for-residents-group_heading {
     font-size: 22px;
   }
-  .links-group_heading {
+  .for-residents-group_heading {
     flex-direction: column;
   }
-  .links-group_heading::before {
+  .for-residents-group_heading::before {
     display: none;
   }
-  .links-group_heading::after {
+  .for-residents-group_heading::after {
     margin: 24px 0 0;
     width: 60px;
   }
-  .links-field.field .key {
+  .for-residents-field.field .key {
     font-size: 18px;
   }
-  .links-field.field .value {
+  .for-residents-field.field .value {
     font-size: 14px;
   }
-  .links-field.field .value {
+  .for-residents-field.field .value {
     padding-left: 0;
   }
-  .links-section {
-    padding-top: 16px;
+  .for-residents-section {
+    padding-top: 0;
   }
-  .links-group-section {
+  .for-residents-group-section {
     padding: 0;
   }
   .summary-section {
@@ -4548,45 +4742,25 @@ br.for-sp {
     margin: 24px 0 0;
     width: 60px;
   }
-  .summary-field.field .key {
-    font-size: 14px;
+  .summary-field {
+    flex-direction: column;
   }
-  .summary-field.field .value {
-    font-size: 14px;
-  }
-  .summary-field.field {
-    gap: 8px;
-  }
-  .summary-field.field:not(:last-child) {
-    margin-bottom: 16px;
-  }
-  .summary-field.field .key {
-    height: 24px;
-    vertical-align: middle;
-    width: 80px;
-  }
-  .summary-field.field .value {
-    color: #222;
-    font-family: "Noto Sans JP", sans-serif;
-    font-size: 16px;
-    line-height: 1.8;
-    text-align: left;
+  .summary-field .key {
+    padding: 0;
+    width: 100%;
   }
   .summary-section {
-    padding-top: 16px;
+    padding-top: 0;
   }
   .summary-group-section {
     padding: 0;
   }
   .activity-introduction-section {
-    padding: 120px 0;
+    padding: 0 0 64px;
   }
   .activity-introduction-section_inner {
     gap: 40px;
     width: calc(100vw - 8.5333333333%);
-  }
-  .activity-introduction-section {
-    padding-bottom: 64px;
   }
   .activity-introduction_heading {
     font-size: 22px;
@@ -4662,7 +4836,7 @@ br.for-sp {
     display: none;
   }
   .disaster-prevention-section {
-    padding-top: 16px;
+    padding-top: 0;
   }
   .disaster-prevention_heading {
     text-align: center;
@@ -4918,34 +5092,33 @@ br.for-sp {
     gap: 40px;
     width: calc(100vw - 8.5333333333%);
   }
+  .access_heading {
+    font-size: 22px;
+  }
+  .access_sub_heading {
+    font-size: 18px;
+  }
+  .access_detail {
+    font-size: 14px;
+  }
   .access_bus_heading {
     font-size: 22px;
   }
   .access_bus_detail {
     font-size: 14px;
   }
-  .access_heading {
-    font-size: 22px;
+  .access_stations {
+    gap: 16px;
   }
-  .access_detail {
-    font-size: 14px;
+  .access-field {
+    flex-direction: column;
   }
-  .access-field.field .key {
-    font-size: 14px;
+  .access-field .key {
+    padding: 0;
+    width: 100%;
   }
-  .access-field.field .key {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    gap: 12px;
-  }
-  .access-field.field .key::before {
-    background-color: #2775A6;
-    content: "";
-    display: block;
-    flex-shrink: 0;
-    height: 52px;
-    width: 8px;
+  .access-section {
+    padding-top: 0;
   }
   .access-section img {
     height: auto;
@@ -4962,8 +5135,59 @@ br.for-sp {
     padding-top: 75%;
     position: relative;
   }
+  .access-bus-section {
+    padding: 0;
+  }
+  .access-bus-section_inner {
+    gap: 40px;
+    width: calc(100vw - 8.5333333333%);
+  }
+  .access-bus-section {
+    gap: 40px;
+  }
+  .bus-map-box {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+  }
+  .bus-map_text {
+    gap: 16px;
+  }
+  .bus-map_heading {
+    font-size: 22px;
+  }
+  .bus-map_heading {
+    text-align: center;
+  }
+  .bus-map_sub {
+    gap: 16px;
+  }
+  .bus-map_sub .image {
+    height: 80px;
+    width: 80px;
+  }
+  .local_map {
+    margin-bottom: 24px;
+  }
+  .access-familiar-section {
+    padding: 120px 0;
+  }
+  .access-familiar-section_inner {
+    gap: 40px;
+    width: calc(100vw - 8.5333333333%);
+  }
+  .access-familiar-section {
+    gap: 40px;
+  }
+  .familiar-image {
+    flex-wrap: wrap;
+  }
+  .familiar-image img {
+    width: 50%;
+  }
   html,
 body {
+    font-size: 14px;
     min-width: auto;
     overflow-x: hidden;
   }
@@ -4977,7 +5201,14 @@ body {
     height: auto;
     width: 100%;
   }
+  .for-pc {
+    display: none;
+  }
+  .for-sp {
+    display: block;
+  }
 }
+
 @media screen and (max-width: 430px) and (max-width: 430px){
   .kv-section.index .kv.slick-slider {
     height: 100%;
@@ -5010,9 +5241,6 @@ body {
   }
   .facilities_heading {
     font-size: 22px;
-  }
-  .summary-field.field .value {
-    font-size: 14px;
   }
   .disaster-prevention-point .point_heading {
     font-size: 18px;

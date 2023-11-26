@@ -45,6 +45,11 @@
     transform-origin: left top;
 
     @include animation.dripping;
+
+    @media screen and (max-width: content-size.$breakpoint) {
+      top: -80px;
+      height: 80px;
+    }
   }
 }
 
