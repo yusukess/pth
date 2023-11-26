@@ -11,22 +11,24 @@
   &.card-view {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+
     text-decoration: none;
     background-color: color.$light-gold;
     border-radius: 12px;
-    transition: transform .1s ease;
+    transition: transform 0.1s ease;
 
     @include shadow.card;
 
-    &:hover {
-      transform: scale(1.02);
-    }
+    // &:hover {
+    //   transform: scale(1.02);
+    // }
 
     .news-card_thumbnail {
-      width: 240px;
+      width: 100%;
       height: 170px;
+      overflow: hidden;
       background: color.$copper;
+      border-radius: 12px 12px 0 0;
 
       img {
         object-fit: cover;
@@ -59,7 +61,7 @@
 
   @media screen and (max-width: content-size.$breakpoint) {
     &.card-view {
-      margin: 0 8px;
+      margin: 0;
       .news-card_thumbnail {
         display: flex;
         align-items: center;
@@ -67,6 +69,7 @@
         width: 100%;
         height: 130px;
         overflow: hidden;
+        border-radius: 12px 12px 0 0;
 
         img {
           width: 100%;
@@ -105,14 +108,14 @@
     display: flex;
     flex-direction: row;
     gap: 16px;
-    overflow: hidden;
-    text-decoration: none;
     align-items: center;
     width: 100%;
     padding: 16px 0;
+    overflow: hidden;
+    text-decoration: none;
 
     &:hover {
-      opacity: .8;
+      opacity: 0.8;
     }
 
     & + & {
@@ -180,8 +183,8 @@
       }
 
       .news-card_summary {
-        width: 100%;
         gap: 4px;
+        width: 100%;
       }
 
       .news-card_tags {

@@ -7,7 +7,7 @@
 @use '../common/section' as section;
 
 .introduction-section {
-  @include section.base($sp-padding: 12px 0 0, $sp-gap: 24px);
+  @include section.base($sp-padding: 12px 0 120px, $sp-gap: 24px);
 }
 
 .introduction-section_inner {

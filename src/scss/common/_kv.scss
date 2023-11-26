@@ -10,7 +10,7 @@
   height: 420px;
 
   &.index {
-    height: 800px;
+    height: 567px;
 
     .kv {
       @include slick.slider-kv;
@@ -101,14 +101,6 @@
 @media screen and (max-width: content-size.$breakpoint) {
   .kv-section {
     height: 280px;
-
-    &.index {
-      height: calc(100vh - 64px);
-
-      @media screen and (max-width: content-size.$breakpoint) {
-        height: 813px;
-      }
-    }
   }
 
   .kv_catchcopy {
