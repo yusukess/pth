@@ -9,11 +9,14 @@ export default () => {
     window.addEventListener('scroll', () => {
       const objTop = $('.message_section').offset().top;
       scroll = $(window).scrollTop();
+
+      console.log(scroll - objTop);
       if (scroll >= objTop) {
-        scroll = (scroll - 1500) / 8;
+        scroll = (scroll - objTop) / 10;
+        console.log(scroll);
         document.documentElement.style.setProperty(
           '--kv-overlay-opacity',
-          Math.round(scroll / 20) / 10 < 0.8 ? Math.round(scroll / 20) / 10 : 0.8
+          Math.round(scroll) / 100 < 0.8 ? Math.round(scroll) / 100 : 0.8
         );
       }
     });

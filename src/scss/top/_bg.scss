@@ -12,24 +12,42 @@
   background: url('../images/top/concept-kv-bg.jpg') repeat-x center center;
   background-size: 1px 100vh;
 
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 1930px;
+    content: '';
+    background-color: color.$message-overlay;
+    mix-blend-mode: multiply;
+    opacity: var(--kv-overlay-opacity, 0);
+  }
+
   @media screen and (max-width: content-size.$breakpoint) {
   }
 
   .obj {
     position: absolute;
+    bottom: calc(100 / 1400 * 100%);
+    //transform: translateX(-50%);
+    // animation: 7s floating infinite;
+
     //left: 50%;
     width: 1876px;
     height: auto;
     aspect-ratio: 1876 / 747;
     content: '';
     background: url('../images/top/concept-kv-whale.png') no-repeat 20px center / 100% auto;
-    //transform: translateX(-50%);
+
     animation: 7s floating infinite;
 
     @media screen and (max-width: content-size.$breakpoint) {
+      bottom: calc(300 / 1400 * 100%);
+      left: -40px;
       width: auto;
-      height: 350px;
-      margin-left: -40px;
+      height: 380px;
     }
   }
 }

@@ -19,21 +19,8 @@ $message-point-height-pc: 900px;
 
   @include section.base($padding: 0 0 130px, $sp-padding: 12px 0 64px, $sp-gap: 24px);
 
-  &:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 1930px;
-    content: '';
-    background-color: color.$message-overlay;
-    mix-blend-mode: multiply;
-    opacity: var(--kv-overlay-opacity, 0);
-  }
-
   @media screen and (max-width: content-size.$breakpoint) {
-    height: 1400px;
+    height: 200vh;
   }
 
   // .bubble {
@@ -79,9 +66,10 @@ $message-point-height-pc: 900px;
 .message_point {
   width: 100%;
   height: $message-point-height-pc;
+  min-height: $message-point-height-pc;
 
   @media screen and (max-width: content-size.$breakpoint) {
-    height: 700px;
+    height: 100vh;
   }
 }
 
@@ -113,7 +101,7 @@ $message-point-height-pc: 900px;
 
   @media screen and (max-width: content-size.$breakpoint) {
     width: auto;
-    padding: 0 36px;
+    padding: 0 28px;
     margin: auto auto auto 0;
     font-size: font.$legend-heading1-size-sp;
     line-height: 75px;
@@ -143,7 +131,6 @@ $message-point-height-pc: 900px;
 
   @media screen and (max-width: content-size.$breakpoint) {
     width: auto;
-
     margin: auto 10%;
     font-size: 15px;
     text-align: center;
