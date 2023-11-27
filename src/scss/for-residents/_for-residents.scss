@@ -23,6 +23,9 @@
 
 .for-residents-field {
   @include key-value.vertical;
+  .key {
+    color: color.$blue !important;
+  }
 }
 
 @media screen and (max-width: content-size.$breakpoint) {

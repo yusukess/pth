@@ -1,0 +1,46 @@
+@use '../variables/color' as color;
+@use '../variables/content-size' as content-size;
+
+.bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: url('../images/top/concept-kv-bg.jpg') repeat-x center center;
+  background-size: 1px 100vh;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+  }
+
+  .obj {
+    position: absolute;
+    //left: 50%;
+    width: 1876px;
+    height: auto;
+    aspect-ratio: 1876 / 747;
+    content: '';
+    background: url('../images/top/concept-kv-whale.png') no-repeat 20px center / 100% auto;
+    //transform: translateX(-50%);
+    animation: 7s floating infinite;
+
+    @media screen and (max-width: content-size.$breakpoint) {
+      width: auto;
+      height: 350px;
+      margin-left: -40px;
+    }
+  }
+}
+
+/* 回転するアニメーション */
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}

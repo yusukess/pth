@@ -281,7 +281,7 @@ legend {
   transform: translateX(0);
 }
 .site-header-sp .site-header_hamburger.active span {
-  background-color: #2775A6;
+  background-color: #2775a6;
 }
 .site-header-sp .site-header_hamburger.active span:nth-child(1) {
   top: 5px;
@@ -340,7 +340,7 @@ legend {
 }
 .site-header_panel .global-navigation li a {
   align-items: center;
-  color: #2775A6;
+  color: #2775a6;
   display: flex;
   height: 100%;
   padding: 0 0 0 24px;
@@ -396,7 +396,7 @@ legend {
 }
 .site-header_panel .sub-navigation li a {
   align-items: center;
-  color: #2775A6;
+  color: #2775a6;
   display: flex;
   height: 100%;
   padding: 0 0 0 24px;
@@ -405,7 +405,7 @@ legend {
 
 .site-footer {
   align-items: center;
-  background-color: #2775A6;
+  background-color: #2775a6;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -501,16 +501,17 @@ legend {
   padding-bottom: 32px;
 }
 
-.kv-section.index {
+.kv-section.index .kv-section-inner {
   opacity: 0;
   transition: opacity 0.3s linear;
 }
 
-.kv-section.index.slick-init {
+.kv-section.index .kv-section-inner.slick-init {
   opacity: 1;
 }
 
 .kv-section {
+  background-color: #fff;
   height: 420px;
   position: relative;
   width: 100%;
@@ -551,10 +552,10 @@ legend {
   width: 8px;
 }
 .kv-section.index .kv.slick-slider .slick-dots li.slick-active button {
-  background: #D2BB3E;
+  background: #d2bb3e;
 }
 .kv-section.index .kv.slick-slider .slick-dots li button {
-  background: #D9D9D9;
+  background: #d9d9d9;
   border-radius: 50%;
   font-size: 0;
   height: 8px;
@@ -563,6 +564,9 @@ legend {
 }
 .kv-section.index .kv.for-sp {
   display: none;
+}
+.kv-section .kv-section-inner {
+  height: 100%;
 }
 .kv-section.structure-facilities {
   background: url("../images/kv/structure-facilities.jpg") no-repeat center center;
@@ -673,7 +677,7 @@ legend {
   line-height: 1;
 }
 .breadcrumb li + li::before {
-  color: #2775A6;
+  color: #2775a6;
   content: "＞";
   font-size: 12px;
   height: 16px;
@@ -681,7 +685,7 @@ legend {
   width: 16px;
 }
 .breadcrumb a {
-  color: #2775A6;
+  color: #2775a6;
   font-size: 12px;
   text-decoration: none;
 }
@@ -708,16 +712,16 @@ legend {
   width: 40px;
 }
 .wp-pagenavi .current {
-  background-color: #2775A6;
+  background-color: #2775a6;
   color: #fff;
 }
 .wp-pagenavi .page,
 .wp-pagenavi .first,
 .wp-pagenavi .last {
   background-color: #fff;
-  border: #2775A6 solid 1px;
+  border: #2775a6 solid 1px;
   box-sizing: border-box;
-  color: #2775A6;
+  color: #2775a6;
 }
 
 .article_pagination {
@@ -728,16 +732,16 @@ legend {
 }
 .article_pagination a {
   border-radius: 8px;
-  color: #2775A6;
+  color: #2775a6;
   font-size: 16px;
   padding: 8px 16px;
   text-decoration: none;
 }
 .article_pagination a:hover {
-  background-color: #E2F0F3;
+  background-color: #e2f0f3;
 }
 .lightboxOverlay {
-  background-color: #2775A6 !important;
+  background-color: #2775a6 !important;
 }
 
 .lb-close {
@@ -773,6 +777,9 @@ legend {
 .wave-anime.is-inverted {
   transform: scale(-1, -1);
 }
+.wave-anime.is-over {
+  z-index: 1;
+}
 .wave-anime.bg-white {
   background-color: #fff;
 }
@@ -794,7 +801,7 @@ legend {
   color: #d3edef;
 }
 .wave-anime .scroller03 {
-  color: #E2F0F3;
+  color: #e2f0f3;
 }
 .wave-anime .simply-scroll {
   height: 130px;
@@ -811,6 +818,7 @@ legend {
 
 .introduction-section {
   align-items: center;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -832,7 +840,7 @@ legend {
 }
 
 .introduction_heading {
-  color: #7F5000;
+  color: #7f5000;
   font-family: "Zen Old Mincho", serif;
   font-size: 32px;
   line-height: 1.5;
@@ -852,19 +860,19 @@ legend {
 }
 
 .introduction_detail {
-  color: #7F5000;
+  color: #7f5000;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   line-height: 1.8;
   text-align: center;
 }
 
-.kv-section.index {
+.kv-section.index .kv-section-inner {
   opacity: 0;
   transition: opacity 0.3s linear;
 }
 
-.kv-section.index.slick-init {
+.kv-section.index .kv-section-inner.slick-init {
   opacity: 1;
 }
 
@@ -947,10 +955,11 @@ legend {
 }
 .recent-news-section {
   align-items: center;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px 0 120px;
+  padding: 80px 0 24px;
   position: relative;
   width: 100%;
 }
@@ -961,6 +970,15 @@ legend {
   gap: 40px;
   justify-content: center;
   width: 1000px;
+}
+.recent-news-section:after {
+  background: linear-gradient(#fff, transparent);
+  bottom: -120px;
+  content: "";
+  height: 120px;
+  left: 0;
+  position: absolute;
+  width: 100%;
 }
 
 .recent-news-section_inner {
@@ -975,7 +993,7 @@ legend {
           animation-duration: 2400ms;
           animation-iteration-count: infinite;
           animation-name: dripping;
-  background-color: #7F5000;
+  background-color: #7f5000;
   content: "";
   height: 100px;
   left: 50%;
@@ -989,7 +1007,7 @@ legend {
 
 .recent-news_heading {
   align-items: center;
-  color: #7F5000;
+  color: #7f5000;
   display: flex;
   flex-direction: column;
   font-family: "Zen Old Mincho", serif;
@@ -1021,7 +1039,7 @@ legend {
 }
 
 .news-card.card-view {
-  background-color: #FAF5E9;
+  background-color: #faf5e9;
   border-radius: 12px;
   display: flex;
   filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
@@ -1031,7 +1049,7 @@ legend {
   transition: transform 0.1s ease;
 }
 .news-card.card-view .news-card_thumbnail {
-  background: #7F5000;
+  background: #7f5000;
   border-radius: 12px 12px 0 0;
   height: 170px;
   overflow: hidden;
@@ -1049,7 +1067,7 @@ legend {
   padding: 16px;
 }
 .news-card.card-view .news-card_post-date {
-  color: #7F5000;
+  color: #7f5000;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 12px;
   line-height: 1.5;
@@ -1057,7 +1075,7 @@ legend {
 .news-card.card-view .news-card_title {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
-  color: #7F5000;
+  color: #7f5000;
   display: -webkit-box;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
@@ -1071,7 +1089,7 @@ legend {
 .news-card.card-view .news-card_detail {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
-  color: #7F5000;
+  color: #7f5000;
   display: -webkit-box;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 12px;
@@ -1098,7 +1116,7 @@ legend {
 }
 .slider_card-list.slick-slider .arrow-prev:not([aria-disabled=true]):hover,
 .slider_card-list.slick-slider .arrow-next:not([aria-disabled=true]):hover {
-  background-color: #FAF5E9;
+  background-color: #faf5e9;
 }
 .slider_card-list.slick-slider .arrow-prev[aria-disabled=true],
 .slider_card-list.slick-slider .arrow-next[aria-disabled=true] {
@@ -1123,7 +1141,7 @@ legend {
 
 .recent-news_button {
   align-items: center;
-  background-color: #D2BB3E;
+  background-color: #d2bb3e;
   border-radius: 12px;
   color: #fff;
   display: flex;
@@ -1141,11 +1159,11 @@ legend {
   text-decoration: none;
 }
 
-.kv-section.index {
+.kv-section.index .kv-section-inner {
   opacity: 0;
   transition: opacity 0.3s linear;
 }
-.kv-section.index.slick-init {
+.kv-section.index .kv-section-inner.slick-init {
   opacity: 1;
 }
 
@@ -1187,12 +1205,195 @@ legend {
     transform: translateY(0);
   }
 }
-.concept-section {
+.message_section {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  overflow-x: hidden;
+  overflow: hidden;
+  padding: 0 0 130px;
+  position: relative;
+  position: relative;
+  width: 100%;
+}
+.message_section_inner {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  width: 1000px;
+}
+.message_section:after {
+  background-color: #9fd1e4;
+  content: "";
+  height: 1930px;
+  left: 0;
+  mix-blend-mode: multiply;
+  opacity: var(--kv-overlay-opacity, 0);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.message_point {
+  height: 900px;
+  width: 100%;
+}
+
+.message_point02 {
+  position: relative;
+}
+
+.message_point_inner {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.message_heading {
+  background-color: #fff;
+  color: #2775a6;
+  font-family: "Zen Old Mincho", serif;
+  font-size: 48px;
+  line-height: 150px;
+  margin: auto 40px auto auto;
+  opacity: 0;
+  text-align: center;
+  width: 720px;
+  z-index: 1;
+}
+.message_heading[data-intersected=true] {
+  -webkit-animation-name: expand-in-keyframe;
+  -webkit-animation-duration: 500ms;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-delay: 100ms;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-delay: 100ms;
+          animation-direction: normal;
+          animation-duration: 500ms;
+          animation-fill-mode: forwards;
+          animation-iteration-count: 1;
+          animation-name: expand-in-keyframe;
+          animation-timing-function: ease;
+  opacity: 0;
+}
+.message_heading span {
+  font-size: 36px;
+}
+
+.message_text {
+  color: #fff;
+  font-family: "Zen Old Mincho", serif;
+  font-size: 24px;
+  margin: auto 40px auto auto;
+  opacity: 0;
+  text-align: center;
+  z-index: 1;
+}
+.message_text[data-intersected=true] {
+  -webkit-animation-name: expand-in-keyframe;
+  -webkit-animation-duration: 500ms;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-delay: 100ms;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-delay: 100ms;
+          animation-direction: normal;
+          animation-duration: 500ms;
+          animation-fill-mode: forwards;
+          animation-iteration-count: 1;
+          animation-name: expand-in-keyframe;
+          animation-timing-function: ease;
+  opacity: 0;
+}
+
+/* 泡の見た目 */
+.bubble {
+  -webkit-animation: bubble 20s linear infinite;
+          animation: bubble 20s linear infinite;
+  background: url(../images/top/bubble/bubble01-01.png) no-repeat center/cover;
+  bottom: -50px;
+  pointer-events: none;
+  position: absolute;
+}
+
+/* 泡が上に浮かび上がっていくアニメーション */
+@-webkit-keyframes bubble {
+  0% {
+    opacity: 1;
+    transform: translatY(0);
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-1800px);
+  }
+}
+@keyframes bubble {
+  0% {
+    opacity: 1;
+    transform: translatY(0);
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-1800px);
+  }
+}
+@keyframes expand-in-keyframe {
+  0% {
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+    opacity: 1;
+  }
+}
+@keyframes dripping {
+  0% {
+    transform: scale(1, 0);
+  }
+  20% {
+    transform: scale(1, 1);
+  }
+  40% {
+    height: 0;
+    top: 0;
+  }
+  100% {
+    height: 0;
+    top: 0;
+    transform: scale(1, 1);
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.concept-section {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
   padding: 0;
   position: relative;
   width: 100%;
@@ -1204,50 +1405,6 @@ legend {
   gap: 40px;
   justify-content: center;
   width: 1000px;
-}
-
-.concept_kv {
-  align-items: center;
-  background: url("../images/top/concept-kv-whale.png") no-repeat 20px center, url("../images/top/concept-kv-bg.jpg") repeat-x center center;
-  background-size: 1876px 747px, 1px 930px;
-  display: flex;
-  flex-direction: column;
-  height: 930px;
-  justify-content: center;
-  overflow: hidden;
-  padding: 0;
-  position: relative;
-  position: relative;
-  width: 100%;
-  width: 100%;
-}
-.concept_kv_inner {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  justify-content: center;
-  width: 1000px;
-}
-
-.concept_kv_inner {
-  height: 930px;
-  position: relative;
-}
-
-.concept_kv_parallax {
-  margin: 0 auto;
-  max-width: 1600px;
-  width: 100%;
-}
-
-.concept_kv_bubble {
-  z-index: 1;
-}
-
-.concept_kv_bubble img {
-  height: auto;
-  width: 100%;
 }
 
 .concept_heading {
@@ -1296,8 +1453,8 @@ legend {
   justify-content: center;
   width: 1000px;
 }
-.concept_point:nth-child(even) {
-  background-color: #E2F0F3;
+.concept_point:nth-child(odd) {
+  background-color: #e2f0f3;
 }
 .concept_point.concept_point1 {
   padding-bottom: 86px;
@@ -1343,14 +1500,14 @@ legend {
 }
 
 .concept_point_heading {
-  color: #2775A6;
+  color: #2775a6;
   font-family: "Zen Old Mincho", serif;
   font-size: 32px;
   line-height: 1.5;
 }
 
 .concept_point_detail {
-  color: #2775A6;
+  color: #2775a6;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   line-height: 1.8;
@@ -1359,7 +1516,7 @@ legend {
 .photo {
   opacity: 0;
 }
-[class*=animation-start] .photo:nth-child(1) {
+[data-intersected=true] .photo:nth-child(1) {
   -webkit-animation-name: expand-in-keyframe;
   -webkit-animation-duration: 500ms;
   -webkit-animation-timing-function: ease;
@@ -1376,7 +1533,7 @@ legend {
           animation-timing-function: ease;
   opacity: 0;
 }
-[class*=animation-start] .photo:nth-child(2) {
+[data-intersected=true] .photo:nth-child(2) {
   -webkit-animation-name: expand-in-keyframe;
   -webkit-animation-duration: 500ms;
   -webkit-animation-timing-function: ease;
@@ -1393,7 +1550,7 @@ legend {
           animation-timing-function: ease;
   opacity: 0;
 }
-[class*=animation-start] .photo:nth-child(3) {
+[data-intersected=true] .photo:nth-child(3) {
   -webkit-animation-name: expand-in-keyframe;
   -webkit-animation-duration: 500ms;
   -webkit-animation-timing-function: ease;
@@ -1410,7 +1567,7 @@ legend {
           animation-timing-function: ease;
   opacity: 0;
 }
-[class*=animation-start] .photo:nth-child(4) {
+[data-intersected=true] .photo:nth-child(4) {
   -webkit-animation-name: expand-in-keyframe;
   -webkit-animation-duration: 500ms;
   -webkit-animation-timing-function: ease;
@@ -1533,7 +1690,7 @@ legend {
 }
 .movie-section {
   align-items: center;
-  background-color: #FAF5E9;
+  background-color: #faf5e9;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1573,7 +1730,7 @@ legend {
           animation-duration: 2400ms;
           animation-iteration-count: infinite;
           animation-name: dripping;
-  background-color: #7F5000;
+  background-color: #7f5000;
   content: "";
   height: 100px;
   left: 50%;
@@ -1587,7 +1744,7 @@ legend {
 
 .movie_heading {
   align-items: center;
-  color: #7F5000;
+  color: #7f5000;
   display: flex;
   flex-direction: column;
   font-family: "Zen Old Mincho", serif;
@@ -1638,13 +1795,48 @@ legend {
   width: 100%;
 }
 
-[class*=home] main {
-  background-color: #fff;
+.bg-image {
+  background: url("../images/top/concept-kv-bg.jpg") repeat-x center center;
+  background-size: 1px 100vh;
+  height: 100vh;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: -1;
+}
+.bg-image .obj {
+  -webkit-animation: 7s floating infinite;
+          animation: 7s floating infinite;
+  aspect-ratio: 1876/747;
+  background: url("../images/top/concept-kv-whale.png") no-repeat 20px center/100% auto;
+  content: "";
+  height: auto;
+  position: absolute;
+  width: 1876px;
 }
 
+/* 回転するアニメーション */
+@-webkit-keyframes floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
 .page-anchor-section {
   align-items: center;
-  background-color: #E2F0F3;
+  background-color: #e2f0f3;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1717,7 +1909,7 @@ legend {
 }
 
 .structure_heading {
-  color: #2775A6;
+  color: #2775a6;
   font-family: "Zen Old Mincho", serif;
   font-size: 32px;
   line-height: 1.5;
@@ -1766,7 +1958,7 @@ legend {
   gap: 24px;
 }
 .structure-facilities-point .point_heading {
-  color: #2775A6;
+  color: #2775a6;
   font-family: "Zen Old Mincho", serif;
   font-size: 24px;
   line-height: 1.5;
@@ -1812,7 +2004,7 @@ legend {
 }
 
 .facilities_heading {
-  color: #2775A6;
+  color: #2775a6;
   font-family: "Zen Old Mincho", serif;
   font-size: 32px;
   line-height: 1.5;
@@ -1827,7 +2019,7 @@ legend {
 
 .facilities-group_heading {
   align-items: center;
-  color: #2775A6;
+  color: #2775a6;
   display: flex;
   font-family: "Zen Old Mincho", serif;
   font-size: 28px;
@@ -1836,7 +2028,7 @@ legend {
   width: 100%;
 }
 .facilities-group_heading::before, .facilities-group_heading::after {
-  background-color: #2775A6;
+  background-color: #2775a6;
   content: "";
   flex-grow: 1;
   height: 1px;
@@ -1877,7 +2069,7 @@ legend {
 
 .facilities-card_title {
   align-items: center;
-  color: #2775A6;
+  color: #2775a6;
   display: flex;
   font-family: "Zen Old Mincho", serif;
   font-size: 20px;
@@ -1904,15 +2096,15 @@ legend {
   width: 100%;
 }
 [class*=structure-facilities] main {
-  background-color: #E2F0F3;
+  background-color: #e2f0f3;
 }
 
-.kv-section.index {
+.kv-section.index .kv-section-inner {
   opacity: 0;
   transition: opacity 0.3s linear;
 }
 
-.kv-section.index.slick-init {
+.kv-section.index .kv-section-inner.slick-init {
   opacity: 1;
 }
 
@@ -1954,7 +2146,7 @@ legend {
 
 .photo-gallery_heading {
   align-items: center;
-  color: #2775A6;
+  color: #2775a6;
   display: flex;
   font-family: "Zen Old Mincho", serif;
   font-size: 32px;
@@ -1962,7 +2154,7 @@ legend {
   width: 100%;
 }
 .photo-gallery_heading::before, .photo-gallery_heading::after {
-  background-color: #2775A6;
+  background-color: #2775a6;
   content: "";
   flex-grow: 1;
   height: 1px;
@@ -1991,7 +2183,7 @@ legend {
 }
 .photo-gallery_slider .slider-photo .arrow-prev:not([aria-disabled=true]):hover,
 .photo-gallery_slider .slider-photo .arrow-next:not([aria-disabled=true]):hover {
-  background-color: #E2F0F3;
+  background-color: #e2f0f3;
 }
 .photo-gallery_slider .slider-photo .arrow-prev[aria-disabled=true],
 .photo-gallery_slider .slider-photo .arrow-next[aria-disabled=true] {
@@ -2064,7 +2256,7 @@ legend {
 }
 
 .photo-gallery_title {
-  color: #2775A6;
+  color: #2775a6;
   font-family: "Zen Old Mincho", serif;
   font-size: 24px;
   line-height: 1.5;
@@ -2117,7 +2309,7 @@ legend {
 }
 
 .information_heading {
-  color: #2775A6;
+  color: #2775a6;
   font-family: "Zen Old Mincho", serif;
   font-size: 32px;
   line-height: 1.5;
@@ -2139,12 +2331,12 @@ legend {
   text-align: right;
   width: 100%;
 }
-.kv-section.index {
+.kv-section.index .kv-section-inner {
   opacity: 0;
   transition: opacity 0.3s linear;
 }
 
-.kv-section.index.slick-init {
+.kv-section.index .kv-section-inner.slick-init {
   opacity: 1;
 }
 
@@ -2167,7 +2359,7 @@ legend {
 }
 
 .event-message {
-  color: #2775A6;
+  color: #2775a6;
   font-family: "Zen Old Mincho", serif;
   font-size: 32px;
   line-height: 1.5;
@@ -2194,7 +2386,7 @@ legend {
 
 .event_heading {
   align-items: center;
-  color: #2775A6;
+  color: #2775a6;
   display: flex;
   font-family: "Zen Old Mincho", serif;
   font-size: 32px;
@@ -2202,7 +2394,7 @@ legend {
   width: 100%;
 }
 .event_heading::before, .event_heading::after {
-  background-color: #2775A6;
+  background-color: #2775a6;
   content: "";
   flex-grow: 1;
   height: 1px;
@@ -2231,7 +2423,7 @@ legend {
 }
 .event_slider .slider-photo .arrow-prev:not([aria-disabled=true]):hover,
 .event_slider .slider-photo .arrow-next:not([aria-disabled=true]):hover {
-  background-color: #E2F0F3;
+  background-color: #e2f0f3;
 }
 .event_slider .slider-photo .arrow-prev[aria-disabled=true],
 .event_slider .slider-photo .arrow-next[aria-disabled=true] {
@@ -2304,7 +2496,7 @@ legend {
 }
 
 .event_title {
-  color: #2775A6;
+  color: #2775a6;
   font-family: "Zen Old Mincho", serif;
   font-size: 28px;
   line-height: 1.5;
@@ -2352,7 +2544,7 @@ legend {
   opacity: 0.8;
 }
 .news-card.list-view + .news-card.list-view {
-  border-top: solid 1px #2775A6;
+  border-top: solid 1px #2775a6;
 }
 .news-card.list-view .news-card_thumbnail {
   height: 152px;
@@ -2375,7 +2567,7 @@ legend {
   gap: 8px;
 }
 .news-card.list-view .news-card_tag {
-  background-color: #2775A6;
+  background-color: #2775a6;
   color: #fff;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 12px;
@@ -2387,7 +2579,7 @@ legend {
   text-decoration: none;
 }
 .news-card.list-view .news-card_post-date {
-  color: #2775A6;
+  color: #2775a6;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 12px;
   line-height: 1.8;
@@ -2395,7 +2587,7 @@ legend {
 .news-card.list-view .news-card_title {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
-  color: #2775A6;
+  color: #2775a6;
   display: -webkit-box;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
@@ -2434,8 +2626,8 @@ legend {
 }
 
 .article_title {
-  border-bottom: solid 1px #2775A6;
-  color: #2775A6;
+  border-bottom: solid 1px #2775a6;
+  color: #2775a6;
   font-family: "Zen Old Mincho", serif;
   font-size: 32px;
   line-height: 1.5;
@@ -2445,7 +2637,7 @@ legend {
 }
 
 .article_post-date {
-  color: #2775A6;
+  color: #2775a6;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   line-height: 1.8;
@@ -2458,7 +2650,7 @@ legend {
 }
 
 .article_tag {
-  background-color: #2775A6;
+  background-color: #2775a6;
   color: #fff;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 12px;
@@ -2540,7 +2732,7 @@ legend {
 
 .gallery_heading,
 .cg_heading {
-  color: #2775A6;
+  color: #2775a6;
   font-family: "Zen Old Mincho", serif;
   font-size: 32px;
   line-height: 1.5;
@@ -2594,7 +2786,7 @@ legend {
 .gallery-group_heading,
 .cg-group_heading {
   align-items: center;
-  color: #2775A6;
+  color: #2775a6;
   display: flex;
   font-family: "Zen Old Mincho", serif;
   font-size: 28px;
@@ -2604,7 +2796,7 @@ legend {
 .gallery-group_heading::before, .gallery-group_heading::after,
 .cg-group_heading::before,
 .cg-group_heading::after {
-  background-color: #2775A6;
+  background-color: #2775a6;
   content: "";
   flex-grow: 1;
   height: 1px;
@@ -2666,7 +2858,7 @@ legend {
 
 .for-residents-group_heading {
   align-items: center;
-  color: #2775A6;
+  color: #2775a6;
   display: flex;
   font-family: "Zen Old Mincho", serif;
   font-size: 32px;
@@ -2676,7 +2868,7 @@ legend {
   width: 100%;
 }
 .for-residents-group_heading::before, .for-residents-group_heading::after {
-  background-color: #2775A6;
+  background-color: #2775a6;
   content: "";
   flex-grow: 1;
   height: 1px;
@@ -2710,7 +2902,7 @@ legend {
   width: 100%;
 }
 .for-residents-field.field .key::before {
-  background-color: #2775A6;
+  background-color: #2775a6;
   content: "";
   display: block;
   flex-shrink: 0;
@@ -2725,6 +2917,9 @@ legend {
   padding-left: 16px;
   text-align: left;
   width: 100%;
+}
+.for-residents-field .key {
+  color: #2775a6 !important;
 }
 .summary-section {
   align-items: center;
@@ -2765,7 +2960,7 @@ legend {
 
 .summary-group_heading {
   align-items: center;
-  color: #2775A6;
+  color: #2775a6;
   display: flex;
   font-family: "Zen Old Mincho", serif;
   font-size: 32px;
@@ -2775,7 +2970,7 @@ legend {
   width: 100%;
 }
 .summary-group_heading::before, .summary-group_heading::after {
-  background-color: #2775A6;
+  background-color: #2775a6;
   content: "";
   flex-grow: 1;
   height: 1px;
@@ -2793,7 +2988,7 @@ legend {
   width: 100%;
 }
 .summary-field .key {
-  background-color: #2775A6;
+  background-color: #2775a6;
   color: #fff;
   min-width: 120px;
   padding: 0 8px;
@@ -2804,7 +2999,7 @@ legend {
 }
 .activity-introduction-section {
   align-items: center;
-  background-color: #E2F0F3;
+  background-color: #e2f0f3;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2825,7 +3020,7 @@ legend {
 
 .activity-introduction_heading {
   align-items: center;
-  color: #2775A6;
+  color: #2775a6;
   display: flex;
   font-family: "Zen Old Mincho", serif;
   font-size: 32px;
@@ -2833,7 +3028,7 @@ legend {
   width: 100%;
 }
 .activity-introduction_heading::before, .activity-introduction_heading::after {
-  background-color: #2775A6;
+  background-color: #2775a6;
   content: "";
   flex-grow: 1;
   height: 1px;
@@ -2859,7 +3054,7 @@ legend {
 }
 
 .activity-introduction-card {
-  background-color: #2775A6;
+  background-color: #2775a6;
   display: flex;
   flex-direction: column;
   width: 306px;
@@ -2900,7 +3095,7 @@ legend {
 }
 
 .disaster-prevention_heading {
-  color: #2775A6;
+  color: #2775a6;
   font-family: "Zen Old Mincho", serif;
   font-size: 32px;
   line-height: 1.5;
@@ -2949,7 +3144,7 @@ legend {
   gap: 8px;
 }
 .disaster-prevention-point .point_heading {
-  color: #2775A6;
+  color: #2775a6;
   font-family: "Zen Old Mincho", serif;
   font-size: 24px;
   line-height: 1.5;
@@ -3065,6 +3260,9 @@ legend {
   text-align: center;
   text-decoration: none;
 }
+.zone-anchor:hover {
+  text-decoration: none;
+}
 .zone-anchor.greeting {
   background-color: rgba(56, 163, 179, 0.7);
 }
@@ -3160,10 +3358,10 @@ legend {
   opacity: 1;
 }
 .zone-section.greeting {
-  background-color: #E3EEF4;
+  background-color: #e3eef4;
 }
 .zone-section.attractive {
-  background-color: #F4E9D3;
+  background-color: #f4e9d3;
 }
 .zone-section.friendship {
   background-color: rgba(218, 238, 232, 0.8);
@@ -3181,13 +3379,13 @@ legend {
   flex-direction: column;
 }
 [class*=greeting] .zone_heading {
-  color: #347CA9;
+  color: #347ca9;
   font-family: "Marck Script", cursive;
   font-size: 64px;
   line-height: 1.5;
 }
 [class*=greeting] .zone_heading small {
-  color: #347CA9;
+  color: #347ca9;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   line-height: 1.8;
@@ -3301,7 +3499,7 @@ legend {
   margin: 16px;
 }
 [class*=greeting] .zone_detail_heading {
-  color: #347CA9;
+  color: #347ca9;
   font-family: "Zen Old Mincho", serif;
   font-size: 28px;
   line-height: 1.5;
@@ -3335,7 +3533,7 @@ legend {
   text-align: center;
 }
 [class*=greeting] .zone_detail_information {
-  color: #347CA9;
+  color: #347ca9;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   line-height: 1.8;
@@ -3366,7 +3564,7 @@ legend {
 }
 .legend-section {
   align-items: center;
-  background: #E2F0F3 url("../images/imagination-land/legend-bg.png") no-repeat center center;
+  background: #e2f0f3 url("../images/imagination-land/legend-bg.png") no-repeat center center;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -3386,7 +3584,7 @@ legend {
 
 .legend_heading {
   align-items: center;
-  color: #2775A6;
+  color: #2775a6;
   display: flex;
   flex-direction: column;
   font-family: "Zen Old Mincho", serif;
@@ -3395,7 +3593,7 @@ legend {
   line-height: 1.5;
 }
 .legend_heading small {
-  color: #2775A6;
+  color: #2775a6;
   font-family: "Zen Old Mincho", serif;
   font-size: 24px;
   line-height: 1.5;
@@ -3403,7 +3601,7 @@ legend {
 }
 
 .legend_story {
-  color: #2775A6;
+  color: #2775a6;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   line-height: 1.8;
@@ -3443,7 +3641,7 @@ legend {
 }
 
 .access_heading {
-  color: #2775A6;
+  color: #2775a6;
   font-family: "Zen Old Mincho", serif;
   font-size: 32px;
   line-height: 1.5;
@@ -3451,7 +3649,7 @@ legend {
 }
 
 .access_sub_heading {
-  color: #2775A6;
+  color: #2775a6;
   font-family: "Zen Old Mincho", serif;
   font-size: 24px;
   font-size: 20px;
@@ -3506,7 +3704,7 @@ legend {
 }
 
 .access_bus_heading {
-  color: #2775A6;
+  color: #2775a6;
   font-family: "Zen Old Mincho", serif;
   font-size: 32px;
   grid-column: 2/3;
@@ -3545,7 +3743,7 @@ legend {
   flex-direction: column;
 }
 .access-field .key {
-  background-color: #2775A6;
+  background-color: #2775a6;
   color: #fff;
   min-width: 120px;
   padding: 0 8px;
@@ -3578,14 +3776,14 @@ legend {
 }
 
 .access_google-map_more {
-  color: #2775A6;
+  color: #2775a6;
   display: block;
   margin-top: 8px;
   text-align: right;
 }
 .access-bus-section {
   align-items: center;
-  background-color: #E2F0F3;
+  background-color: #e2f0f3;
   display: flex;
   flex-direction: column;
   gap: 80px;
@@ -3617,7 +3815,7 @@ legend {
 }
 
 .bus-map_heading {
-  color: #2775A6;
+  color: #2775a6;
   font-family: "Zen Old Mincho", serif;
   font-size: 32px;
   line-height: 1.5;
@@ -3694,7 +3892,7 @@ button {
 }
 
 a {
-  color: #2775A6;
+  color: #2775a6;
   text-decoration: none;
 }
 a:hover {
@@ -3895,7 +4093,7 @@ br.for-sp {
     padding: 16px;
   }
   .news-card.card-view .news-card_post-date {
-    color: #7F5000;
+    color: #7f5000;
     font-family: "Noto Sans JP", sans-serif;
     font-size: 12px;
     line-height: 1.5;
@@ -3903,7 +4101,7 @@ br.for-sp {
   .news-card.card-view .news-card_title {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
-    color: #7F5000;
+    color: #7f5000;
     display: -webkit-box;
     font-family: "Noto Sans JP", sans-serif;
     font-size: 16px;
@@ -3917,7 +4115,7 @@ br.for-sp {
   .news-card.card-view .news-card_detail {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
-    color: #7F5000;
+    color: #7f5000;
     display: -webkit-box;
     font-family: "Noto Sans JP", sans-serif;
     font-size: 12px;
@@ -3932,28 +4130,44 @@ br.for-sp {
     flex-direction: column;
     gap: 16px;
   }
+  .recent-news_button {
+    width: 250px;
+  }
+  .message_section {
+    padding: 12px 0 64px;
+  }
+  .message_section_inner {
+    gap: 24px;
+    width: calc(100vw - 8.5333333333%);
+  }
+  .message_section {
+    height: 1400px;
+  }
+  .message_point {
+    height: 700px;
+  }
+  .message_heading {
+    font-size: 24px;
+    line-height: 75px;
+    margin: auto auto auto 0;
+    padding: 0 36px;
+    width: auto;
+  }
+  .message_heading span {
+    font-size: 18px;
+  }
+  .message_text {
+    font-size: 15px;
+    margin: auto 10%;
+    text-align: center;
+    width: auto;
+  }
   .concept-section {
     padding: 0 0 120px;
   }
   .concept-section_inner {
     gap: 40px;
     width: calc(100vw - 8.5333333333%);
-  }
-  .concept_kv {
-    padding: 120px 0;
-  }
-  .concept_kv_inner {
-    gap: 40px;
-    width: calc(100vw - 8.5333333333%);
-  }
-  .concept_kv {
-    background: url("../images/top/concept-kv-sp.jpg") no-repeat center top;
-    background-size: cover;
-    height: 640px;
-    padding-top: 0;
-  }
-  .concept_kv_inner {
-    height: 640px;
   }
   .concept_heading {
     height: auto;
@@ -4159,6 +4373,11 @@ br.for-sp {
     height: auto;
     width: calc(100% - 16px);
   }
+  .bg-image .obj {
+    height: 350px;
+    margin-left: -40px;
+    width: auto;
+  }
   .page-anchor-section {
     padding: 120px 0;
   }
@@ -4246,7 +4465,7 @@ br.for-sp {
     gap: 24px;
   }
   .structure-facilities-point .point_heading {
-    color: #2775A6;
+    color: #2775a6;
     font-family: "Zen Old Mincho", serif;
     font-size: 24px;
     line-height: 1.5;
@@ -4288,7 +4507,7 @@ br.for-sp {
     padding: 0 0 64px;
   }
   .facilities_heading {
-    color: #2775A6;
+    color: #2775a6;
     font-family: "Zen Old Mincho", serif;
     font-size: 32px;
     line-height: 1.5;
@@ -4868,7 +5087,7 @@ br.for-sp {
     gap: 24px;
   }
   .disaster-prevention-point .point_heading {
-    color: #2775A6;
+    color: #2775a6;
     font-family: "Zen Old Mincho", serif;
     font-size: 24px;
     line-height: 1.5;
@@ -5104,7 +5323,7 @@ br.for-sp {
     font-size: 14px;
   }
   .legend-section {
-    background: #EAF9F9 url("../images/imagination-land/legend-bg.png") no-repeat right bottom;
+    background: #eaf9f9 url("../images/imagination-land/legend-bg.png") no-repeat right bottom;
     background-size: 800px 470px;
     padding-bottom: 280px;
     position: relative;

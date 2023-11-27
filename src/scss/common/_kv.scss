@@ -8,6 +8,7 @@
   position: relative;
   width: 100%;
   height: 420px;
+  background-color: color.$white;
 
   &.index {
     height: auto;
@@ -33,6 +34,10 @@
         }
       }
     }
+  }
+
+  .kv-section-inner {
+    height: 100%;
   }
 
   &.structure-facilities {
