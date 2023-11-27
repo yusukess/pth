@@ -1,31 +1,18 @@
 <section class="concept-section">
-    <section class="concept_kv">
-        <div class="concept_kv_parallax">
-            <div class="concept_kv_bubble">
-                <?php echo (default_image(array('top/concept-kv-bubble.png'), '', '', '', 'bubble')); ?>
-            </div>
-        </div>
-        <div class="concept_kv_inner">
-            <h2 class="concept_heading"><?php echo (default_image(array('top/concept-heading.png'), '720', '150', '水と緑と共に、自由に住まう')); ?></h2>
-        </div>
-        <?php get_template_part('components/common/wave', null, ['className' => 'is-bottom']); ?>
-    </section>
-    <section class="concept_point concept_point1">
-
-
+    <section class="concept_point concept_point1" data-intersected="false">
         <div class="concept_point_inner">
-            <?php echo (default_image(array('top/moving-photo/photo1.jpg'), '300', '530', '', 'photo')); ?>
-            <?php echo (default_image(array('top/moving-photo/photo2.jpg'), '300', '530', '', 'photo')); ?>
-            <?php echo (default_image(array('top/moving-photo/photo3.jpg'), '870', '530', '', 'photo')); ?>
+            <?php echo (default_image(array('top/moving-photo/photo1.jpg'), '300', '530', '画像', 'photo')); ?>
+            <?php echo (default_image(array('top/moving-photo/photo2.jpg'), '300', '530', '画像', 'photo')); ?>
+            <?php echo (default_image(array('top/moving-photo/photo3.jpg'), '870', '530', '画像', 'photo')); ?>
         </div>
     </section>
-    <section class="concept_point concept_point2">
+    <section class="concept_point concept_point2" data-intersected="false">
         <?php get_template_part('components/common/wave', null, ['className' => 'is-inverted is-top']); ?>
         <?php get_template_part('components/common/wave', null, ['className' => 'is-bottom']); ?>
         <div class="concept_point_inner">
-            <?php echo (default_image(array('top/moving-photo/photo4.jpg'), '700', '700', '', 'photo')); ?>
-            <?php echo (default_image(array('top/moving-photo/photo5.jpg'), '300', '300', '', 'photo')); ?>
-            <?php echo (default_image(array('top/moving-photo/photo6.jpg'), '420', '500', '', 'photo')); ?>
+            <?php echo (default_image(array('top/moving-photo/photo4.jpg'), '700', '700', '画像', 'photo')); ?>
+            <?php echo (default_image(array('top/moving-photo/photo5.jpg'), '300', '300', '画像', 'photo')); ?>
+            <?php echo (default_image(array('top/moving-photo/photo6.jpg'), '420', '500', '画像', 'photo')); ?>
             <div class="concept_point_description">
                 <h3 class="concept_point_heading">晴海の水辺に面した住環境で、<br class="for-sp">都会を使いこなす</h3>
                 <p class="concept_point_detail">
@@ -38,13 +25,13 @@
             </div>
         </div>
     </section>
-    <section class="concept_point concept_point3">
+    <section class="concept_point concept_point3" data-intersected="false">
         <?php get_template_part('components/common/wave', null, ['className' => 'is-inverted is-bottom bg-white']); ?>
         <div class="concept_point_inner">
-            <?php echo (default_image(array('top/moving-photo/photo7.jpg'), '600', '270', '', 'photo')); ?>
-            <?php echo (default_image(array('top/moving-photo/photo8.jpg'), '300', '300', '', 'photo')); ?>
-            <?php echo (default_image(array('top/moving-photo/photo9.jpg'), '350', '260', '', 'photo')); ?>
-            <?php echo (default_image(array('top/moving-photo/photo10.jpg'), '800', '650', '', 'photo')); ?>
+            <?php echo (default_image(array('top/moving-photo/photo7.jpg'), '600', '270', '画像', 'photo')); ?>
+            <?php echo (default_image(array('top/moving-photo/photo8.jpg'), '300', '300', '画像', 'photo')); ?>
+            <?php echo (default_image(array('top/moving-photo/photo9.jpg'), '350', '260', '画像', 'photo')); ?>
+            <?php echo (default_image(array('top/moving-photo/photo10.jpg'), '800', '650', '画像', 'photo')); ?>
             <div class="concept_point_description">
                 <h3 class="concept_point_heading">多様な共用施設で、<br>個性溢れる暮らしを彩る</h3>
                 <p class="concept_point_detail">
@@ -57,11 +44,11 @@
             </div>
         </div>
     </section>
-    <section class="concept_point concept_point4">
+    <section class="concept_point concept_point4" data-intersected="false">
         <div class="concept_point_inner">
-            <?php echo (default_image(array('top/moving-photo/photo11.jpg'), '700', '650', '', 'photo')); ?>
-            <?php echo (default_image(array('top/moving-photo/photo12.jpg'), '280', '520', '', 'photo')); ?>
-            <?php echo (default_image(array('top/moving-photo/photo13.jpg'), '280', '520', '', 'photo')); ?>
+            <?php echo (default_image(array('top/moving-photo/photo11.jpg'), '700', '650', '画像', 'photo')); ?>
+            <?php echo (default_image(array('top/moving-photo/photo12.jpg'), '280', '520', '画像', 'photo')); ?>
+            <?php echo (default_image(array('top/moving-photo/photo13.jpg'), '280', '520', '画像', 'photo')); ?>
             <div class="concept_point_description">
                 <h3 class="concept_point_heading">大人も子どもも<br>多様な方に愛される住空間</h3>
                 <p class="concept_point_detail">

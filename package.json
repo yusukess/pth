@@ -44,5 +44,11 @@
     "webpack-dev-server": "^3.11.2",
     "webpack-remove-empty-scripts": "^0.8.1",
     "zlib": "^1.0.5"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "jquery-simplyscroll": "^2.1.1",
+    "rellax": "^1.12.1",
+    "slick-carousel": "^1.8.1"
   }
 }

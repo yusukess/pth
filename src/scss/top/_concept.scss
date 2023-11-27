@@ -12,50 +12,8 @@
 
 .concept-section {
   @include section.base($padding: 0, $sp-padding: 0 0 120px);
-  overflow-x: hidden;
-}
-
-.concept_kv {
-  position: relative;
-  width: 100%;
-  height: 930px;
   overflow: hidden;
-  background: url('../images/top/concept-kv-whale.png') no-repeat 20px center,
-    url('../images/top/concept-kv-bg.jpg') repeat-x center center;
-  background-size: 1876px 747px, 1px 930px;
-
-  @include section.base($padding: 0);
-
-  @media screen and (max-width: content-size.$breakpoint) {
-    height: 640px;
-    padding-top: 0;
-    background: url('../images/top/concept-kv-sp.jpg') no-repeat center top;
-    background-size: cover;
-  }
-}
-
-.concept_kv_inner {
-  position: relative;
-  height: 930px;
-
-  @media screen and (max-width: content-size.$breakpoint) {
-    height: 640px;
-  }
-}
-
-.concept_kv_parallax {
-  width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
-}
-
-.concept_kv_bubble {
-  z-index: 1;
-}
-
-.concept_kv_bubble img {
-  width: 100%;
-  height: auto;
+  background-color: color.$white;
 }
 
 .concept_heading {
@@ -90,7 +48,7 @@
   max-width: 100%;
   @include section.base($padding: 130px 0);
 
-  &:nth-child(even) {
+  &:nth-child(odd) {
     background-color: color.$light-blue;
   }
 
@@ -218,7 +176,7 @@
 .photo {
   opacity: 0;
 
-  [class*='animation-start'] & {
+  [data-intersected='true'] & {
     &:nth-child(1) {
       @include animation.expand-in($delay: 100ms);
     }

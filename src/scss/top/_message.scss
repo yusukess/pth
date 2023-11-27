@@ -1,0 +1,189 @@
+@use '../variables/color' as color;
+@use '../variables/font' as font;
+@use '../variables/content-size' as content-size;
+
+@use 'sass:math';
+
+@use '../common/heading' as heading;
+@use '../common/section' as section;
+@use '../common/paragraph' as paragraph;
+@use '../common/animation' as animation;
+@use '../common/decoration' as decoration;
+
+$message-point-height-pc: 900px;
+
+.message_section {
+  position: relative;
+
+  overflow: hidden;
+
+  @include section.base($padding: 0 0 130px, $sp-padding: 12px 0 64px, $sp-gap: 24px);
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 1930px;
+    content: '';
+    background-color: color.$message-overlay;
+    mix-blend-mode: multiply;
+    opacity: var(--kv-overlay-opacity, 0);
+  }
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    height: 1400px;
+  }
+
+  // .bubble {
+  //   position: absolute;
+
+  //   width: 100%;
+  //   text-align: center;
+
+  //   img {
+  //     width: 100%;
+
+  //     height: auto;
+  //     aspect-ratio: 1480/930;
+  //   }
+
+  //   // &[data-num='01'] {
+  //   //   top: math.div(82, 1930) * 100%;
+  //   //   left: 31px;
+  //   // }
+
+  //   // &[data-num='02'] {
+  //   //   top: math.div(287, 1930) * 100%;
+  //   //   left: 230px;
+  //   // }
+
+  //   // &[data-num='03'] {
+  //   //   top: math.div(54, 1930) * 100%;
+  //   //   left: 399px;
+  //   // }
+
+  //   // &[data-num='04'] {
+  //   //   top: math.div(174, 1930) * 100%;
+  //   //   right: 562px;
+  //   // }
+
+  //   // &[data-num='05'] {
+  //   //   top: math.div(-18, 1930) * 100%;
+  //   //   right: 376px;
+  //   // }
+  // }
+}
+
+.message_point {
+  width: 100%;
+  height: $message-point-height-pc;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    height: 700px;
+  }
+}
+
+.message_point02 {
+  position: relative;
+}
+
+.message_point_inner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.message_heading {
+  z-index: 1;
+  width: 720px;
+  margin: auto 40px auto auto;
+  font-family: font.$heading-font-family;
+  font-size: font.$legend-heading1-size;
+  line-height: 150px;
+  color: color.$blue;
+  text-align: center;
+  background-color: color.$white;
+  opacity: 0;
+
+  &[data-intersected='true'] {
+    @include animation.expand-in($delay: 100ms);
+  }
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    width: auto;
+    padding: 0 36px;
+    margin: auto auto auto 0;
+    font-size: font.$legend-heading1-size-sp;
+    line-height: 75px;
+  }
+
+  span {
+    font-size: 36px;
+
+    @media screen and (max-width: content-size.$breakpoint) {
+      font-size: 18px;
+    }
+  }
+}
+
+.message_text {
+  z-index: 1;
+  margin: auto 40px auto auto;
+  font-family: font.$heading-font-family;
+  font-size: font.$heading3-size;
+  color: color.$white;
+  text-align: center;
+  opacity: 0;
+
+  &[data-intersected='true'] {
+    @include animation.expand-in($delay: 100ms);
+  }
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    width: auto;
+
+    margin: auto 10%;
+    font-size: 15px;
+    text-align: center;
+  }
+}
+
+/* 泡の見た目 */
+.bubble {
+  position: absolute;
+  bottom: -50px;
+  pointer-events: none;
+  // background-color: transparent;
+  // border-radius: 50%;
+  // box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
+  background: url(../images/top/bubble/bubble01-01.png) no-repeat center / cover;
+  animation: bubble 20s linear infinite;
+}
+
+// /* 泡の一番明るい部分を疑似要素で表現 */
+// .bubble::before {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   content: '';
+//   background: radial-gradient(rgba(255, 255, 255, 0.5), transparent);
+//   border-radius: 50%;
+//   transform: scale(0.25) translate(-70%, -70%);
+// }
+
+/* 泡が上に浮かび上がっていくアニメーション */
+@keyframes bubble {
+  0% {
+    opacity: 1;
+    transform: translatY(0);
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-2 * $message-point-height-pc);
+  }
+}

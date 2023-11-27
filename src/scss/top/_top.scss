@@ -4,11 +4,13 @@
 @import 'news';
 @import '../common/news-card';
 @import '../common/slick';
+@import 'message';
 @import 'concept';
 @import 'movie';
+@import 'bg';
 
-[class*="home"] {
-  main {
-    background-color: color.$white;
-  }
-}
+// [class*='home'] {
+//   main {
+//     background-color: color.$white;
+//   }
+// }
