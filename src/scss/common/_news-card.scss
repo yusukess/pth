@@ -39,7 +39,7 @@
       display: flex;
       flex-direction: column;
       gap: 4px;
-      height: 182px;
+      height: 152px;
       padding: 16px;
     }
 
@@ -48,9 +48,14 @@
     }
 
     .news-card_title {
-      font-weight: bold;
+      height: 76px;
       @include paragraph.for-card(color.$copper);
+      font-weight: bold;
       @include text-ellipsis.multiple-ellipsis(76px);
+
+      @media screen and (max-width: content-size.$breakpoint) {
+        height: auto;
+      }
     }
 
     .news-card_detail {
@@ -87,12 +92,6 @@
 
       .news-card_post-date {
         @include notice.for-card(color.$copper);
-      }
-
-      .news-card_title {
-        font-weight: bold;
-        @include paragraph.for-card(color.$copper);
-        @include text-ellipsis.multiple-ellipsis(76px);
       }
 
       .news-card_detail {

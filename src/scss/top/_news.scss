@@ -14,7 +14,7 @@
 @use '../common/animation' as animation;
 
 .recent-news-section {
-  @include section.base($padding: 80px 0 24px, $sp-padding: 0, $sp-gap: 24px);
+  @include section.base($padding: 80px 0 64px, $sp-padding: 0, $gap: 16px, $sp-gap: 24px);
   background-color: color.$white;
 
   &:after {
@@ -30,6 +30,10 @@
 
 .recent-news-section_inner {
   position: relative;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    padding-bottom: 12px;
+  }
 
   &::before {
     position: absolute;
@@ -83,23 +87,26 @@
 .slider_card-list {
   @include slick.slider-multiple;
 
-  @media screen and (max-width: content-size.$breakpoint) {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  .inview_item & {
+    opacity: 0;
+    transition: opacity 1s 0.2s cubic-bezier(0.42, 0.2, 0.16, 1), transform 1s 0.2s cubic-bezier(0.42, 0.2, 0.16, 1);
+    transform: translate(0, 30px);
+
+    @media screen and (max-width: content-size.$breakpoint) {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+
+  [data-intersected='true'] & {
+    opacity: 1;
+    transform: translate(0, 0);
   }
 }
 
 .recent-news_button {
-  @include button.base;
-  width: 500px;
-  background-color: color.$gold;
-
-  @media screen and (max-width: content-size.$breakpoint) {
-    width: 250px;
-  }
-
-  &:hover {
-    text-decoration: none;
-  }
+  @include button.design;
 }

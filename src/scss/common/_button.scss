@@ -1,5 +1,6 @@
 @use '../variables/color' as color;
 @use '../variables/font' as font;
+@use '../variables/content-size' as content-size;
 
 @mixin base() {
   display: flex;
@@ -11,8 +12,41 @@
   color: color.$white;
   text-decoration: none;
   border-radius: 12px;
+  transition: opacity 0.3s;
 
   &:hover {
     opacity: 0.8;
+  }
+}
+
+@mixin design() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 60px;
+  font-family: font.$heading-font-family;
+  font-size: 24px;
+  color: color.$white;
+  text-decoration: none;
+  text-shadow: 0 0 2px rgba(color.$blue, 0.8);
+  background: url('../images/common/button/design-bg.jpg') no-repeat center center;
+  filter: drop-shadow(0 4px 4px rgba(color.$black, 0.25));
+  background-size: auto 100%;
+  border-radius: 12px;
+  transition: all 0.3s;
+
+  &:hover {
+    text-decoration: none;
+    filter: drop-shadow(0 1px 1px rgba(color.$black, 0.25));
+    transform: translateY(3px);
+  }
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    max-width: 300px;
+    aspect-ratio: 260/52;
+    font-size: 23px;
+    background-position: right center;
+    border-radius: 5px;
   }
 }

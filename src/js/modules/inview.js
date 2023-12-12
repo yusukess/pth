@@ -1,5 +1,5 @@
 export default () => {
-  const target = document.querySelectorAll('.concept_point');
+  const target = document.querySelectorAll('.inview_item');
 
   if (!target) return false;
 

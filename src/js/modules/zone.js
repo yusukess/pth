@@ -14,7 +14,6 @@ export default () => {
   zone_anchor.on('click', function ($e) {
     // クリックした対象ゾーンを洗い出す
 
-    console.log(zone_anchor);
     target_class_name = $($e.currentTarget).attr('class').slice(12); //zone-anchorを削除
 
     if (target_class_name.indexOf('current') >= 0) {

@@ -9,22 +9,25 @@ import 'slick-carousel/slick/slick.css';
 
 export default () => {
   // top > newsのスライダー
-  $('.slider-multiple').slick({
-    infinite: false,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    prevArrow: '<button class="arrow-prev"></button>',
-    nextArrow: '<button class="arrow-next"></button>',
-    responsive: [
-      {
-        breakpoint: 431,
-        settings: 'unslick',
-      },
-    ],
-  });
+  function initializeNewsSlick() {
+    $('.slider-multiple').not('.slick-initialized').slick({
+      infinite: false,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      prevArrow: '<button class="arrow-prev"></button>',
+      nextArrow: '<button class="arrow-next"></button>',
+    });
+  }
 
-  $(window).on('resize orientationchange', function () {
-    $('.slider-multiple').slick('resize');
+  $(window).on('load resize orientationchange', () => {
+    const windowWidth = $(window).width();
+    if (windowWidth < 431) {
+      // SPサイズ
+      $('.slider-multiple.slick-initialized').slick('unslick');
+    } else {
+      // PCサイズ
+      initializeNewsSlick();
+    }
   });
 
   // top > キービジュアルのスライダー
@@ -117,7 +120,6 @@ export default () => {
     tmp_nav_setting['asNavFor'] = '.' + $target + ' .slider-photo';
 
     $('.' + $target + ' .slider-photo').each(function () {
-      console.log('hoge');
       $(this).slick(tmp_setting);
     });
 

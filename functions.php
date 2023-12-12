@@ -137,6 +137,15 @@ function get_cat($key, $parent)
 }
 
 //navigation
+function prefix_nav_description($item_output, $item, $depth, $args)
+{
+	if (!empty($item->description)) {
+		$item_output = str_replace('">' . $args->link_before . $item->title, '">' . $args->link_before . '<strong>' . $item->title . '</strong>' . '<span class="menu-item-description">' . $item->description . '</span>', $item_output);
+	}
+	return $item_output;
+}
+add_filter('walker_nav_menu_start_el', 'prefix_nav_description', 10, 4);
+
 register_nav_menus(array('header-nav' => 'ヘッダーナビ', 'global-nav' => 'グローバルナビ', 'contents-nav' => 'コンテンツナビ', 'footer-nav' => 'フッターナビ', 'menu-nav' => 'メニューナビ'));
 
 function nav_menu_current($var)

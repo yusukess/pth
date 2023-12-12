@@ -93,11 +93,8 @@ $message-point-height-pc: 900px;
   color: color.$blue;
   text-align: center;
   background-color: color.$white;
-  opacity: 0;
 
-  &[data-intersected='true'] {
-    @include animation.expand-in($delay: 100ms);
-  }
+  @include animation.blind-fold;
 
   @media screen and (max-width: content-size.$breakpoint) {
     width: auto;
@@ -142,23 +139,9 @@ $message-point-height-pc: 900px;
   position: absolute;
   bottom: -50px;
   pointer-events: none;
-  // background-color: transparent;
-  // border-radius: 50%;
-  // box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
   background: url(../images/top/bubble/bubble01-01.png) no-repeat center / cover;
   animation: bubble 20s linear infinite;
 }
-
-// /* 泡の一番明るい部分を疑似要素で表現 */
-// .bubble::before {
-//   position: absolute;
-//   width: 100%;
-//   height: 100%;
-//   content: '';
-//   background: radial-gradient(rgba(255, 255, 255, 0.5), transparent);
-//   border-radius: 50%;
-//   transform: scale(0.25) translate(-70%, -70%);
-// }
 
 /* 泡が上に浮かび上がっていくアニメーション */
 @keyframes bubble {

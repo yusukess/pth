@@ -55,7 +55,7 @@ $news_database = [
 <section class="recent-news-section">
     <div class="recent-news-section_inner">
         <h2 class="recent-news_heading">News<small>パークタワー晴海のからのお知らせ</small></h2>
-        <section class="recent-news_slider">
+        <section class="recent-news_slider inview_item" data-intersected="false">
             <div class="slider_card-list slider-multiple">
                 <?php if (have_posts()) : ?>
                     <?php while (have_posts()) : the_post(); ?>
@@ -75,6 +75,6 @@ $news_database = [
                 endif; ?>
             </div>
         </section>
-        <a href="<?php echo (esc_url(home_url('/'))); ?>/news" class="recent-news_button">ニュース一覧</a>
+        <a href="<?php echo (esc_url(home_url('/'))); ?>news" class="recent-news_button">ニュース一覧</a>
     </div>
 </section>

@@ -102,6 +102,7 @@ legend {
   justify-content: center;
   min-width: 1280px;
   padding: 0 16px;
+  width: 1600px;
 }
 
 .site-header_navigation {
@@ -123,65 +124,29 @@ legend {
   margin-left: auto;
 }
 .site-header .global-navigation li {
-  font-family: "Zen Old Mincho", serif;
   min-width: 96px;
   position: relative;
 }
-.site-header .global-navigation li::after {
-  bottom: 2px;
-  color: #fff;
-  display: block;
-  left: 50%;
-  position: absolute;
-  top: auto;
-  transform: translateX(-50%);
-}
-.site-header .global-navigation li.structure-facilities::after {
-  content: "Structure & Facilities";
-}
-.site-header .global-navigation li.common-facilities::after {
-  content: "Common Facilities";
-}
-.site-header .global-navigation li.management-association::after {
-  content: "Management Association";
-}
-.site-header .global-navigation li.disaster-prevention::after {
-  content: "Disaster Prevention";
-}
-.site-header .global-navigation li.news::after {
-  content: "News/Events";
-}
-.site-header .global-navigation li.imagination-land::after {
-  content: "Imagination Land";
-}
-.site-header .global-navigation li.gallery-cg::after {
-  content: "Gallery & CG Collection";
-}
-.site-header .global-navigation li.access::after {
-  content: "Access & Map";
-}
-.site-header .global-navigation li.summary::after {
-  content: "Building Overview";
-}
-.site-header .global-navigation li.for-residents::after {
-  content: "Links for Residents";
-}
-.site-header .global-navigation li::after {
-  bottom: -1px;
-  font-size: 10px;
-  line-height: 1;
-  pointer-events: none;
-  white-space: nowrap;
-}
 .site-header .global-navigation li a {
   color: #fff;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  font-family: "Zen Old Mincho", serif;
   font-size: 14px;
   height: 100%;
   position: relative;
   text-align: center;
   text-decoration: none;
   width: 100%;
+}
+.site-header .global-navigation li a .menu-item-description {
+  font-size: 10px;
+  line-height: 1;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.site-header .global-navigation li a strong {
+  line-height: 1.5;
 }
 .site-header .global-navigation li a::after {
   background-color: #fff;
@@ -233,6 +198,9 @@ legend {
   text-align: center;
   text-decoration: none;
   width: 100%;
+}
+.site-header .sub-navigation li a .menu-item-description {
+  display: none;
 }
 .site-header .sub-navigation li a:after {
   background-color: #fff;
@@ -339,12 +307,18 @@ legend {
   position: relative;
 }
 .site-header_panel .global-navigation li a {
-  align-items: center;
   color: #2775a6;
   display: flex;
+  flex-direction: column;
   height: 100%;
   padding: 0 0 0 24px;
   text-decoration: none;
+}
+.site-header_panel .global-navigation li a .menu-item-description {
+  font-size: 10px;
+  line-height: 1;
+  pointer-events: none;
+  white-space: nowrap;
 }
 .site-header_panel .sub-navigation {
   display: flex;
@@ -395,12 +369,18 @@ legend {
   content: "Links for Residents";
 }
 .site-header_panel .sub-navigation li a {
-  align-items: center;
   color: #2775a6;
   display: flex;
+  flex-direction: column;
   height: 100%;
   padding: 0 0 0 24px;
   text-decoration: none;
+}
+.site-header_panel .sub-navigation li a .menu-item-description {
+  font-size: 10px;
+  line-height: 1;
+  pointer-events: none;
+  white-space: nowrap;
 }
 
 .site-footer {
@@ -432,7 +412,7 @@ legend {
   background-size: 100%;
   height: 160px;
   text-align: center;
-  transition: all 0.1s ease;
+  transition: all 0.3s ease;
   width: 25%;
 }
 .site-footer .global-navigation li.structure-facilities {
@@ -472,6 +452,9 @@ legend {
   justify-content: center;
   text-decoration: none;
   width: 100%;
+}
+.site-footer .global-navigation li a .menu-item-description {
+  display: none;
 }
 
 .site-footer_logo {
@@ -959,7 +942,7 @@ legend {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px 0 24px;
+  padding: 80px 0 64px;
   position: relative;
   width: 100%;
 }
@@ -967,7 +950,7 @@ legend {
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 16px;
   justify-content: center;
   width: 1000px;
 }
@@ -1063,7 +1046,7 @@ legend {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  height: 182px;
+  height: 152px;
   padding: 16px;
 }
 .news-card.card-view .news-card_post-date {
@@ -1080,6 +1063,7 @@ legend {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   font-weight: bold;
+  height: 76px;
   line-height: 1.5;
   /* ブラウザがサポートしていない場合のフェールセーフ */
   max-height: 76px;
@@ -1133,30 +1117,42 @@ legend {
   right: -80px;
 }
 .slider_card-list .slick-list {
-  padding: 12px 0 !important; /* slickのスタイルを上書き */
+  padding: 32px 0 !important; /* slickのスタイルを上書き */
 }
 .slider_card-list .slick-slide {
   margin: 0 6px;
 }
+.inview_item .slider_card-list {
+  opacity: 0;
+  transform: translate(0, 30px);
+  transition: opacity 1s 0.2s cubic-bezier(0.42, 0.2, 0.16, 1), transform 1s 0.2s cubic-bezier(0.42, 0.2, 0.16, 1);
+}
+[data-intersected=true] .slider_card-list {
+  opacity: 1;
+  transform: translate(0, 0);
+}
 
 .recent-news_button {
   align-items: center;
-  background-color: #d2bb3e;
+  background: url("../images/common/button/design-bg.jpg") no-repeat center center;
+  background-size: auto 100%;
   border-radius: 12px;
   color: #fff;
   display: flex;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
   font-family: "Zen Old Mincho", serif;
+  font-size: 24px;
   height: 60px;
   justify-content: center;
   text-decoration: none;
+  text-shadow: 0 0 2px rgba(39, 117, 166, 0.8);
+  transition: all 0.3s;
   width: 300px;
-  width: 500px;
 }
 .recent-news_button:hover {
-  opacity: 0.8;
-}
-.recent-news_button:hover {
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.25));
   text-decoration: none;
+  transform: translateY(3px);
 }
 
 .kv-section.index .kv-section-inner {
@@ -1242,33 +1238,28 @@ legend {
 }
 
 .message_heading {
+  -webkit-clip-path: inset(0 100% 0 0);
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
   background-color: #fff;
+          clip-path: inset(0 100% 0 0);
   color: #2775a6;
   font-family: "Zen Old Mincho", serif;
   font-size: 48px;
   line-height: 150px;
   margin: auto 40px auto auto;
-  opacity: 0;
   text-align: center;
+  transition-duration: 1000ms;
+  transition-property: -webkit-clip-path;
+  transition-property: clip-path;
+  transition-property: clip-path, -webkit-clip-path;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   width: 720px;
   z-index: 1;
 }
 .message_heading[data-intersected=true] {
-  -webkit-animation-name: expand-in-keyframe;
-  -webkit-animation-duration: 500ms;
-  -webkit-animation-timing-function: ease;
-  -webkit-animation-delay: 100ms;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
-          animation-delay: 100ms;
-          animation-direction: normal;
-          animation-duration: 500ms;
-          animation-fill-mode: forwards;
-          animation-iteration-count: 1;
-          animation-name: expand-in-keyframe;
-          animation-timing-function: ease;
-  opacity: 0;
+  -webkit-clip-path: inset(0 0 0 0);
+          clip-path: inset(0 0 0 0);
 }
 .message_heading span {
   font-size: 36px;
@@ -1869,20 +1860,25 @@ legend {
 
 .page-anchor_button {
   align-items: center;
-  background: url("../images/structure-facilities/anchor-button-bg.jpg") no-repeat center center;
+  background: url("../images/common/button/design-bg.jpg") no-repeat center center;
+  background-size: auto 100%;
   border-radius: 12px;
   color: #fff;
   display: flex;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
   font-family: "Zen Old Mincho", serif;
   font-size: 24px;
   height: 60px;
   justify-content: center;
   text-decoration: none;
   text-shadow: 0 0 2px rgba(39, 117, 166, 0.8);
+  transition: all 0.3s;
   width: 300px;
 }
 .page-anchor_button:hover {
-  opacity: 0.8;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.25));
+  text-decoration: none;
+  transform: translateY(3px);
 }
 .structure-section {
   align-items: center;
@@ -3916,7 +3912,7 @@ br.for-sp {
   display: none;
 }
 
-@media screen and (max-width: 1325px){
+@media screen and (max-width: 1330px){
   .site-header_logo .logo-text {
     display: none;
   }
@@ -3925,7 +3921,7 @@ br.for-sp {
   }
 }
 
-@media screen and (max-width: 1160px){
+@media screen and (max-width: 1190px){
   .site-header {
     display: none;
   }
@@ -4052,6 +4048,9 @@ br.for-sp {
     gap: 24px;
     width: calc(100vw - 8.5333333333%);
   }
+  .recent-news-section_inner {
+    padding-bottom: 12px;
+  }
   .recent-news-section_inner::before {
     height: 50px;
     top: -50px;
@@ -4070,6 +4069,9 @@ br.for-sp {
   }
   .news-card.card-view .news-card_title {
     font-size: 14px;
+  }
+  .news-card.card-view .news-card_title {
+    height: auto;
   }
   .news-card.card-view {
     margin: 0;
@@ -4100,20 +4102,6 @@ br.for-sp {
     font-size: 12px;
     line-height: 1.5;
   }
-  .news-card.card-view .news-card_title {
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    color: #7f5000;
-    display: -webkit-box;
-    font-family: "Noto Sans JP", sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 1.5;
-    /* ブラウザがサポートしていない場合のフェールセーフ */
-    max-height: 76px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
   .news-card.card-view .news-card_detail {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
@@ -4127,13 +4115,19 @@ br.for-sp {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  .slider_card-list {
+  .inview_item .slider_card-list {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    opacity: 1;
+    transform: translate(0, 0);
   }
   .recent-news_button {
-    width: 250px;
+    aspect-ratio: 260/52;
+    background-position: right center;
+    border-radius: 5px;
+    font-size: 23px;
+    max-width: 300px;
   }
   .message_section {
     padding: 12px 0 64px;
@@ -4388,17 +4382,19 @@ br.for-sp {
     gap: 40px;
     width: calc(100vw - 8.5333333333%);
   }
-  .page-anchor-section {
-    padding: 8px 0 24px;
-  }
   .page-anchor-section_inner {
-    gap: 8px;
+    flex-direction: column;
+    gap: 16px;
   }
   .page-anchor_button {
+    aspect-ratio: 260/52;
     background-position: right center;
-    border-radius: 4px;
-    font-size: 12px;
-    height: 30px;
+    border-radius: 5px;
+    font-size: 23px;
+    max-width: 300px;
+  }
+  .page-anchor-section {
+    padding: 8px 0 16px;
   }
   .structure-section {
     padding: 120px 0;
@@ -5487,9 +5483,6 @@ body {
   }
   .kv-section.index .kv.slick-slider .slick-list img {
     height: auto;
-  }
-  .news-card.card-view .news-card_title {
-    font-size: 14px;
   }
   .structure-facilities-point .point_detail {
     font-size: 14px;

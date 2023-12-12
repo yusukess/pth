@@ -1,4 +1,5 @@
 @use '../variables/content-size' as content-size;
+@use '../variables/color' as color;
 
 @keyframes expand-in-keyframe {
   0% {
@@ -68,4 +69,16 @@
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-fill-mode: forwards;
+}
+
+@mixin blind-fold {
+  clip-path: inset(0 100% 0 0);
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  transition-duration: 1000ms;
+  transition-property: clip-path;
+  animation-delay: 100ms;
+
+  &[data-intersected='true'] {
+    clip-path: inset(0 0 0 0);
+  }
 }

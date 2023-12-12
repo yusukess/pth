@@ -22,28 +22,19 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 
 .page-anchor_button {
-  font-size: 24px;
-  text-shadow: 0 0 2px rgba(color.$blue, 0.8);
-  background: url('../images/structure-facilities/anchor-button-bg.jpg') no-repeat center center;
-  @include button.base;
+  @include button.design();
 }
 
 @media screen and (max-width: content-size.$breakpoint) {
   .page-anchor-section {
-    padding: 8px 0 24px;
-  }
-
-  .page-anchor-section_inner {
-    gap: 8px;
-  }
-
-  .page-anchor_button {
-    height: 30px;
-    font-size: 12px;
-    background-position: right center;
-    border-radius: 4px;
+    padding: 8px 0 16px;
   }
 }

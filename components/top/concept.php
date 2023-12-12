@@ -1,13 +1,5 @@
 <section class="concept-section">
-    <section class="concept_point concept_point1" data-intersected="false">
-        <div class="concept_point_inner">
-            <?php echo (default_image(array('top/moving-photo/photo1.jpg'), '300', '530', '画像', 'photo')); ?>
-            <?php echo (default_image(array('top/moving-photo/photo2.jpg'), '300', '530', '画像', 'photo')); ?>
-            <?php echo (default_image(array('top/moving-photo/photo3.jpg'), '870', '530', '画像', 'photo')); ?>
-        </div>
-    </section>
-    <section class="concept_point concept_point2" data-intersected="false">
-        <?php get_template_part('components/common/wave', null, ['className' => 'is-inverted is-top']); ?>
+    <section class="concept_point concept_point2 inview_item" data-intersected="false">
         <?php get_template_part('components/common/wave', null, ['className' => 'is-bottom']); ?>
         <div class="concept_point_inner">
             <?php echo (default_image(array('top/moving-photo/photo4.jpg'), '700', '700', '画像', 'photo')); ?>
@@ -25,7 +17,7 @@
             </div>
         </div>
     </section>
-    <section class="concept_point concept_point3" data-intersected="false">
+    <section class="concept_point concept_point3 inview_item" data-intersected="false">
         <?php get_template_part('components/common/wave', null, ['className' => 'is-inverted is-bottom bg-white']); ?>
         <div class="concept_point_inner">
             <?php echo (default_image(array('top/moving-photo/photo7.jpg'), '600', '270', '画像', 'photo')); ?>
@@ -44,7 +36,7 @@
             </div>
         </div>
     </section>
-    <section class="concept_point concept_point4" data-intersected="false">
+    <section class="concept_point concept_point4 inview_item" data-intersected="false">
         <div class="concept_point_inner">
             <?php echo (default_image(array('top/moving-photo/photo11.jpg'), '700', '650', '画像', 'photo')); ?>
             <?php echo (default_image(array('top/moving-photo/photo12.jpg'), '280', '520', '画像', 'photo')); ?>
