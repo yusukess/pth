@@ -82,6 +82,14 @@
 
 .news-card {
   @include news-card.card-view;
+
+  @media screen and (max-width: content-size.$breakpoint) {
+    width: calc((100% - 16px) / 2);
+
+    &:nth-child(n + 5) {
+      display: none;
+    }
+  }
 }
 
 .slider_card-list {
@@ -95,6 +103,8 @@
     @media screen and (max-width: content-size.$breakpoint) {
       display: flex;
       flex-direction: column;
+      flex-direction: row;
+      flex-wrap: wrap;
       gap: 16px;
       opacity: 1;
       transform: translate(0, 0);

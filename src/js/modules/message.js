@@ -5,6 +5,7 @@ export default () => {
   // 背景を暗くする処理
   if ($('body').hasClass('home')) {
     let scroll;
+    const maxNum = 0.5;
 
     window.addEventListener('scroll', () => {
       const objTop = $('.message_section').offset().top;
@@ -15,7 +16,7 @@ export default () => {
 
         document.documentElement.style.setProperty(
           '--kv-overlay-opacity',
-          Math.round(scroll) / 100 < 0.8 ? Math.round(scroll) / 100 : 0.8
+          Math.round(scroll) / 100 < maxNum ? Math.round(scroll) / 100 : maxNum
         );
       }
     });

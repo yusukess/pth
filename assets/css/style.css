@@ -342,7 +342,7 @@ legend {
   content: "Structure & Facilities";
 }
 .site-header_panel .sub-navigation li.common-facilities::after {
-  content: "Common Facilities";
+  content: "Common Facilities & Services";
 }
 .site-header_panel .sub-navigation li.management-association::after {
   content: "Management Association";
@@ -351,7 +351,7 @@ legend {
   content: "Disaster Prevention";
 }
 .site-header_panel .sub-navigation li.news::after {
-  content: "News/Events";
+  content: "News & Events";
 }
 .site-header_panel .sub-navigation li.imagination-land::after {
   content: "Imagination Land";
@@ -503,30 +503,25 @@ legend {
   height: auto;
 }
 .kv-section.index .kv.slick-slider {
-  height: 800px;
   overflow: hidden;
   position: relative;
   width: 100%;
 }
 .kv-section.index .kv.slick-slider .slick-list {
-  left: 50%;
-  margin-top: -56px;
+  height: 800px;
   max-width: 100vw;
   min-width: 1600px;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
+}
+.kv-section.index .kv.slick-slider .slick-slide img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .kv-section.index .kv.slick-slider .slick-dots {
   background-color: #fff;
-  bottom: 0;
   display: flex;
   gap: 8px;
   justify-content: center;
-  left: 50%;
-  padding: 24px 0;
-  position: absolute;
-  transform: translateX(-50%);
+  padding: 8px 0;
   width: 100%;
 }
 .kv-section.index .kv.slick-slider .slick-dots li {
@@ -618,7 +613,7 @@ legend {
   content: "Structure & Facilities";
 }
 .kv_catchcopy.common-facilities::after {
-  content: "Common Facilities";
+  content: "Common Facilities & Services";
 }
 .kv_catchcopy.management-association::after {
   content: "Management Association";
@@ -627,7 +622,7 @@ legend {
   content: "Disaster Prevention";
 }
 .kv_catchcopy.news::after {
-  content: "News/Events";
+  content: "News & Events";
 }
 .kv_catchcopy.imagination-land::after {
   content: "Imagination Land";
@@ -643,6 +638,17 @@ legend {
 }
 .kv_catchcopy.for-residents::after {
   content: "Links for Residents";
+}
+
+.kv_credit {
+  bottom: 28px;
+  color: #fff;
+  font-family: "Zen Old Mincho", serif;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  position: absolute;
+  right: 12px;
+  z-index: 1;
 }
 .breadcrumb {
   align-items: start;
@@ -762,6 +768,13 @@ legend {
 }
 .wave-anime.is-over {
   z-index: 1;
+}
+.wave-anime.is-white .scroller01 {
+  color: #fff;
+}
+.wave-anime.is-white .scroller02,
+.wave-anime.is-white .scroller03 {
+  display: none;
 }
 .wave-anime.bg-white {
   background-color: #fff;
@@ -1433,7 +1446,7 @@ legend {
   justify-content: center;
   width: 1000px;
 }
-.concept_point:nth-child(odd) {
+.concept_point:nth-child(even) {
   background-color: #e2f0f3;
 }
 .concept_point.concept_point1 {
@@ -1442,6 +1455,7 @@ legend {
 }
 .concept_point.concept_point2 {
   padding-bottom: 270px;
+  padding-top: 46px;
 }
 .concept_point.concept_point3 {
   padding-bottom: 64px;
@@ -1886,7 +1900,7 @@ legend {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 180px 0 280px;
+  padding: 40px 0 280px;
   position: relative;
   width: 100%;
 }
@@ -1969,6 +1983,7 @@ legend {
 }
 .facilities-section {
   align-items: center;
+  background-color: #e2f0f3;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2093,10 +2108,6 @@ legend {
   text-align: left;
   width: 100%;
 }
-[class*=structure-facilities] main {
-  background-color: #e2f0f3;
-}
-
 .kv-section.index .kv-section-inner {
   opacity: 0;
   transition: opacity 0.3s linear;
@@ -3962,17 +3973,11 @@ br.for-sp {
   .site-footer_copyright {
     font-size: 14px;
   }
-  .kv-section.index {
-    height: 567px;
-  }
   .kv-section.index .kv.slick-slider .slick-list {
-    left: 0;
+    aspect-ratio: 750/1626;
+    height: auto;
+    margin-top: 0;
     min-width: auto;
-    position: relative;
-    top: 0;
-  }
-  .kv-section.index .kv.slick-slider .slick-dots {
-    padding: 8px 0;
   }
   .kv-section.index .kv.slick-slider {
     height: calc(100vh - 64px);
@@ -3996,6 +4001,12 @@ br.for-sp {
   }
   .kv-section.index .kv.for-sp {
     display: block;
+  }
+  .kv_credit {
+    bottom: 24px;
+    font-size: 10px;
+    letter-spacing: 0;
+    right: 6px;
   }
   .kv-section {
     height: 280px;
@@ -4071,7 +4082,14 @@ br.for-sp {
     font-size: 14px;
   }
   .news-card.card-view .news-card_title {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
     height: auto;
+    /* ブラウザがサポートしていない場合のフェールセーフ */
+    max-height: 42px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .news-card.card-view {
     margin: 0;
@@ -4082,6 +4100,7 @@ br.for-sp {
     border-radius: 12px 12px 0 0;
     display: flex;
     justify-content: center;
+    max-height: 140px;
     overflow: hidden;
     width: 100%;
   }
@@ -4104,20 +4123,28 @@ br.for-sp {
   }
   .news-card.card-view .news-card_detail {
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     color: #7f5000;
     display: -webkit-box;
     font-family: "Noto Sans JP", sans-serif;
     font-size: 12px;
     line-height: 1.5;
     /* ブラウザがサポートしていない場合のフェールセーフ */
-    max-height: 52px;
+    max-height: 36px;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  .news-card {
+    width: calc((100% - 16px) / 2);
+  }
+  .news-card:nth-child(n+5) {
+    display: none;
   }
   .inview_item .slider_card-list {
     display: flex;
     flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 16px;
     opacity: 1;
     transform: translate(0, 0);
@@ -4188,6 +4215,7 @@ br.for-sp {
   }
   .concept_point.concept_point2 {
     padding-bottom: 200px;
+    padding-top: 0;
   }
   .concept_point.concept_point3 {
     padding-bottom: 80px;
@@ -4205,8 +4233,8 @@ br.for-sp {
     height: 365px;
   }
   [class*=concept_point2] .concept_point_inner {
-    height: 484px;
     margin: 0;
+    padding-top: 250px;
   }
   [class*=concept_point3] .concept_point_inner {
     height: 630px;
@@ -4273,7 +4301,7 @@ br.for-sp {
   [class*=concept_point2] .photo:nth-child(3) {
     bottom: auto;
     height: 167px;
-    left: 180px;
+    left: 174px;
     position: absolute;
     right: auto;
     top: 64px;
@@ -4423,6 +4451,9 @@ br.for-sp {
   }
   .structure-facilities-point:nth-child(even) {
     flex-direction: column;
+  }
+  .structure-section {
+    padding-top: 0;
   }
   .structure_heading {
     text-align: center;
@@ -5477,7 +5508,6 @@ body {
     height: 100%;
   }
   .kv-section.index .kv.slick-slider .slick-list {
-    margin-top: -120px;
     min-width: 375px;
     transform: none;
   }

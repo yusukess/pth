@@ -10,7 +10,7 @@
 
 .structure-section {
   background-color: color.$white;
-  @include section.base($padding: 180px 0 280px, $gap: 80px);
+  @include section.base($padding: 40px 0 280px, $gap: 80px);
 }
 
 .structure_information {
@@ -40,6 +40,7 @@
 
 @media screen and (max-width: content-size.$breakpoint) {
   .structure-section {
+    padding-top: 0;
   }
 
   .structure_information {

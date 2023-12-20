@@ -4,15 +4,32 @@
 
         <?php if ($args["page"] === "index") { ?>
             <p class="kv_catchcopy <?php echo ($args['page']) ?>">都心一望。<br class="for-sp">ウォーターフロントで、<br class="for-sp">心豊かな人生を叶える</p>
+            <p class="kv_credit">Photo by Naoomi Kurozumi</p>
             <div class="kv slider-kv for-pc">
-                <?php echo (default_image(array('kv/top/pc/01.jpg'), '1600', '800', '画像', 'for-pc')); ?>
+                <?php echo (default_image(array('kv/top/pc/00.jpg'), '1600', '800', '画像')); ?>
+                <?php echo (default_image(array('kv/top/pc/01.jpg'), '1600', '800', '画像')); ?>
                 <?php echo (default_image(array('kv/top/pc/02.jpg'), '1600', '800', '画像')); ?>
                 <?php echo (default_image(array('kv/top/pc/03.jpg'), '1600', '800', '画像')); ?>
+                <?php echo (default_image(array('kv/top/pc/04.jpg'), '1600', '800', '画像')); ?>
+                <?php echo (default_image(array('kv/top/pc/05.jpg'), '1600', '800', '画像')); ?>
+                <?php echo (default_image(array('kv/top/pc/06.jpg'), '1600', '800', '画像')); ?>
+                <?php echo (default_image(array('kv/top/pc/07.jpg'), '1600', '800', '画像')); ?>
+                <?php echo (default_image(array('kv/top/pc/08.jpg'), '1600', '800', '画像')); ?>
+                <?php echo (default_image(array('kv/top/pc/09.jpg'), '1600', '800', '画像')); ?>
+                <?php echo (default_image(array('kv/top/pc/10.jpg'), '1600', '800', '画像')); ?>
             </div>
             <div class="kv slider-kv for-sp">
+                <?php echo (default_image(array('kv/top/sp/00.jpg'), '590', '1278', '画像')); ?>
                 <?php echo (default_image(array('kv/top/sp/01.jpg'), '590', '1278', '画像')); ?>
                 <?php echo (default_image(array('kv/top/sp/02.jpg'), '590', '1278', '画像')); ?>
                 <?php echo (default_image(array('kv/top/sp/03.jpg'), '590', '1278', '画像')); ?>
+                <?php echo (default_image(array('kv/top/sp/04.jpg'), '590', '1278', '画像')); ?>
+                <?php echo (default_image(array('kv/top/sp/05.jpg'), '590', '1278', '画像')); ?>
+                <?php echo (default_image(array('kv/top/sp/06.jpg'), '590', '1278', '画像')); ?>
+                <?php echo (default_image(array('kv/top/sp/07.jpg'), '590', '1278', '画像')); ?>
+                <?php echo (default_image(array('kv/top/sp/08.jpg'), '590', '1278', '画像')); ?>
+                <?php echo (default_image(array('kv/top/sp/09.jpg'), '590', '1278', '画像')); ?>
+                <?php echo (default_image(array('kv/top/sp/10.jpg'), '590', '1278', '画像')); ?>
             </div>
         <?php } else { ?>
             <p class="kv_catchcopy <?php echo ($args['page']) ?>"><?php echo ($args['title']) ?></p>

@@ -4,9 +4,3 @@
 @import 'structure';
 @import 'facilities';
 @import 'facilities-card';
-
-[class*="structure-facilities"] {
-  main {
-    background-color: color.$light-blue;
-  }
-}

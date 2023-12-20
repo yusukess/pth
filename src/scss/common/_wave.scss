@@ -21,6 +21,17 @@
     z-index: 1;
   }
 
+  &.is-white {
+    .scroller01 {
+      color: color.$white;
+    }
+
+    .scroller02,
+    .scroller03 {
+      display: none;
+    }
+  }
+
   &.bg-white {
     background-color: color.$white;
   }
@@ -42,7 +53,6 @@
   .scroller01 {
     color: #e7f7f7;
   }
-
   .scroller02 {
     color: #d3edef;
   }

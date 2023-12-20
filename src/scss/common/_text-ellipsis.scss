@@ -1,9 +1,9 @@
-@mixin multiple-ellipsis($max-height){
-  overflow: hidden;
+@mixin multiple-ellipsis($max-height, $line-clamp: 3) {
   display: -webkit-box;
+  /* ブラウザがサポートしていない場合のフェールセーフ */
+  max-height: $max-height;
+  overflow: hidden;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  /* ブラウザがサポートしていない場合のフェールセーフ */
-  max-height: $max-height
+  -webkit-line-clamp: $line-clamp;
 }

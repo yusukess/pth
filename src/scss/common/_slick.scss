@@ -6,41 +6,34 @@
   &.slick-slider {
     position: relative;
     width: 100%;
-    height: 800px;
     overflow: hidden;
 
     .slick-list {
-      position: absolute;
-      top: 50%;
-      left: 50%;
       min-width: 1600px;
       max-width: 100vw;
-      margin-top: -56px;
-      transform: translate(-50%, -50%);
+      height: 800px;
 
       @media screen and (max-width: content-size.$breakpoint) {
-        position: relative;
-        top: 0;
-        left: 0;
         min-width: auto;
+        height: auto;
+        aspect-ratio: 750/1626;
+        margin-top: 0;
+      }
+    }
+
+    .slick-slide {
+      img {
+        object-fit: cover;
       }
     }
 
     .slick-dots {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
       display: flex;
       gap: 8px;
       justify-content: center;
       width: 100%;
-      padding: 24px 0;
+      padding: 8px 0;
       background-color: color.$white;
-      transform: translateX(-50%);
-
-      @media screen and (max-width: content-size.$breakpoint) {
-        padding: 8px 0;
-      }
 
       li {
         width: 8px;
@@ -78,7 +71,6 @@
 
         @media screen and (max-width: content-size.$breakpoint) {
           min-width: content-size.$min-width-sp;
-          margin-top: -120px;
           transform: none;
         }
 
@@ -236,8 +228,8 @@
     }
 
     img {
-      object-fit: cover;
       filter: brightness(60%);
+      object-fit: cover;
 
       &:hover {
         opacity: 0.8;

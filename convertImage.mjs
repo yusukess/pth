@@ -51,14 +51,14 @@ const ENCODER_OPTIONS = {
     progressive: true,
   },
   jpg: {
-    quality: 90,
+    quality: 60,
   },
   webp: {
     png: {
       lossless: true,
     },
     jpg: {
-      quality: 90,
+      quality: 80,
     },
   },
 };

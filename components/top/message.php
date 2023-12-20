@@ -13,5 +13,5 @@
                 多彩なライフスタイルを実現する住空間であり続けます。</p>
         </div>
     </section>
-    <?php get_template_part('components/common/wave', null, ['className' => 'is-bottom is-over']); ?>
+    <?php get_template_part('components/common/wave', null, ['className' => 'is-bottom is-over is-white']); ?>
 </section>

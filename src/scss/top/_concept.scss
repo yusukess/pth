@@ -48,7 +48,7 @@
   max-width: 100%;
   @include section.base($padding: 130px 0);
 
-  &:nth-child(odd) {
+  &:nth-child(even) {
     background-color: color.$light-blue;
   }
 
@@ -63,9 +63,11 @@
   }
 
   &.concept_point2 {
+    padding-top: 46px;
     padding-bottom: 270px;
 
     @media screen and (max-width: content-size.$breakpoint) {
+      padding-top: 0;
       padding-bottom: 200px;
     }
   }
@@ -110,7 +112,8 @@
     }
 
     [class*='concept_point2'] & {
-      height: calc(968px / 2);
+      padding-top: 250px;
+      // height: calc(968px / 2);
       margin: 0;
     }
 
@@ -317,7 +320,7 @@
         top: 64px;
         right: auto;
         bottom: auto;
-        left: 180px;
+        left: 174px;
         width: 122px;
         height: 167px;
       }

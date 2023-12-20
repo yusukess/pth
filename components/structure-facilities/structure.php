@@ -29,7 +29,6 @@ $structure_database = [
 ?>
 
 <section class="structure-section" id="structure">
-    <?php get_template_part('components/common/wave', null, ['className' => 'is-inverted is-top']); ?>
     <?php get_template_part('components/common/wave', null, ['className' => 'is-bottom']); ?>
     <div class="structure-section_inner">
         <div class="structure_information">

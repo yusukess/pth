@@ -8,8 +8,9 @@
 
 .facilities-section {
   position: relative;
-  @include section.base($gap: 64px);
   padding-top: 0;
+  background-color: color.$light-blue;
+  @include section.base($gap: 64px);
 
   &:not(:last-child) {
     @include decoration.wave-bottom;
