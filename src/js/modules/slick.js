@@ -54,11 +54,6 @@ export default () => {
     ],
   });
 
-  // SPでスライダーが止まるのを防止
-  $('.slider-kv.index').on('touchmove', function (event, slick, currentSlide, nextSlide) {
-    $('.slider-kv.index').slick('slickPlay');
-  });
-
   // ギャラリースライダー（共有施設・ギャラリー）
   let slider_photo_setting_base = {
     infinite: true,

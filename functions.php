@@ -107,7 +107,7 @@ function default_image($src, $width, $height, $alt = '画像', $className = '')
 {
 	$srcset = count($src) > 1 ? 'srcset="' . get_template_directory_uri() . '/assets/images/' . $src[1] . ' 2x, ' . get_template_directory_uri() . '/assets/images/' . $src[0] . ' 1x"' : '';
 
-	return '<img src="' . get_template_directory_uri() . '/assets/images/' . $src[0] . '"' . $srcset . 'width="' . $width . '" height="' . $height . '" alt="' . $alt . '" class="' . $className . '">';
+	return '<img src="' . get_template_directory_uri() . '/assets/images/' . $src[0] . '"' . $srcset . 'width="' . $width . '" height="' . $height . '" alt="' . $alt . '" class="' . $className . '" loading="lazy" >';
 }
 
 function get_cat($key, $parent)

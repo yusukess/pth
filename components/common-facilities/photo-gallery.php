@@ -325,10 +325,6 @@ $facilities_database = [
                 "caption" => "キャプションテキスト"
             ],
             [
-                "id" => "emergency04",
-                "caption" => "キャプションテキスト"
-            ],
-            [
                 "id" => "emergency05",
                 "caption" => "キャプションテキスト"
             ],

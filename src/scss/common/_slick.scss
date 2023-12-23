@@ -7,6 +7,7 @@
     position: relative;
     width: 100%;
     overflow: hidden;
+    pointer-events: none;
 
     .slick-list {
       min-width: 1600px;
@@ -16,7 +17,7 @@
       @media screen and (max-width: content-size.$breakpoint) {
         min-width: auto;
         height: auto;
-        aspect-ratio: 750/1626;
+        aspect-ratio: 750/1134;
         margin-top: 0;
       }
     }

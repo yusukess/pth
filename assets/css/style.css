@@ -504,6 +504,7 @@ legend {
 }
 .kv-section.index .kv.slick-slider {
   overflow: hidden;
+  pointer-events: none;
   position: relative;
   width: 100%;
 }
@@ -3974,7 +3975,7 @@ br.for-sp {
     font-size: 14px;
   }
   .kv-section.index .kv.slick-slider .slick-list {
-    aspect-ratio: 750/1626;
+    aspect-ratio: 750/1134;
     height: auto;
     margin-top: 0;
     min-width: auto;
