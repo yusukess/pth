@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: color.$footer-lower-part-background;
+  background-color: color.$footer-bg;
 }
 
 .site-footer_navigation {
@@ -83,7 +83,7 @@
       height: 100%;
       font-family: font.$heading-font-family;
       font-size: font.$footer-nav-size;
-      color: color.$footer-text;
+      color: color.$white;
       text-decoration: none;
 
       .menu-item-description {
@@ -111,12 +111,22 @@
   width: 100%;
   height: 100%;
   padding: 32px 0;
-  background-color: color.$footer-upper-part-background;
 
   @media screen and (max-width: content-size.$breakpoint) {
-    img {
+    padding: 16px 0;
+  }
+
+  a {
+    display: flex;
+  }
+
+  img {
+    width: 430px;
+    height: auto;
+    aspect-ratio: 430/133;
+
+    @media screen and (max-width: content-size.$breakpoint) {
       width: 200px;
-      height: 86px;
     }
   }
 }
@@ -128,23 +138,32 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 32px 0;
+  padding: 56px 0 8px;
 
   @media screen and (max-width: content-size.$breakpoint) {
-    a img {
+    gap: 16px;
+    padding: 28px 0 0;
+  }
+
+  a img {
+    width: 300px;
+    height: auto;
+    aspect-ratio: 3/1;
+
+    @media screen and (max-width: content-size.$breakpoint) {
       width: 150px;
-      height: 50px;
     }
   }
 }
 
 .site-footer_copyright {
-  padding-bottom: 32px;
+  padding-bottom: 16px;
   font-family: font.$heading-font-family;
   font-size: font.$footer-copyright-size;
   color: color.$footer-text;
 
   @media screen and (max-width: content-size.$breakpoint) {
+    padding-bottom: 8px;
     font-size: font.$footer-copyright-sp-size;
   }
 }

@@ -110,6 +110,21 @@ function default_image($src, $width, $height, $alt = '画像', $className = '')
 	return '<img src="' . get_template_directory_uri() . '/assets/images/' . $src[0] . '"' . $srcset . 'width="' . $width . '" height="' . $height . '" alt="' . $alt . '" class="' . $className . '" loading="lazy" >';
 }
 
+//ウィジェット
+function sample_widgets()
+{
+	register_sidebar(array(
+		'before_widget' => '<div class="footer_widget %2$s" id="%1$s">' . "\n",
+		'after_widget' => "</div>\n",
+		'before_title' => '<h3 class="footer_headline"><span>',
+		'after_title' => "</span></h3>\n",
+		'name' => 'フッターバナー',
+		'description' => __('Registration is possible to three.', 'tcd-w'),
+		'id' => 'footer_banner'
+	));
+}
+add_action('widgets_init', 'sample_widgets');
+
 function get_cat($key, $parent)
 {
 	$cat = get_the_category();

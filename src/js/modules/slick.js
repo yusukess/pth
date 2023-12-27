@@ -83,10 +83,11 @@ export default () => {
   const common_facilities_area = [
     'entrance',
     'lounge',
+    'lamp',
+    'cabin',
     'guest-room',
     'open-garden',
     'activity-space',
-    'cabin',
     'owners-living',
     'kids',
     'parking',
@@ -104,7 +105,30 @@ export default () => {
     tmp_nav_setting['asNavFor'] = '.' + $target + ' .slider-photo';
 
     $('.' + $target + ' .slider-photo').slick(tmp_setting);
-    $('.' + $target + ' .slider-gallery_nav').slick(tmp_nav_setting);
+    $('.' + $target + ' .slider-gallery_nav')
+      .slick(tmp_nav_setting)
+      .on('afterChange', function (event, slick, currentSlide) {
+        const $this = $('.' + $target + ' .slider-gallery_nav');
+        const sliderWidth = $this.innerWidth();
+        const itemMargin = parseInt($this.find('.slick-slide').css('margin-right'), 10);
+        const itemWidth = $this.find('.slick-slide').innerWidth() + itemMargin;
+
+        // 現在のスライドに応じて横に自動スクロール
+        function moveScroll() {
+          var currentPosition = $('.' + $target + ' .slider-gallery_nav .slick-current').position().left;
+          console.log(itemMargin);
+
+          const scrollSize = currentPosition > sliderWidth ? currentPosition + itemWidth - sliderWidth : 0;
+
+          $('.' + $target + ' .slider-gallery_nav .slick-list').animate(
+            {
+              scrollLeft: scrollSize,
+            },
+            300
+          );
+        }
+        moveScroll();
+      });
   });
 
   event.forEach(($target) => {

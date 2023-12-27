@@ -5,15 +5,15 @@
         <div class="activity-introduction-card-list">
             <div class="activity-introduction-card">
                 <?php echo (default_image(array("disaster-prevention/activity1.jpg"), '306', '208', "")); ?>
-                <p class="activity-introduction-card_title">管内ツアーで提供されたノベルティ</p>
+                <p class="activity-introduction-card_title">管内ツアーで提供された<br>ノベルティ</p>
             </div>
             <div class="activity-introduction-card">
                 <?php echo (default_image(array("disaster-prevention/activity2.jpg"), '306', '208', "")); ?>
-                <p class="activity-introduction-card_title">防災グッズ「まかないくん」を使った炊き出しの様子</p>
+                <p class="activity-introduction-card_title">防災グッズ「まかないくん」を<br>使った炊き出しの様子</p>
             </div>
             <div class="activity-introduction-card">
                 <?php echo (default_image(array("disaster-prevention/activity3.jpg"), '306', '208', "")); ?>
-                <p class="activity-introduction-card_title">区と連携した、防災に関する啓発活動も</p>
+                <p class="activity-introduction-card_title">区と連携した、<br>防災に関する啓発活動も</p>
             </div>
         </div>
     </div>

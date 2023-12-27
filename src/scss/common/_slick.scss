@@ -194,12 +194,17 @@
     width: 100%;
     margin-top: 8px;
 
+    @media screen and (max-width: content-size.$breakpoint) {
+    }
+
     .slick-list {
       width: 100%;
       height: 80px;
+      overflow-x: scroll;
     }
 
     .slick-track {
+      display: flex;
       min-width: 100%;
 
       height: 80px;
@@ -208,7 +213,7 @@
     }
 
     .slick-slide {
-      width: 116px !important;
+      min-width: 116px !important;
       height: 80px !important;
       margin: 0 5px;
       cursor: pointer;

@@ -128,6 +128,9 @@
 
 .zone_image_title {
   @include heading.h1(color.$white);
+  text-align: center;
+
+  text-shadow: 0 0 4px color.$black;
 }
 
 .zone_detail_heading {
