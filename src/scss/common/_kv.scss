@@ -13,6 +13,11 @@
   &.index {
     height: auto;
 
+    @media screen and (max-width: content-size.$breakpoint) {
+      aspect-ratio: 750/1134;
+      margin-bottom: 24px;
+    }
+
     .kv {
       @include slick.slider-kv;
 
@@ -113,9 +118,10 @@
   font-size: 16px;
   color: color.$white;
   letter-spacing: 0.04em;
+
   @media screen and (max-width: content-size.$breakpoint) {
     right: 6px;
-    bottom: 24px;
+    bottom: 6px;
     font-size: 10px;
     letter-spacing: 0;
   }

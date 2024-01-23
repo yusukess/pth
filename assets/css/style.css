@@ -362,7 +362,7 @@ legend {
 .site-header_panel .sub-navigation li.access::after {
   content: "Access & Map";
 }
-.site-header_panel .sub-navigation li.summary::after {
+.site-header_panel .sub-navigation li.building-overview::after {
   content: "Building Overview";
 }
 .site-header_panel .sub-navigation li.for-residents::after {
@@ -516,7 +516,6 @@ legend {
 }
 .kv-section.index .kv.slick-slider {
   overflow: hidden;
-  pointer-events: none;
   position: relative;
   width: 100%;
 }
@@ -646,7 +645,7 @@ legend {
 .kv_catchcopy.access::after {
   content: "Access & Map";
 }
-.kv_catchcopy.summary::after {
+.kv_catchcopy.building-overview::after {
   content: "Building Overview";
 }
 .kv_catchcopy.for-residents::after {
@@ -4020,11 +4019,18 @@ br.for-sp {
     font-size: 14px;
     padding-bottom: 8px;
   }
+  .kv-section.index {
+    aspect-ratio: 750/1134;
+    margin-bottom: 24px;
+  }
   .kv-section.index .kv.slick-slider .slick-list {
     aspect-ratio: 750/1134;
     height: auto;
     margin-top: 0;
     min-width: auto;
+  }
+  .kv-section.index .kv.slick-slider .slick-dots {
+    height: 24px;
   }
   .kv-section.index .kv.slick-slider {
     height: calc(100vh - 64px);
@@ -4050,7 +4056,7 @@ br.for-sp {
     display: block;
   }
   .kv_credit {
-    bottom: 24px;
+    bottom: 6px;
     font-size: 10px;
     letter-spacing: 0;
     right: 6px;
@@ -5555,10 +5561,9 @@ body {
 
 @media screen and (max-width: 430px) and (max-width: 430px){
   .kv-section.index .kv.slick-slider {
-    height: 100%;
+    height: calc(100% + 24px);
   }
   .kv-section.index .kv.slick-slider .slick-list {
-    min-width: 375px;
     transform: none;
   }
   .kv-section.index .kv.slick-slider .slick-list img {
