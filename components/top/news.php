@@ -75,6 +75,5 @@ $news_database = [
                 endif; ?>
             </div>
         </section>
-        <a href="<?php echo (esc_url(home_url('/'))); ?>news" class="recent-news_button">ニュース一覧</a>
     </div>
 </section>
