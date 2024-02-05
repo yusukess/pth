@@ -3,7 +3,7 @@
     <div class="kv-section-inner">
 
         <?php if ($args["page"] === "index") { ?>
-            <p class="kv_catchcopy <?php echo ($args['page']) ?>">都心一望。<br class="for-sp">ウォーターフロントで、<br class="for-sp">心豊かな人生を叶える</p>
+            <p class="kv_catchcopy <?php echo ($args['page']) ?>">湾岸から都心までを一望。<br class="for-sp">ウォーターフロントで、<br class="for-sp">心豊かな人生を叶える</p>
             <p class="kv_credit">Photo by Naoomi Kurozumi</p>
             <div class="kv slider-kv for-pc">
                 <?php echo (default_image(array('kv/top/pc/00.jpg'), '1600', '800', '画像')); ?>

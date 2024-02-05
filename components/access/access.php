@@ -6,47 +6,43 @@ $self = [
 
 $bus_database = [
     [
-        "name" => "銀座",
-        "value" => "東京メトロ有楽町線利用、直通で約4分。『銀座一丁目駅』下車。"
+        "name" => "銀座（銀座一丁目）",
+        "value" => "東京メトロ有楽町線利用、直通で約5分"
     ],
     [
         "name" => "有楽町",
-        "value" => "東京メトロ有楽町線利用、直通で約5分。『有楽町駅』下車。"
+        "value" => "東京メトロ有楽町線利用、直通で約6分"
     ],
     [
         "name" => "汐留",
-        "value" => "都営大江戸線利用、直通で約6分。『汐留駅』下車。"
+        "value" => "都営大江戸線利用、直通で約6分"
     ],
     [
         "name" => "東京",
-        "value" => "東京メトロ有楽町線『有楽町駅』からJR山手線へ乗り換え。『東京駅』下車。"
+        "value" => "東京メトロ有楽町線「有楽町駅」からJR山手線へ乗り換え"
     ],
     [
         "name" => "六本木",
-        "value" => "都営大江戸線利用利用、直通で約15分。『六本木駅』下車。"
+        "value" => "都営大江戸線利用、直通で約15分"
     ],
     [
         "name" => "品川",
-        "value" => "東京メトロ有楽町線『有楽町駅』からJR山手線へ乗り換え。『品川』下車。"
+        "value" => "東京メトロ有楽町線「有楽町駅」からJR山手線へ乗り換え"
     ],
     [
         "name" => "新宿",
-        "value" => "都営大江戸線利用、直通で約25分。『新宿駅』下車。"
+        "value" => "都営大江戸線利用、直通で約25分"
     ],
     [
         "name" => "池袋",
-        "value" => "東京メトロ有楽町線利用、直通で約25分。『池袋駅』下車。"
-    ],
-    [
-        "name" => "青山一丁目",
-        "value" => "都営大江戸線利用、直通で18分。『青山一丁目駅』下車。"
+        "value" => "東京メトロ有楽町線利用、直通で約25分"
     ],
 ];
 
 $transportation_database = [
     [
         "name" => "晴海ライナー",
-        "value" => "マンション敷地前「晴海2丁目北」バス停より、東銀座駅へ約10分、有楽町駅へ約15分、東京駅八重洲北口へ約20分で運行<br><a href='https://www.hitachi-gr.com/harumi-liner' target='_blank'>https://www.hitachi-gr.com/harumi-liner</a>"
+        "value" => "マンション敷地前「晴海2丁目北」バス停より、東銀座駅へ9分、有楽町駅へ16分、東京駅八重洲北口へ23分で運行<br><a href='https://www.hitachi-gr.com/harumi-liner' target='_blank'>https://www.hitachi-gr.com/harumi-liner</a>"
     ],
     [
         "name" => "東京BRT",
@@ -54,14 +50,15 @@ $transportation_database = [
     ],
     [
         "name" => "都営バス",
-        "value" => "→「晴海1丁目」バス停より、業10系統「新橋」行きで、築地、東銀座、銀座、新橋へＸＸ分で運行<br>
-        →「晴海1丁目」バス停より、東15系統「東京駅八重洲南口」行きで、勝どき、聖路加病院、東京駅八重洲口へXX分で運行<br>
-        →「新月島公園」バス停より、東16系統「東京駅八重洲南口」行きで、月島、八丁堀、東京駅八重洲口へXX分で運行<br>
-        →「晴海3丁目」バス停より、都05-1・05-2系統「東京駅丸の内南口」行きで、築地、東銀座、銀座、有楽町、東京駅丸の内南口へＸＸ分で運行"
+        "value" => "→「晴海1丁目」バス停より、業10系統「新橋」行きで、築地・東銀座・銀座経由、新橋まで約20分で運行<br>
+        →「晴海1丁目」バス停より、東15系統「東京駅八重洲南口」行きで、勝どき・聖路加病院・八丁堀経由、東京駅八重洲口へ約30分で運行<br>
+        →「新月島公園」バス停より、東16系統「東京駅八重洲南口」行きで、月島・八丁堀経由、東京駅八重洲口へ約20分で運行<br>
+        →「晴海3丁目」バス停より、都03・都05-1・都05-2系統「東京駅丸の内南口」行きで、築地・東銀座・銀座・有楽町経由、東京駅丸の内南口へ約25分で運行<br>
+        <a href='https://tobus.jp/sp/blsys/top/time' target='blank'>時刻表 ｜都バス 運行情報サービス (tobus.jp) </a>"
     ],
     [
         "name" => "リムジンバス",
-        "value" => "豊洲駅からリムジンバスで羽田空港まで約15分、成田空港へ約60分でアクセス"
+        "value" => "豊洲駅からリムジンバス（東京空港交通）で羽田空港まで約15分、成田空港へ約60分でアクセス<br><a href='https://www.limousinebus.co.jp/guide/timetable/' target='_blank'>リムジンバス時刻表 | リムジンバスの東京空港交通 (limousinebus.co.jp)</a>"
     ],
 
 ];
@@ -73,10 +70,8 @@ $transportation_database = [
         <div class="access-sub-section">
             <h2 class="access_heading">空と海と未来に開かれた都心。中央区・晴海。</h2>
             <div class="access_detail_wrapper">
-                <p class="access_detail">銀座約2.5km圏（直線距離約2,500m※3）に位置するパークタワー晴海。空と海を身近に感じる環境にありながら、<br>
-                    都市の利便性を使いこなし、加速度的に開発が進む湾岸エリアの賑わいも楽しめる、別世界の都心がここにあります。
-                <p class="access_notice">※3 銀座約2.5km圏とは東京メトロ「銀座」駅A7出口を起点とした直線距離であり、徒歩距離は約2,970m（38分）です。<br>
-                    所要時間は日中平常時(通勤時)のもので、乗換え待ち時間は含みません。また時間帯により多少異なります。</p>
+                <p class="access_detail">銀座約2.5km圏に位置するパークタワー晴海。空と海を身近に感じる環境にありながら、<br>
+                    都市の利便性を使いこなし、加速度的に開発が進む湾岸エリアの賑わいも楽しめる、別世界の都心です。</p>
             </div>
             <div class="access_google-map_wrapper">
                 <div>
@@ -107,7 +102,7 @@ $transportation_database = [
                     <?php get_template_part('components/common/key-value', null, ['page' => $self['page'], 'link' => $summary]); ?>
                 <?php } ?>
             </div>
-            <p class="access_notice">※所要時間は日中平常時のもので乗換え待ち時間は含みません、また時間帯により多少異なります。</p>
+            <p class="access_notice">※2024年1月時点。所要時間は日中平常時（通勤時）のもので、乗り換え待ち時間は含みません。時間帯により異なりますので、詳細は鉄道各社のホームページ等をご確認ください。</p>
         </div>
     </div>
     <?php get_template_part('components/common/wave', null, ['className' => 'bg-white is-bottom']); ?>
@@ -121,17 +116,18 @@ $transportation_database = [
             <?php foreach ($transportation_database as $summary) { ?>
                 <?php get_template_part('components/common/key-value', null, ['page' => $self['page'], 'link' => $summary]); ?>
             <?php } ?>
+            <p class="access_notice">※2024年1月時点。詳細は各社のホームページ等をご確認ください。</p>
         </div>
         <div class="bus-map-box">
             <div class="bus-map_text">
-                <h2 class="bus-map_heading">居住者専用シャトルバス運行！</h2>
+                <h2 class="bus-map_heading">居住者専用シャトルバス運行</h2>
                 <div class="bus-map_sub">
                     <?php echo (default_image(array('access/bus_info_logo.jpg'), '107', '107', '画像', 'image')); ?>
                     <h3 class="access_sub_heading">月島へ、東銀座へ、<br>快適にダイレクトアクセス。</h3>
                 </div>
-                <p>パークタワー晴海ではマンション専用のシャトルバスを運行いたします。<br>
-                    朝送迎は最寄りの月島駅停留所、東銀座駅停留所へ直通便での出勤や通学が可能になります。<br>
-                    夕送迎は東銀座6丁目停留所から月島駅の経由便で運行いたします。<br>
+                <p>平日の朝・夕夜にパークタワー晴海専用のシャトルバスを運行しています。<br>
+                    朝送迎は、マンション車寄せから最寄りの月島駅停留所まで5分、東銀座駅停留所まで約15分の直通便で、居住者の出勤や通学を支えています。<br>
+                    夕送迎は、東銀座6丁目停留所→月島駅停留所→パークタワー晴海の経由便を運行しています。<br>
                     <a href="" target="_blank">＞＞時刻表はこちら</a>
                 </p>
 
@@ -141,11 +137,11 @@ $transportation_database = [
     </div>
 
     <div class="access-section_inner">
-        <h2 class="access_heading">自動車でのアクセスも抜群（仮）</h2>
+        <h2 class="access_heading">自動車でのアクセスも抜群</h2>
         <ul class="access-car">
             <li>タクシーで銀座、東京駅などから10～15分程度</li>
-            <li>首都高速 10号線「晴海」「豊洲」出入口が最寄りで、羽田空港まで15分、成田空港まで1時間程度</li>
-            <li>首都高速 C1都心環状線「汐留」「銀座」「新富町」「京橋」各出入口から5～10分程度</li>
+            <li>首都高速 10号線「晴海」「豊洲」出入口が最寄り。湾岸線経由で羽田空港まで15分程度、成田空港まで1時間程度、横浜まで30分程度</li>
+            <li>首都高速 C1都心環状線「汐留」「銀座」「新富町」「京橋」各出入口から10分程度</li>
         </ul>
     </div>
     </div>
@@ -157,15 +153,5 @@ $transportation_database = [
         <h2 class="access_heading">日常を豊かに彩る大型商業施設が身近に</h2>
         <?php echo (default_image(array('access/familiar_spot_img01.jpg'), '1000', '711', '施設の画像', 'image for-pc')); ?>
         <?php echo (default_image(array('access/familiar_spot_img06.jpg'), '1000', '711', '施設の画像', 'image for-sp')); ?>
-    </div>
-
-    <div class="access-section_inner">
-        <h2 class="access_heading">普段使いのお買い物スポットも気分に合わせて</h2>
-        <div class="familiar-image">
-            <?php echo (default_image(array('access/familiar_spot_img02.jpg'), '224', '180', '施設の画像', 'image')); ?>
-            <?php echo (default_image(array('access/familiar_spot_img03.jpg'), '224', '180', '施設の画像', 'image')); ?>
-            <?php echo (default_image(array('access/familiar_spot_img04.jpg'), '224', '180', '施設の画像', 'image')); ?>
-            <?php echo (default_image(array('access/familiar_spot_img05.jpg'), '224', '180', '施設の画像', 'image')); ?>
-        </div>
     </div>
 </section>

@@ -8,7 +8,7 @@
 @use '../common/notice' as notice;
 
 .management-association-section {
-  @include section.base($padding: 40px 0 80px);
+  @include section.base($padding: 40px 0 80px, $gap: 64px);
 }
 
 .information-section {
@@ -18,16 +18,30 @@
 .information_heading {
   text-align: center;
   @include heading.h1($color: color.$blue);
+
+  &:empty {
+    display: none;
+  }
 }
 
 .information_detail {
   @include paragraph.base;
+
+  .heading {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
 }
 
 .information_signature {
   width: 100%;
   text-align: right;
   @include paragraph.base;
+
+  &:empty {
+    display: none;
+  }
 }
 
 @media screen and (max-width: content-size.$breakpoint) {
@@ -36,7 +50,7 @@
   }
 
   .management-association-section_inner {
-    gap: 40px;
+    gap: 64px;
   }
 
   .information-section {

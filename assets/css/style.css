@@ -1700,7 +1700,7 @@ legend {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 160px 0 160px;
+  padding: 180px 0 160px;
   position: relative;
   position: relative;
   width: 100%;
@@ -1783,7 +1783,7 @@ legend {
   width: 96px;
 }
 .movie_heading::after {
-  right: -44px !important;
+  right: -56px !important;
   top: 8px !important;
 }
 .movie_heading small {
@@ -2172,6 +2172,7 @@ legend {
   font-family: "Zen Old Mincho", serif;
   font-size: 32px;
   line-height: 1.5;
+  text-align: center;
   width: 100%;
 }
 .photo-gallery_heading::before, .photo-gallery_heading::after {
@@ -2308,7 +2309,7 @@ legend {
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 64px;
   justify-content: center;
   width: 1000px;
 }
@@ -2338,12 +2339,20 @@ legend {
   line-height: 1.5;
   text-align: center;
 }
+.information_heading:empty {
+  display: none;
+}
 
 .information_detail {
   color: #222;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   line-height: 1.8;
+}
+.information_detail .heading {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
 .information_signature {
@@ -2353,6 +2362,9 @@ legend {
   line-height: 1.8;
   text-align: right;
   width: 100%;
+}
+.information_signature:empty {
+  display: none;
 }
 .kv-section.index .kv-section-inner {
   opacity: 0;
@@ -3794,7 +3806,7 @@ legend {
 .access-field .key {
   background-color: #2775a6;
   color: #fff;
-  min-width: 120px;
+  min-width: 160px;
   padding: 0 8px;
   text-align: center;
   width: -webkit-fit-content;
@@ -4290,10 +4302,10 @@ br.for-sp {
     padding-top: 250px;
   }
   [class*=concept_point3] .concept_point_inner {
-    height: 630px;
+    height: 670px;
   }
   [class*=concept_point4] .concept_point_inner {
-    height: 510px;
+    height: 530px;
   }
   [class*=concept_point2] .concept_point_description {
     margin: auto 0 0;
@@ -4378,7 +4390,7 @@ br.for-sp {
   [class*=concept_point3] .photo:nth-child(3) {
     bottom: auto;
     height: 102px;
-    left: -8px;
+    left: -4.2666666667%;
     position: absolute;
     top: 224px;
     width: 102px;
@@ -4421,8 +4433,8 @@ br.for-sp {
     width: calc(100vw - 8.5333333333%);
   }
   .movie-section::before {
-    height: 100px;
-    top: -100px;
+    height: 80px;
+    top: -80px;
   }
   .movie-section_inner::before {
     height: 80px;
@@ -4437,8 +4449,11 @@ br.for-sp {
     top: -10px;
     width: 40px;
   }
+  .movie_heading::after {
+    right: -44px !important;
+  }
   .movie_heading small {
-    font-size: 12px;
+    font-size: 10px;
   }
   .movie_heading::before {
     height: 74px;
@@ -4744,7 +4759,7 @@ br.for-sp {
     padding-top: 0;
   }
   .management-association-section_inner {
-    gap: 40px;
+    gap: 64px;
   }
   .information-section {
     padding: 0;

@@ -146,4 +146,8 @@ export default () => {
       $(this).slick(tmp_nav_setting);
     });
   });
+
+  $('.slider-kv').on('touchmove', function (event, slick, currentSlide, nextSlide) {
+    $('.slider-kv').slick('slickPlay');
+  });
 };

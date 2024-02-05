@@ -18,6 +18,7 @@
 .photo-gallery_heading {
   @include heading.h1(color.$blue);
   @include heading.add-border;
+  text-align: center;
 }
 
 .photo-gallery_slider {

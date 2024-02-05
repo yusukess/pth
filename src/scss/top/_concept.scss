@@ -118,11 +118,11 @@
     }
 
     [class*='concept_point3'] & {
-      height: 630px;
+      height: 670px;
     }
 
     [class*='concept_point4'] & {
-      height: 510px;
+      height: 530px;
     }
   }
 }
@@ -347,7 +347,7 @@
         position: absolute;
         top: 224px;
         bottom: auto;
-        left: -8px;
+        left: -1 * content-size.$cotent-side-sp;
         width: 102px;
         height: 102px;
       }
