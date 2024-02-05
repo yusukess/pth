@@ -21,10 +21,37 @@
   @include heading.add-border;
 }
 
+// .for-residents-field {
+//   @include key-value.vertical;
+//   .key {
+//     color: color.$blue !important;
+//   }
+// }
+
+.for-residents-field-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  width: 100%;
+}
+
 .for-residents-field {
-  @include key-value.vertical;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
   .key {
-    color: color.$blue !important;
+    width: fit-content;
+    min-width: 160px;
+    padding: 0 8px;
+    color: color.$white;
+    text-align: center;
+    background-color: color.$blue;
+
+    @media screen and (max-width: content-size.$breakpoint) {
+      width: 100%;
+      padding: 0;
+    }
   }
 }
 

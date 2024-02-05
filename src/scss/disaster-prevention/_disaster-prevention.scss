@@ -9,10 +9,11 @@
 @use '../common/point' as point;
 
 @import 'activity-introduction';
+@import 'disaster-card';
 
 .disaster-prevention-section {
   background-color: color.$white;
-  @include section.base($padding: 40px 0 240px, $gap: 80px);
+  @include section.base($padding: 40px 0 180px, $sp-padding: 0 0 100px, $gap: 80px);
 }
 
 .disaster-prevention_information {
@@ -39,11 +40,14 @@
   @include point.small;
 }
 
-@media screen and (max-width: content-size.$breakpoint) {
-  .disaster-prevention-section {
-    padding-top: 0;
-  }
+.disaster-card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 16px;
+  width: 100%;
+}
 
+@media screen and (max-width: content-size.$breakpoint) {
   .disaster-prevention_information {
   }
 
@@ -60,5 +64,9 @@
 
   .disaster-prevention-point {
     gap: 24px;
+  }
+
+  .disaster-card-list {
+    gap: 8px;
   }
 }

@@ -17,12 +17,22 @@
     }
 
     .point_detail {
+      display: flex;
+      flex-direction: column;
       text-align: left;
       @include paragraph.base;
+
+      a {
+        margin-left: auto;
+      }
     }
 
     .point_notice {
       @include notice.base;
+
+      &:empty {
+        display: none;
+      }
     }
   }
 }
@@ -65,8 +75,12 @@
       width: 100%;
       height: auto;
 
-      &.for-sp { display: none; }
-      &.for-pc { display: inline-block; }
+      &.for-sp {
+        display: none;
+      }
+      &.for-pc {
+        display: inline-block;
+      }
     }
   }
 
@@ -89,8 +103,12 @@
       }
 
       .point_sub-image {
-        &.for-sp { display: inline-block; }
-        &.for-pc { display: none; }
+        &.for-sp {
+          display: inline-block;
+        }
+        &.for-pc {
+          display: none;
+        }
       }
     }
   }

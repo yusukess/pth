@@ -1,0 +1,73 @@
+@use '../variables/color' as color;
+@use '../variables/content-size' as content-size;
+
+@use '../common/heading' as heading;
+@use '../common/paragraph' as paragraph;
+@use '../common/notice' as notice;
+
+.disaster-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 238px;
+  padding: 8px;
+  background-color: color.$white;
+}
+
+.disaster-card_thumbnail {
+  line-height: 0;
+}
+
+.disaster-card_summary {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.disaster-card_title {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  font-size: 20px;
+  text-align: center;
+  @include heading.h3(color.$blue, 20px);
+}
+
+.disaster-card_detail {
+  @include paragraph.for-card;
+  text-align: center;
+}
+
+.disaster-card_notice {
+  width: 100%;
+  text-align: left;
+  @include notice.for-card();
+}
+
+@media screen and (max-width: content-size.$breakpoint) {
+  .disaster-card {
+    width: calc(50% - 4px);
+  }
+
+  .disaster-card_thumbnail {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .disaster-card_summary {
+  }
+
+  .disaster-card_title {
+    height: 40px;
+  }
+
+  .disaster-card_detail {
+  }
+
+  .disaster-card_notice {
+  }
+}

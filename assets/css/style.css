@@ -1967,16 +1967,24 @@ legend {
 }
 .structure-facilities-point .point_detail {
   color: #222;
+  display: flex;
+  flex-direction: column;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   line-height: 1.8;
   text-align: left;
+}
+.structure-facilities-point .point_detail a {
+  margin-left: auto;
 }
 .structure-facilities-point .point_notice {
   color: #777;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 12px;
   line-height: 1.8;
+}
+.structure-facilities-point .point_notice:empty {
+  display: none;
 }
 .structure-facilities-point .point_information {
   gap: 24px;
@@ -2917,46 +2925,27 @@ legend {
   margin-left: 72px;
 }
 
-.for-residents-field.field {
+.for-residents-field-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  width: 100%;
+}
+
+.for-residents-field {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  width: 100%;
-}
-.for-residents-field.field:not(:last-child) {
-  margin-bottom: 24px;
-}
-.for-residents-field.field .key {
-  align-items: center;
-  color: #fff;
-  display: flex;
-  flex-direction: row;
-  font-family: "Zen Old Mincho", serif;
-  font-size: 24px;
-  gap: 12px;
-  line-height: 1.5;
-  text-align: left;
-  width: 100%;
-}
-.for-residents-field.field .key::before {
-  background-color: #2775a6;
-  content: "";
-  display: block;
-  flex-shrink: 0;
-  height: 20px;
-  width: 8px;
-}
-.for-residents-field.field .value {
-  color: #222;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 16px;
-  line-height: 1.8;
-  padding-left: 16px;
-  text-align: left;
-  width: 100%;
 }
 .for-residents-field .key {
-  color: #2775a6 !important;
+  background-color: #2775a6;
+  color: #fff;
+  min-width: 160px;
+  padding: 0 8px;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .building-overview-section {
   align-items: center;
@@ -3055,7 +3044,6 @@ legend {
 }
 .activity-introduction-section {
   align-items: center;
-  background-color: #e2f0f3;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3107,6 +3095,7 @@ legend {
   display: flex;
   gap: 16px;
   justify-content: space-between;
+  width: 100%;
 }
 
 .activity-introduction-card {
@@ -3127,13 +3116,114 @@ legend {
   padding: 16px;
   text-align: center;
 }
+.activity-training_heading {
+  color: #2775a6;
+  font-family: "Zen Old Mincho", serif;
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.activity-training-list {
+  width: 100%;
+}
+.activity-training-list ul {
+  border-top: 1px solid #2775a6;
+}
+
+.activity-training-field {
+  border-bottom: 1px solid #2775a6;
+  display: flex;
+  width: 100%;
+}
+.activity-training-field .key {
+  align-items: center;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 120px;
+  padding: 12px;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.activity-training-field .value {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 12px;
+  word-break: break-all;
+}
+.activity-training-field .value span {
+  display: flex;
+  font-size: 12px;
+  line-height: 16px;
+}
+.activity-training-field .value span:before {
+  content: "※";
+  display: block;
+}
+
+.disaster-card {
+  background-color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  width: 238px;
+}
+
+.disaster-card_thumbnail {
+  line-height: 0;
+}
+
+.disaster-card_summary {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.disaster-card_title {
+  align-items: center;
+  color: #2775a6;
+  display: flex;
+  font-family: "Zen Old Mincho", serif;
+  font-size: 20px;
+  font-size: 20px;
+  height: 56px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.disaster-card_detail {
+  color: #222;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.disaster-card_notice {
+  color: #777;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: left;
+  width: 100%;
+}
 .disaster-prevention-section {
   align-items: center;
   background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 40px 0 240px;
+  padding: 40px 0 180px;
   position: relative;
   width: 100%;
 }
@@ -3188,16 +3278,24 @@ legend {
 }
 .disaster-prevention-point .point_detail {
   color: #222;
+  display: flex;
+  flex-direction: column;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   line-height: 1.8;
   text-align: left;
+}
+.disaster-prevention-point .point_detail a {
+  margin-left: auto;
 }
 .disaster-prevention-point .point_notice {
   color: #777;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 12px;
   line-height: 1.8;
+}
+.disaster-prevention-point .point_notice:empty {
+  display: none;
 }
 .disaster-prevention-point .point_information {
   gap: 8px;
@@ -3217,6 +3315,13 @@ legend {
 }
 .disaster-prevention-point .point_sub-image.for-pc {
   display: inline-block;
+}
+
+.disaster-card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 16px;
+  width: 100%;
 }
 .story-introduction-section {
   align-items: center;
@@ -4548,16 +4653,24 @@ br.for-sp {
   }
   .structure-facilities-point .point_detail {
     color: #222;
+    display: flex;
+    flex-direction: column;
     font-family: "Noto Sans JP", sans-serif;
     font-size: 16px;
     line-height: 1.8;
     text-align: left;
+  }
+  .structure-facilities-point .point_detail a {
+    margin-left: auto;
   }
   .structure-facilities-point .point_notice {
     color: #777;
     font-family: "Noto Sans JP", sans-serif;
     font-size: 12px;
     line-height: 1.8;
+  }
+  .structure-facilities-point .point_notice:empty {
+    display: none;
   }
   .structure-facilities-point .point_information {
     gap: 24px;
@@ -5062,14 +5175,9 @@ br.for-sp {
     margin: 24px 0 0;
     width: 60px;
   }
-  .for-residents-field.field .key {
-    font-size: 18px;
-  }
-  .for-residents-field.field .value {
-    font-size: 14px;
-  }
-  .for-residents-field.field .value {
-    padding-left: 0;
+  .for-residents-field .key {
+    padding: 0;
+    width: 100%;
   }
   .for-residents-section {
     padding-top: 0;
@@ -5146,7 +5254,6 @@ br.for-sp {
   }
   .activity-introduction-card-list {
     flex-direction: column;
-    width: 100%;
   }
   .activity-introduction-card {
     width: 100%;
@@ -5157,8 +5264,34 @@ br.for-sp {
        object-fit: cover;
     width: 100%;
   }
+  .activity-training_heading {
+    font-size: 18px;
+  }
+  .activity-training-field .key {
+    min-width: 32%;
+    padding: 2.1333333333%;
+  }
+  .activity-training-field .value {
+    padding: 2.1333333333%;
+  }
+  .disaster-card_title {
+    font-size: 18px;
+  }
+  .disaster-card_detail {
+    font-size: 14px;
+  }
+  .disaster-card {
+    width: calc(50% - 4px);
+  }
+  .disaster-card_thumbnail img {
+    height: auto;
+    width: 100%;
+  }
+  .disaster-card_title {
+    height: 40px;
+  }
   .disaster-prevention-section {
-    padding: 120px 0;
+    padding: 0 0 100px;
   }
   .disaster-prevention-section_inner {
     gap: 40px;
@@ -5199,9 +5332,6 @@ br.for-sp {
   .disaster-prevention-point .point_sub-image.for-pc {
     display: none;
   }
-  .disaster-prevention-section {
-    padding-top: 0;
-  }
   .disaster-prevention_heading {
     text-align: center;
   }
@@ -5210,6 +5340,9 @@ br.for-sp {
   }
   .disaster-prevention-point {
     gap: 24px;
+  }
+  .disaster-card-list {
+    gap: 8px;
   }
   .story-introduction-section {
     padding: 120px 0;

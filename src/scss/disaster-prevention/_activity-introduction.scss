@@ -11,7 +11,6 @@
   @include section.base($sp-padding: 0 0 64px);
   position: relative;
   padding-top: 0;
-  background-color: color.$light-blue;
 }
 
 .activity-introduction_heading {
@@ -27,6 +26,7 @@
   display: flex;
   gap: 16px;
   justify-content: space-between;
+  width: 100%;
 }
 
 .activity-introduction-card {
@@ -58,8 +58,6 @@
 @media screen and (max-width: content-size.$breakpoint) {
   .activity-introduction-card-list {
     flex-direction: column;
-
-    width: 100%;
   }
 
   .activity-introduction-card {
@@ -69,6 +67,67 @@
       width: 100%;
       aspect-ratio: 670/280;
       object-fit: cover;
+    }
+  }
+}
+
+.activity-training_heading {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: left;
+  @include heading.h3(color.$blue);
+}
+
+.activity-training-list {
+  width: 100%;
+
+  ul {
+    border-top: 1px solid color.$blue;
+  }
+}
+
+.activity-training-field {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid color.$blue;
+
+  .key {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: fit-content;
+    min-width: 120px;
+    padding: 12px;
+    color: color.$black;
+    text-align: center;
+
+    @media screen and (max-width: content-size.$breakpoint) {
+      min-width: calc(240 / 750 * 100%);
+      padding: calc(16 / 750 * 100%);
+    }
+  }
+
+  .value {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 12px;
+    word-break: break-all;
+
+    @media screen and (max-width: content-size.$breakpoint) {
+      padding: calc(16 / 750 * 100%);
+    }
+
+    span {
+      display: flex;
+
+      &:before {
+        display: block;
+        content: '※';
+      }
+      font-size: font.$notice-size;
+      line-height: 16px;
     }
   }
 }

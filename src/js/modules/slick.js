@@ -80,7 +80,7 @@ export default () => {
     ],
   };
 
-  const common_facilities_area = [
+  const slider_area = [
     'entrance',
     'lounge',
     'lamp',
@@ -93,11 +93,12 @@ export default () => {
     'parking',
     'emergency',
     'other',
+    'disaster',
   ];
 
   const event = ['tanabata', 'halloween', 'illumination'];
 
-  common_facilities_area.forEach(($target) => {
+  slider_area.forEach(($target) => {
     let tmp_setting = { ...slider_photo_setting_base };
     let tmp_nav_setting = { ...slider_photo_nav_setting_base };
 
@@ -116,7 +117,6 @@ export default () => {
         // 現在のスライドに応じて横に自動スクロール
         function moveScroll() {
           var currentPosition = $('.' + $target + ' .slider-gallery_nav .slick-current').position().left;
-          console.log(itemMargin);
 
           const scrollSize = currentPosition > sliderWidth ? currentPosition + itemWidth - sliderWidth : 0;
 

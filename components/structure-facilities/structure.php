@@ -17,8 +17,8 @@ $structure_database = [
         "sub-image" => ""
     ],
     [
-        "heading" => "約72時間使用可能<br class='for-sp'>非常用発電設備",
-        "detail" => "災害時に停電になった際は非常用発電機が作動し、非常用エレベーターや共用部の保安照明、災害防災拠点の電気設備などへ電力を供給します。非常用発電設備の備蓄燃料は法定量以上を確保し、3日間の運用スケジュールを策定します。",
+        "heading" => "マンションの生命線を支える約72時間使用可能な<br class='for-sp'>非常用発電設備",
+        "detail" => "非常用発電設備を2階に有しています。災害時に停電になった際は非常用発電機が作動し、非常用エレベーターや共用部の保安照明、災害防災拠点（2Fキャビンラウンジや1Fオーナーズリビング等）の電気設備などへ電力を供給します。非常用発電設備の備蓄燃料は法定量以上を確保し、3日間の運用スケジュールを策定しています。",
         "notice" => "",
         "image" => "structure-facilities/structure/emergency-power.jpg",
         "image-width" => "480",
@@ -32,9 +32,9 @@ $structure_database = [
     <?php get_template_part('components/common/wave', null, ['className' => 'is-bottom']); ?>
     <div class="structure-section_inner">
         <div class="structure_information">
-            <h2 class="structure_heading">日本初、免震×連結制振<br class='for-sp'>「DFSハイブリッド」を採用</h2>
-            <p class="structure_detail">パークタワー晴海では、免震皇族とDFS（デュアル・フレーム・システム／連結制振構造）を併用するハイブリッド構造を採用。従来の免震構造だけでは対応できなかった風揺れや長周期地震動による揺れにも対応する安心感の高い構造です。</p>
-            <small class="structure_notice">※大林組独自の連結制振構造であるDFS（デュアル・フレーム・システム）に免震構造を組み込んだ構造システム（DFSハイブリッドハイブリッド）の初適用物件。</small>
+            <h2 class="structure_heading">免震×連結制振<br class='for-sp'>「DFSハイブリッド」を採用</h2>
+            <p class="structure_detail">パークタワー晴海では、免震構造と制震構造（DFS：デュアル・フレーム・システム／連結制振構造）を併用するハイブリッド構造を採用しています。免震構造だけでは対応できなかった風揺れや長周期地震動による揺れにも対応する安心感の高い構造です。</p>
+            <small class="structure_notice">※竣工（2019年）時点で、大林組独自の連結制振構造であるDFS（デュアル・フレーム・システム）に免震構造を組み込んだ構造システム（DFSハイブリッドハイブリッド）の初適用物件。</small>
         </div>
         <?php foreach ($structure_database as $structure) { ?>
             <?php get_template_part('components/common/point', null, ['point' => $structure, 'page' => $args['page']]); ?>

@@ -16,5 +16,25 @@
                 <p class="activity-introduction-card_title">区と連携した、<br>防災に関する啓発活動も</p>
             </div>
         </div>
-    </div>
+        <div class="activity-training-list">
+            <h3 class="activity-training_heading">訓練履歴</h3>
+            <ul>
+                <li class="field activity-training-field">
+                    <p class="key">2024年01月01日(月)</p>
+                    <p class="value">〇〇訓練実施</p>
+                </li>
+                <li class="field activity-training-field">
+                    <p class="key">2024年01月01日(月)</p>
+                    <p class="value">〇〇訓練実施</p>
+                </li>
+                <li class="field activity-training-field">
+                    <p class="key">2024年01月01日(月)</p>
+                    <p class="value">〇〇訓練実施</p>
+                </li>
+                <li class="field activity-training-field">
+                    <p class="key">2024年01月01日(月)</p>
+                    <p class="value">〇〇訓練実施</p>
+                </li>
+            </ul>
+        </div>
 </section>

@@ -269,3 +269,18 @@ function my_scripts_method()
 	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', array(), '2.2.4');
 }
 add_action('wp_enqueue_scripts', 'my_scripts_method');
+
+function my_wp_head_tel_link()
+{
+	if (!wp_is_mobile()) : ?>
+		<style type="text/css">
+			a[href*="tel:"] {
+				pointer-events: none;
+				cursor: default;
+				text-decoration: none;
+				color: inherit;
+			}
+		</style>
+<?php endif;
+}
+add_action('wp_head', 'my_wp_head_tel_link');
