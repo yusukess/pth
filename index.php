@@ -14,8 +14,8 @@ get_header();
 	<?php get_template_part('components/top/bg'); ?>
 	<main id="site-content">
 		<?php get_template_part('components/top/introduction'); ?>
-		<?php get_template_part('components/top/news'); ?>
 		<?php get_template_part('components/top/message'); ?>
+		<?php get_template_part('components/top/news'); ?>
 		<?php get_template_part('components/top/concept'); ?>
 		<?php get_template_part('components/top/movie'); ?>
 	</main><!-- #site-content -->

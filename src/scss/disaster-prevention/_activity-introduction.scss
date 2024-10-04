@@ -14,19 +14,22 @@
 }
 
 .activity-introduction_heading {
-  @include heading.h1(color.$blue);
+  @include heading.h2(color.$blue);
   @include heading.add-border;
 }
 
 .activity-introduction_detail {
   @include paragraph.base();
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .activity-introduction-card-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
-  justify-content: space-between;
   width: 100%;
+  margin-bottom: 40px;
 }
 
 .activity-introduction-card {
@@ -72,14 +75,17 @@
 }
 
 .activity-training_heading {
+  @include heading.h3(color.$blue);
   width: 100%;
   margin-bottom: 20px;
+
+  font-size: 20px;
   text-align: left;
-  @include heading.h3(color.$blue);
 }
 
 .activity-training-list {
   width: 100%;
+  margin-bottom: 20px;
 
   ul {
     border-top: 1px solid color.$blue;
@@ -88,6 +94,7 @@
 
 .activity-training-field {
   display: flex;
+  align-items: center;
   width: 100%;
   border-bottom: 1px solid color.$blue;
 
@@ -97,7 +104,7 @@
     align-items: center;
     justify-content: flex-start;
     width: fit-content;
-    min-width: 120px;
+    min-width: 90px;
     padding: 12px;
     color: color.$black;
     text-align: center;

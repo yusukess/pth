@@ -14,7 +14,7 @@
 @use '../common/animation' as animation;
 
 .recent-news-section {
-  @include section.base($padding: 80px 0 64px, $sp-padding: 0, $gap: 16px, $sp-gap: 24px);
+  @include section.base($padding: 80px 0 240px, $sp-padding: 0 0 80px, $gap: 16px, $sp-gap: 24px);
   background-color: color.$white;
 
   &:after {
@@ -85,10 +85,6 @@
 
   @media screen and (max-width: content-size.$breakpoint) {
     width: calc((100% - 16px) / 2);
-
-    &:nth-child(n + 5) {
-      display: none;
-    }
   }
 }
 

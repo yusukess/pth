@@ -38,6 +38,15 @@
 
 .disaster-prevention-point {
   @include point.small;
+
+  .point_heading {
+    font-size: 20px !important;
+
+    span {
+      display: block;
+      font-size: 18px;
+    }
+  }
 }
 
 .disaster-card-list {
@@ -45,6 +54,25 @@
   flex-wrap: wrap;
   gap: 40px 16px;
   width: 100%;
+}
+
+.disaster-section {
+  @include section.base($padding: 40px 0 80px);
+
+  text-align: center;
+
+  .gallery {
+    margin-bottom: 40px;
+  }
+
+  small {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  a {
+    display: block;
+  }
 }
 
 @media screen and (max-width: content-size.$breakpoint) {

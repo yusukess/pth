@@ -3,18 +3,20 @@
 @use '../variables/content-size' as content-size;
 
 .wp-pagenavi {
-  width: 100%;
   display: flex;
-  justify-content: center;
   gap: 8px;
+  justify-content: center;
+  width: 100%;
   margin: 40px 0;
 
   .pages,
-  .extend　{
+  .extend {
     display: none;
   }
 
   .current,
+  .nextpostslink,
+  .previouspostslink,
   .page,
   .first,
   .last {
@@ -33,6 +35,8 @@
 
   .page,
   .first,
+  .nextpostslink,
+  .previouspostslink,
   .last {
     box-sizing: border-box;
     color: color.$blue;
@@ -49,10 +53,10 @@
 
   a {
     padding: 8px 16px;
-    text-decoration: none;
-    color: color.$blue;
-    border-radius: 8px;
     font-size: font.$paragraph-size;
+    color: color.$blue;
+    text-decoration: none;
+    border-radius: 8px;
 
     &:hover {
       background-color: color.$light-blue;

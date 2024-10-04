@@ -93,7 +93,7 @@
 
 .concept_point_inner {
   position: relative;
-  width: 1600px;
+  width: content-size.$site-width;
 
   /* TODO: 仮置きのため要調整 */
   min-height: 800px;
@@ -104,7 +104,7 @@
   }
 
   @media screen and (max-width: content-size.$breakpoint) {
-    max-width: content-size.$min-width-sp;
+    //max-width: content-size.$min-width-sp;
     min-height: auto;
 
     [class*='concept_point1'] & {
@@ -112,17 +112,17 @@
     }
 
     [class*='concept_point2'] & {
-      padding-top: 250px;
+      padding-top: calc(500 / 750 * 100vw);
       // height: calc(968px / 2);
       margin: 0;
     }
 
     [class*='concept_point3'] & {
-      height: 670px;
+      padding-top: calc(720 / 750 * 100vw);
     }
 
     [class*='concept_point4'] & {
-      height: 530px;
+      padding-top: calc(480 / 750 * 100vw);
     }
   }
 }
@@ -135,16 +135,16 @@
 
   [class*='concept_point2'] & {
     width: 710px;
-    margin: 0 150px auto auto;
+    margin: 0 0 auto auto;
   }
 
   [class*='concept_point3'] & {
-    margin: 66px auto auto 46px;
+    margin: 20px auto auto 46px;
   }
 
   [class*='concept_point4'] & {
     width: 700px;
-    margin: 0 64px auto auto;
+    margin: 0 0 auto auto;
   }
 
   @media screen and (max-width: content-size.$breakpoint) {
@@ -215,19 +215,19 @@
     &:nth-child(1) {
       position: absolute;
       top: -60px;
-      left: 0px;
+      left: -172px;
     }
 
     &:nth-child(2) {
       position: absolute;
-      right: 558px;
       bottom: 40px;
+      left: 570px;
     }
 
     &:nth-child(3) {
       position: absolute;
-      right: 96px;
       bottom: 0;
+      left: 912px;
     }
   }
   [class*='concept_point3'] & {
@@ -252,26 +252,26 @@
     &:nth-child(4) {
       position: absolute;
       top: -40px;
-      right: 0px;
+      right: -322px;
     }
   }
   [class*='concept_point4'] & {
     &:nth-child(1) {
       position: absolute;
       top: 80px;
-      left: 0px;
+      left: -220px;
     }
 
     &:nth-child(2) {
       position: absolute;
-      right: 504px;
       bottom: -76px;
+      left: 594px;
     }
 
     &:nth-child(3) {
       position: absolute;
-      right: 150px;
       bottom: 0;
+      left: 948px;
     }
   }
   @media screen and (max-width: content-size.$breakpoint) {
@@ -303,26 +303,26 @@
         position: absolute;
         top: 0;
         left: -1 * content-size.$cotent-side-sp;
-        width: 177px;
-        height: 177px;
+        width: calc(355 / 750 * 100vw);
+        aspect-ratio: 1/1;
       }
 
       &:nth-child(2) {
         position: absolute;
-        right: 8px;
-        bottom: -124px;
-        width: 99px;
-        height: 99px;
+        bottom: calc(220 / 750 * -100vw);
+        left: calc(458 / 750 * 100vw);
+        width: calc(198 / 750 * 100vw);
+        aspect-ratio: 1/1;
       }
 
       &:nth-child(3) {
         position: absolute;
-        top: 64px;
+        top: calc(130 / 750 * 100vw);
         right: auto;
         bottom: auto;
-        left: 174px;
-        width: 122px;
-        height: 167px;
+        left: calc(345 / 750 * 100vw);
+        width: calc(245 / 750 * 100vw);
+        aspect-ratio: 245/334;
       }
     }
     [class*='concept_point3'] & {
@@ -330,62 +330,59 @@
         position: absolute;
         top: 0px;
         left: -1 * content-size.$cotent-side-sp;
-        width: 220px;
-        height: 95px;
+        width: calc(440 / 750 * 100vw);
+        aspect-ratio: 440/190;
       }
 
       &:nth-child(2) {
         position: absolute;
-        top: 118px;
+        top: calc(230 / 750 * 100vw);
         bottom: auto;
-        left: 16px;
-        width: 120px;
-        height: 89px;
+        left: calc(12 / 750 * 100vw);
+        width: calc(240 / 750 * 100vw);
+        aspect-ratio: 240/178;
       }
 
       &:nth-child(3) {
         position: absolute;
-        top: 224px;
+        top: calc(450 / 750 * 100vw);
         bottom: auto;
         left: -1 * content-size.$cotent-side-sp;
-        width: 102px;
-        height: 102px;
+        width: calc(205 / 750 * 100vw);
+        aspect-ratio: 1/1;
       }
 
       &:nth-child(4) {
         position: absolute;
-        top: 114px;
-        right: -60px;
-        width: 250px;
-        height: 203px;
+        top: calc(220 / 750 * 100vw);
+        right: calc(140 / 750 * -100vw);
+        width: calc(513 / 750 * 100vw);
+        aspect-ratio: 513/417;
       }
     }
 
     [class*='concept_point4'] & {
       &:nth-child(1) {
-        position: absolute;
         top: 0;
         left: -1 * content-size.$cotent-side-sp;
-        width: 181px;
-        height: 174px;
+        width: calc(362 / 750 * 100vw);
+        aspect-ratio: 362/348;
       }
 
       &:nth-child(2) {
-        position: absolute;
-        top: 64px;
-        right: 84px;
+        top: calc(120 / 750 * 100vw);
         bottom: auto;
-        width: 79px;
-        height: 147px;
+        left: calc(357 / 750 * 100vw);
+        width: calc(159 / 750 * 100vw);
+        aspect-ratio: 159/294;
       }
 
       &:nth-child(3) {
-        position: absolute;
         top: 24px;
-        right: -1 * math.div(content-size.$cotent-side-sp, 2);
         bottom: auto;
-        width: 79px;
-        height: 147px;
+        left: calc(543 / 750 * 100vw);
+        width: calc(159 / 750 * 100vw);
+        aspect-ratio: 159/294;
       }
     }
   }

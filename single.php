@@ -37,7 +37,7 @@ get_header();
                         if (!empty($posttags)) {
                             echo '<ul class="article_tags">';
                             foreach ($posttags as $tag) {
-                                echo '<li class="article_tag"><a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a></li>';
+                                echo '<li class="article_tag">' . $tag->name . '</li>';
                             }
                             echo '</ul>';
                         };

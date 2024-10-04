@@ -28,7 +28,8 @@
     content: '＞';
   }
 
-  a {
+  a,
+  span {
     font-size: font.$notice-size;
     color: color.$anchor-text;
     text-decoration: none;
@@ -40,7 +41,8 @@
     width: content-size.$content-width-sp;
     margin: 8px 0 40px;
 
-    a {
+    a,
+    span {
       font-size: font.$paragraph-sp-size;
     }
   }

@@ -61,10 +61,24 @@
   @include section.base($padding: 0 0 40px);
 }
 
+.gallery-group {
+  &:first-of-type {
+    .gallery {
+      &:after {
+        content: '※当サイトに掲載の写真・CGなどの無断転載はお控えください。';
+      }
+    }
+  }
+}
+
 .gallery-group_heading,
 .cg-group_heading {
   @include heading.h2(color.$blue);
   @include heading.add-border;
+
+  &:empty {
+    display: none;
+  }
 }
 
 .gallery,
@@ -72,8 +86,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 24px;
-  justify-content: space-between;
+  gap: 24px 39px;
   width: 100%;
   margin-top: 40px;
 }

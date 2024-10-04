@@ -35,7 +35,43 @@
 
 .structure-facilities-point {
   @include point.large;
-  @include point.layout-alternative;
+
+  &:first-of-type {
+    h3 {
+      @media screen and (min-width: content-size.$breakpoint + 1) {
+        width: 530px;
+        margin-bottom: 30px;
+        font-size: 32px;
+        text-align: center;
+      }
+      @media screen and (max-width: content-size.$breakpoint) {
+        font-size: 22px;
+      }
+    }
+
+    .point_detail {
+      @media screen and (min-width: content-size.$breakpoint + 1) {
+        width: 530px;
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+    .point_notice {
+      @media screen and (min-width: content-size.$breakpoint + 1) {
+        width: 530px;
+      }
+    }
+
+    .point_information {
+      @media screen and (min-width: content-size.$breakpoint + 1) {
+        margin-left: -480px;
+      }
+
+      @media screen and (max-width: content-size.$breakpoint) {
+        order: -1;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: content-size.$breakpoint) {

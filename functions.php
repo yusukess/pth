@@ -1,14 +1,7 @@
 <?php
 
 // settings
-remove_action('wp_head', 'wp_generator');
-remove_action('wp_head', 'rsd_link');
-remove_action('wp_head', 'wlwmanifest_link');
-remove_action('wp_head', 'wp_shortlink_wp_head');
-remove_action('wp_head', 'adjacent_posts_rel_link_wp_head');
-remove_action('wp_head', 'feed_links_extra', 3);
-remove_action('wp_head', 'noindex', 1);
-add_filter('show_admin_bar', '__return_false');
+
 
 function remove_image_attribute($html)
 {
@@ -249,6 +242,11 @@ function filter_other_post($wp_query)
 		return;
 	}
 	$wp_query->query_vars['author'] = $current_user->ID;
+
+	if ($wp_query->is_front_page()) {
+		//「posts_per_page」で表示する最大投稿数を「３件」に変更
+		$wp_query->set('posts_per_page', '4');
+	}
 }
 
 function default_style_version($styles)
@@ -284,3 +282,10 @@ function my_wp_head_tel_link()
 <?php endif;
 }
 add_action('wp_head', 'my_wp_head_tel_link');
+
+function theme_setup()
+{
+	add_theme_support('post-thumbnails');
+	add_theme_support('title-tag');
+}
+add_action('after_setup_theme', 'theme_setup');

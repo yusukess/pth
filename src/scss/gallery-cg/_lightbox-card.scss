@@ -6,6 +6,10 @@
 
 .lightbox-card {
   width: 307px;
+
+  img {
+    object-fit: cover;
+  }
 }
 
 .lightbox-card_description {

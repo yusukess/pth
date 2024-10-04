@@ -2,7 +2,7 @@ $site-width: 1280px;
 $max-width: 1600px;
 $content-width: 1000px;
 $min-width-sp: 375px;
-$cotent-side-sp: calc(32 / 750 * 100%);
+$cotent-side-sp: calc(32 / 750 * 100vw);
 $content-width-sp: calc(100vw - $cotent-side-sp * 2);
 
 $breakpoint: 430px;
